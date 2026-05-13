@@ -1,8 +1,76 @@
+# robots.txt for yu7.site
+# Справочник владельца Xiaomi YU7 / SU7
+
 User-agent: *
 Allow: /
 Disallow: /_pgbackup/
 Disallow: /_pginfo/
 Disallow: /pinegrow.json
 Disallow: /notes/
+Disallow: /*.bak
+Disallow: /*.bak_BROKEN_*
 
+# Yandex
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content
+Crawl-delay: 1
+
+User-agent: YandexImages
+Allow: /
+Allow: /assets/
+
+User-agent: YandexMobileBot
+Allow: /
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /assets/
+
+User-agent: Googlebot-News
+Allow: /
+
+# AI Crawlers - разрешаем индексацию для AI-поиска
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YandexBot/3.0
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# DuckDuckGo, Bing
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# Sitemap
 Sitemap: https://yu7.site/sitemap.xml
+
+# Host (Yandex)
+Host: https://yu7.site
