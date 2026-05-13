@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Виды зарядных станций для Xiaomi YU7: 220В, 380В и DC · YU7.site</title>
+        <meta name="description" content="Полный разбор домашней зарядки YU7: от розетки 220В до DC-станций 20 кВт. AC vs DC, wallbox 380В, портативные зарядки, что нужно от электрики, цены и модели.">
+        <meta name="author" content="Herbert Wells">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/article.css?v=4">
+        <style>/* Калькулятор тока/мощности/времени */
+  .calc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 14px;
+}
+  .calc-table th {
+    background: var(--bg-2);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 12px 14px;
+    text-align: left;
+}
+  .calc-table td {
+    padding: 12px 14px;
+    border-top: 1px solid var(--border);
+}
+  .calc-table td:first-child {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: var(--accent);
+}
+  .calc-table tr.safe td:first-child {
+    color: var(--green);
+}
+  .calc-table tr.caution td:first-child {
+    color: var(--yellow);
+}
+  .calc-table tr.danger td:first-child {
+    color: var(--red);
+}
+  .calc-table td:nth-child(2) {
+    color: var(--text);
+    font-weight: 600;
+}
+  .calc-table td:nth-child(3),
+.calc-table td:nth-child(4) {
+    color: var(--text-dim);
+}
+
+  /* Быстрая сводка */
+  .fact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+  .fact {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+}
+  .fact-value {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+  .fact-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+}
+
+  /* Визуал "светофор тока" */
+  .traffic {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+  .traffic-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14px;
+    align-items: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+  .traffic-dot {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #0a0a0b;
+    flex-shrink: 0;
+}
+  .traffic-dot.green {
+    background: var(--green);
+}
+  .traffic-dot.yellow {
+    background: var(--yellow);
+}
+  .traffic-dot.red {
+    background: var(--red);
+}
+  .traffic-info {
+    min-width: 0;
+}
+  .traffic-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+  .traffic-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+  @media (max-width: 520px) {
+    .calc-table {
+        font-size: 13px;
+    }
+    .calc-table th,
+    .calc-table td {
+        padding: 10px;
+    }
+}
+
+  /* AC vs DC сравнение */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 24px 0;
+}
+  .compare-col {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+  .compare-col::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+}
+  .compare-ac::before {
+    background: var(--blue);
+}
+  .compare-dc::before {
+    background: var(--accent);
+}
+  .compare-title {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+}
+  .compare-ac .compare-title {
+    color: var(--blue);
+}
+  .compare-dc .compare-title {
+    color: var(--accent);
+}
+  .compare-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+  .compare-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  .compare-list li {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    padding: 8px 0;
+    border-top: 1px solid var(--border);
+}
+  .compare-list li:first-child {
+    border-top: none;
+}
+  .compare-list b {
+    color: var(--text);
+}
+
+  @media (max-width: 620px) {
+    .compare {
+        grid-template-columns: 1fr;
+    }
+}
+
+  /* Карточки моделей DC-станций */
+  .models {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+}
+  .model {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+  .model-head {
+    background: var(--bg-2);
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+}
+  .model-name {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 2px;
+}
+  .model-power {
+    font-size: 12px;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+  .model-body {
+    padding: 14px 16px;
+}
+  .model-body p {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin: 0 0 8px;
+}
+  .model-body p:last-child {
+    margin-bottom: 0;
+}
+  .model-body b {
+    color: var(--text);
+}
+
+  /* Сравнение AC vs DC */
+  .ac-dc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+}
+  .ac-dc-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    position: relative;
+}
+  .ac-dc-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 14px 14px 0 0;
+}
+  .ac-dc-card.ac::before {
+    background: var(--blue);
+}
+  .ac-dc-card.dc::before {
+    background: var(--accent);
+}
+  .ac-dc-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+  .ac-dc-card.ac .ac-dc-label {
+    color: var(--blue);
+}
+  .ac-dc-card.dc .ac-dc-label {
+    color: var(--accent);
+}
+  .ac-dc-title {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+}
+  .ac-dc-body {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.55;
+}
+  .ac-dc-body b {
+    color: var(--text);
+}
+  .ac-dc-body ul {
+    margin: 8px 0 0 18px;
+}
+  .ac-dc-body li {
+    margin-bottom: 4px;
+}
+
+  @media (max-width: 560px) {
+    .ac-dc-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+  /* Карточки опций — какую станцию выбрать */
+  .station-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+  .station-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--accent);
+}
+  .station-card.budget {
+    border-left-color: var(--green);
+}
+  .station-card.smart {
+    border-left-color: var(--blue);
+}
+  .station-card.premium {
+    border-left-color: var(--accent);
+}
+  .station-card.pro {
+    border-left-color: var(--red);
+}
+  .station-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+  .station-title-wrap {
+    flex: 1;
+    min-width: 0;
+}
+  .station-title {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+}
+  .station-subtitle {
+    font-size: 13px;
+    color: var(--text-dim);
+}
+  .station-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    padding: 5px 10px;
+    background: rgba(255, 105, 0, 0.08);
+    border: 1px solid rgba(255, 105, 0, 0.2);
+    border-radius: 6px;
+    white-space: nowrap;
+}
+  .station-body {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.55;
+}
+  .station-body b {
+    color: var(--text);
+}
+  .station-body ul {
+    margin: 8px 0 0 20px;
+}
+  .station-body li {
+    margin-bottom: 4px;
+}
+
+  @media (max-width: 520px) {
+    .station-head {
+        flex-direction: column;
+    }
+    .station-price {
+        align-self: flex-start;
+    }
+}
+
+  /* Фото в карточке модели */
+  .model-photo {
+    margin: 0 0 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+}
+  .model-photo img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center 60%;
+    display: block;
+}
+  .model-photo-caption {
+    font-size: 12px;
+    color: var(--text-muted);
+    padding: 8px 12px;
+    border-top: 1px solid var(--border);
+    font-style: italic;
+}
+
+  /* Выделенная карточка модели */
+  .model-highlight {
+    border: 1px solid rgba(255, 105, 0, 0.4) !important;
+    background: linear-gradient(135deg, rgba(255,105,0,0.06), var(--card)) !important;
+    position: relative;
+}
+  .model-highlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 12px 0 0 12px;
+}
+  .model-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    background: rgba(62, 207, 142, 0.15);
+    color: var(--green);
+    border: 1px solid rgba(62, 207, 142, 0.3);
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+}</style>
+            <!-- === SEO meta auto-generated 2026-05-06 === -->
+        <link rel="canonical" href="https://yu7.site/home220.html">
+        <meta property="og:url" content="https://yu7.site/home220.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Виды зарядных станций для Xiaomi YU7: 220В, 380В и DC · YU7.site">
+        <meta property="og:description" content="Полный разбор домашней зарядки YU7: от розетки 220В до DC-станций 20 кВт. AC vs DC, wallbox 380В, портативные зарядки, что нужно от электрики, цены и модели.">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Виды зарядных станций для Xiaomi YU7: 220В, 380В и DC · YU7.site">
+        <meta name="twitter:description" content="Полный разбор домашней зарядки YU7: от розетки 220В до DC-станций 20 кВт. AC vs DC, wallbox 380В, портативные зарядки, что нужно от электрики, цены и модели.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Зарядные станции для Xiaomi YU7","name":"Виды зарядных станций для Xiaomi YU7: 220В, 380В и DC · YU7.site","description":"Полный разбор домашней зарядки YU7: от розетки 220В до DC-станций 20 кВт. AC vs DC, wallbox 380В, портативные зарядки, что нужно от электрики, цены и модели.","url":"https://yu7.site/home220.html","inLanguage":"ru-RU","author":{"@type":"Person","name":"Herbert Wells"},"publisher":{"@type":"Organization","name":"YU7.site","logo":{"@type":"ImageObject","url":"https://yu7.site/icon-512.png"}},"image":"https://yu7.site/assets/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://yu7.site/home220.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yu7.site/"},{"@type":"ListItem","position":2,"name":"Зарядка и батарея","item":"https://yu7.site/charging.html"},{"@type":"ListItem","position":3,"name":"Домашняя зарядка","item":"https://yu7.site/home220.html"}]}]}
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="container nav-inner">
+                <a href="/" class="logo"> <span class="logo-dot"></span>
+      YU7.site </a>
+                <a href="/charging.html" class="back-link">← Зарядка и батарея</a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="/">Главная</a>
+                <span class="sep">/</span>
+                <a href="/charging.html">Зарядка и батарея</a>
+                <span class="sep">/</span>
+                <span>Виды зарядных станций</span>
+            </div>
+            <section class="hero">
+                <div class="hero-eyebrow">🔌 Зарядка дома</div>
+                <h1>Виды зарядных станций<br><span class="hl">для Xiaomi YU7</span></h1>
+                <p class="lead">От обычной розетки 220В до DC-зарядок 20 кВт: как они работают, чем отличаются и что выбрать под свою ситуацию. По реальному опыту 300+ обсуждений клуба и обзору рынка РФ.</p>
+            </section>
+            <div class="content">
+                <h2>Коротко о главном</h2>
+                <p>Если запомнить только четыре цифры - этого хватит:</p>
+                <div class="fact-grid">
+                    <div class="fact">
+                        <div class="fact-value">3,5 кВт</div>
+                        <div class="fact-label">максимум от бытовой розетки</div>
+                    </div>
+                    <div class="fact">
+                        <div class="fact-value">16 А</div>
+                        <div class="fact-label">безопасный предел для розетки</div>
+                    </div>
+                    <div class="fact">
+                        <div class="fact-value">8–10 А</div>
+                        <div class="fact-label">рекомендуемый ток для старой проводки</div>
+                    </div>
+                    <div class="fact">
+                        <div class="fact-value">~30 часов</div>
+                        <div class="fact-label">полная зарядка от 0 до 100%</div>
+                    </div>
+                </div>
+                <h2>Почему «7 кВт от розетки» - миф</h2>
+                <p>В чате постоянно всплывает вопрос: «Продавец сказал, что зарядное устройство может 7 кВт, а розетка рядом - обычная, можно?». Ответ: <b>нет, нельзя</b>. И вот почему.</p>
+                <p>Обычная бытовая розетка рассчитана на <b>16 А</b>. Это стандарт, к которому подведён кабель сечением 2,5 мм² через автомат на 16 А. 16 А × 220 В = <b>3 520 Вт</b>. Это физический потолок розетки.</p>
+                <p>Чтобы снять 7 кВт, нужно 32 А - вдвое больше. А это:</p>
+                <ul>
+                    <li>Силовая розетка (синяя CEE, не обычная Schuko)</li>
+                    <li>Отдельная линия от щитка, кабель <b>не менее 4–6 мм²</b>
+                    </li>
+                    <li>Отдельный автомат на 32 А</li>
+                    <li>Желательно - дифавтомат или УЗО</li>
+                </ul>
+                <p>То есть «зарядка на 7 кВт» - это не бытовая розетка, это полноценная точка подключения, которую ставит электрик. В обычную розетку такую зарядку втыкать нельзя: <b>проводка просто загорится</b>.</p>
+                <div class="note note-danger">
+                    <div class="note-icon">🔥</div>
+                    <div>
+                        <b>Реальный случай из клуба:</b> владелец купил зарядку на 7 кВт, воткнул через китайский удлинитель в обычную розетку, выставил 32 А. Через несколько часов пропала фаза и свет во всём доме - кабель на одной фазе расплавился. Автоматы даже не сработали. Хорошо, что не загорелось. Это типовой сценарий.
+                    </div>
+                </div>
+                <h2>Что реально принимает машина от переменного тока</h2>
+                <p>У YU7 <b>два зарядных порта</b>, и это важно понять. Слева - <b>GB/T AC</b> (медленная, переменный ток), справа - <b>GB/T DC</b> (быстрая, постоянный ток). Оба работают на всех версиях YU7. Выбор зависит от ситуации: дома/на работе - через AC, на трассе за 20 минут до 80% - через DC.</p>
+                <p>По переменному току YU7 архитектурно ограничен: <b>11 кВт по одной фазе</b> - это предел для всех версий (RWD, Pro, Max). В отличие от SU7 Max, где есть трёхфазный режим 11 кВт (по 16 А на каждую фазу), <b>YU7 работает только с одной фазой</b>.</p>
+                <table class="calc-table">
+                    <thead>
+                        <tr>
+                            <th>Версия YU7</th>
+                            <th>Порт AC · медленно</th>
+                            <th>Порт DC · быстро</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RWD</td>
+                            <td>11 кВт · 1 фаза</td>
+                            <td>до 330 кВт</td>
+                        </tr>
+                        <tr>
+                            <td>Pro</td>
+                            <td>11 кВт · 1 фаза</td>
+                            <td>до 330 кВт</td>
+                        </tr>
+                        <tr>
+                            <td>Max</td>
+                            <td>11 кВт · 1 фаза</td>
+                            <td>до 507 кВт</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note note-info">
+                    <div class="note-icon">💡</div>
+                    <div>
+                        <b>Что это значит на практике:</b> даже если подключить YU7 к трёхфазной AC-станции на 22 кВт - машина возьмёт максимум 11 кВт с одной фазы. Для полной реализации 11 кВт по AC нужна однофазная линия на <b>50 А</b>, а это уже серьёзная нагрузка - требует отдельного кабеля от щитка и автомата на 50 А. <b>Для быстрой зарядки на трассе</b> таких ограничений нет - используется другой порт (DC), там важны уже параметры самой станции.
+                    </div>
+                </div>
+                <p>Эта статья - именно про <b>медленную зарядку от розетки через AC-порт</b>. Про быструю DC-зарядку на трассе и на общественных станциях - в отдельном материале про <a href="/adapters.html" class="inline">адаптеры и переходники</a>.</p>
+                <h2>Светофор токов: что выставлять в машине</h2>
+                <p>В настройках зарядки YU7 можно выбирать силу тока от 5 до 32 А. Вот как выбирать значение, исходя из реальной ситуации:</p>
+                <div class="traffic">
+                    <div class="traffic-row">
+                        <div class="traffic-dot green">6–10А</div>
+                        <div class="traffic-info">
+                            <div class="traffic-title">Незнакомая или старая проводка</div>
+                            <div class="traffic-desc">Деревня, старая квартира, проводка 60+ лет, сомнительный удлинитель. Безопаснее долгий процесс, чем сгоревший дом. 1,3–2,2 кВт, зарядка до 100% - 35–50 часов</div>
+                        </div>
+                    </div>
+                    <div class="traffic-row">
+                        <div class="traffic-dot green">13А</div>
+                        <div class="traffic-info">
+                            <div class="traffic-title">Хорошая квартира, современный дом</div>
+                            <div class="traffic-desc">Розетки и проводка 2,5 мм². Около 2,9 кВт - проверенный безопасный режим, который не перегружает сеть. Самый популярный выбор в клубе</div>
+                        </div>
+                    </div>
+                    <div class="traffic-row">
+                        <div class="traffic-dot yellow">16А</div>
+                        <div class="traffic-info">
+                            <div class="traffic-title">Максимум для бытовой розетки</div>
+                            <div class="traffic-desc">3,5 кВт, предел «обычной» 16 А розетки. Зимой параллельно с обогревателями, чайником, утюгом - может вырубить автомат. Проверь что на этой линии больше ничего не висит</div>
+                        </div>
+                    </div>
+                    <div class="traffic-row">
+                        <div class="traffic-dot red">25–32А</div>
+                        <div class="traffic-info">
+                            <div class="traffic-title">Только с отдельной линией от щитка</div>
+                            <div class="traffic-desc">5,5–7 кВт. Требует силовой розетки, кабеля 4–6 мм², отдельного автомата. Через «обычную» розетку не включать - расплавится</div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Что идёт в комплекте с YU7</h2>
+                <p>С машиной поставляется <b>портативное зарядное устройство на 3,5 кВт</b> с китайской вилкой и функцией разрядника (V2L). В комплекте есть переходник с китайской вилки на евровилку (Schuko) - тот самый «серый» адаптер, про который часто спрашивают.</p>
+                <div class="note note-warning">
+                    <div class="note-icon">⚡</div>
+                    <div>
+                        <b>Важная особенность комплектного переходника:</b> он программно ограничивает ток до <b>8 А</b> (около 1,8 кВт). То есть напрямую через китайскую вилку зарядка даёт 13 А, а через родной переходник Schuko - всего 8. Это сделано для безопасности: европейские розетки часто бывают слабее китайских аналогов, ограничение защищает проводку от перегрузки.
+                    </div>
+                </div>
+                <p>В клубе нашли способ обойти это ограничение: внутри переходника есть металлический штырёк, который нажимает кнопку на вилке зарядки и программно сбрасывает ток вдвое. Если подложить между вилкой и переходником <b>тонкий кусочек пластика</b> (около 2 мм толщиной), штырёк не нажмёт кнопку - и зарядка будет идти на полных 13 А. <b>Делать это стоит только если уверен в проводке</b> - иначе резко повышается риск перегрева.</p>
+                <h2>Реальные сценарии использования</h2>
+                <h3>Подземный паркинг / офис</h3>
+                <p>Если арендодатель разрешил пользоваться розеткой, обычно ставят ограничение <b>8–10 А</b>: паркинговые розетки редко бывают сильными, и никому не нужен пожар в подвале. На офисе работает стабильно: за рабочий день (8–10 часов) при 10 А добавляется около 18–22 кВт·ч - это плюс 80–100 км пробега. Хватает, чтобы не заезжать на внешние зарядки.</p>
+                <h3>Дача без нормального электричества</h3>
+                <p>Если на даче 5 кВт на фазу (стандарт для СНТ) - комфортно будет только на <b>3,5 кВт из розетки</b>. За ночь (10 часов) зальёт около 30 кВт·ч, то есть плюс 130–140 км. Для редких поездок по окрестностям хватит. Если живёте там постоянно - имеет смысл заказать увеличение выделенной мощности и поставить нормальный wallbox.</p>
+                <h3>Подключили, но заряжается только на 8 А вместо 16</h3>
+                <p>Типичная ситуация: вставил в розетку через комплектный переходник, рассчитывал на 16, получил 8. Причина - именно этот переходник со штырьком (см. выше). Варианты:</p>
+                <ul>
+                    <li>Заменить переходник на другой без ограничения</li>
+                    <li>Физически отрезать штырёк (на свой риск)</li>
+                    <li>Подложить кусочек пластика</li>
+                    <li>Перерезать кабель зарядки и припаять обычную вилку Schuko вместо китайской - так делают, когда зарядка живёт стационарно на одном месте</li>
+                </ul>
+                <h3>Заряжается, но потом отключается</h3>
+                <p>Если зарядка стартует на 16 А, несколько часов работает нормально, а затем вырубается - почти наверняка <b>автомат перегрелся</b> и сработал тепловой расцепитель. Это значит, что линия не рассчитана на такую длительную нагрузку. Решение: снизить до 10–13 А в настройках машины или протянуть нормальную линию.</p>
+                <h2>Критически важные правила безопасности</h2>
+                <div class="note note-danger">
+                    <div class="note-icon">🚫</div>
+                    <div>
+                        <b>Категорически нельзя:</b> китайские удлинители на катушке. Даже если на коробке написано «16 А», у них внутри провод 1,5 мм² вместо положенных 2,5, и на долгой нагрузке они плавятся. В клубе фиксировали случаи, когда такой удлинитель горел за 20 минут на 10 А.
+                    </div>
+                </div>
+                <div class="note note-warning">
+                    <div class="note-icon">📏</div>
+                    <div>
+                        <b>Удлинитель - только размотанный.</b> Смотанный в бухту кабель работает как катушка индуктивности и нагревается гораздо сильнее. Если провод намотан - размотай на всю длину и уложи свободно.
+                    </div>
+                </div>
+                <div class="note note-warning">
+                    <div class="note-icon">🌍</div>
+                    <div>
+                        <b>Заземление обязательно.</b> Если на даче или в гараже нет заземления - зарядка не запустится в принципе (сработает защита). Это не недостаток, а страховка от удара током.
+                    </div>
+                </div>
+                <div class="note note-info">
+                    <div class="note-icon">🌡️</div>
+                    <div>
+                        <b>Зимой нужно больше.</b> При сильном морозе машина параллельно с зарядкой греет батарею (это забирает до 7 кВт). Если в розетке только 3,5 кВт, то вся мощность уходит на подогрев, а батарея почти не пополняется. В мороз либо греть авто в тёплом гараже, либо ставить мощный wallbox.
+                    </div>
+                </div>
+                <h2>Следующий уровень: 380В и wallbox</h2>
+                <p>Бытовая розетка хороша как временное решение. Но если вы:</p>
+                <ul>
+                    <li>Живёте в частном доме и заряжаете каждый день</li>
+                    <li>Ездите больше 80–100 км в сутки</li>
+                    <li>Хотите заряжаться быстрее 10 часов</li>
+                    <li>Заряжаете зимой на улице</li>
+                </ul>
+                <p>- всё это сигнал, что пора ставить <b>нормальную зарядную станцию</b>. Дальше в статье разберём два варианта: <b>AC-станции на 7–22 кВт</b> (переменный ток, самые распространённые) и <b>DC-станции для дома</b> (постоянный ток, быстрее, но дороже).</p>
+                <h2>AC-станция на 7 или 11 кВт - классический wallbox</h2>
+                <p>Это самый популярный вариант в мире и в клубе. Настенная или напольная зарядка, подключается к сети 220В (1 фаза) или 380В (3 фазы), заряжает машину переменным током через порт GB/T AC.</p>
+                <h3>7 кВт на одной фазе (220В, 32А)</h3>
+                <p>Самая ходовая конфигурация. Требует отдельного кабеля от щитка (4–6 мм²), автомата на 32 А и УЗО. На одной фазе выдаёт около 7 кВт. <b>Для YU7 это практически предельная AC-мощность</b> - машина принимает 11 кВт только при тонких условиях (полный контакт с 50 А на фазе), а 7 кВт берёт всегда и стабильно.</p>
+                <p>За ночь (10 часов) заливает примерно <b>70 кВт·ч</b> - это 300+ км пробега. Для ежедневной эксплуатации хватает с запасом.</p>
+                <h3>11 кВт на трёх фазах (380В, 16А на фазу)</h3>
+                <p>Если в доме заведены 3 фазы (стандарт для частных домов) - можно поставить трёхфазную станцию. На каждую фазу она берёт по 16 А, в сумме 11 кВт. <b>Но тут важный нюанс YU7:</b> машина не умеет работать с тремя фазами - она возьмёт только 1 фазу × 16 А ≈ 3,5 кВт.</p>
+                <div class="note note-warning">
+                    <div class="note-icon">⚠️</div>
+                    <div>
+                        <b>Для YU7 трёхфазный 11 кВт AC-wallbox покупать бессмысленно</b> - толку от него будет как от однофазного 3,5 кВт. Если в доме 3 фазы и хочется использовать их все, есть два разумных варианта:
+                        <ul style="margin-top: 10px;">
+                            <li>
+                                <b>Однофазный 7 кВт на 32 А</b> - проще, дешевле, машина берёт всё что даёт
+                            </li>
+                            <li>
+                                <b>Трёхфазная DC-станция 11–22 кВт</b> - возьмёт все 3 фазы из сети и отдаст в машину постоянным током. Об этом ниже.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Что подводит электрик</h3>
+                <p>Для нормальной AC-станции на 7 кВт электрик делает:</p>
+                <ul>
+                    <li>Отдельная линия от щитка кабелем <b>ВВГнг-LS 6 мм²</b> (4 мм² минимум, но с 6 мм² автомат не греется)
+                    </li>
+                    <li>Автомат <b>40 А</b> (C-характеристика) - не 32А: штатная зарядка Xiaomi 7 кВт потребляет 31–32 А, автомат 32А будет постоянно греться
+                    </li>
+                    <li>
+                        <b>УЗО или дифавтомат</b> (обязательно, не экономить)
+                    </li>
+                    <li>Заземление (сопротивление не более 30 Ом) - без него зарядка падает в ошибку</li>
+                    <li>Если кабель идёт по улице - в гофре ПНД или с УФ-защитой</li>
+                </ul>
+                <div class="note note-info">
+                    <div class="note-icon">💡</div>
+                    <div>
+                        <b>Лайфхак: ограничьте ток до 24 А.</b> Если автомат греется или сеть слабая - в настройках зарядки или машины выставьте максимальный ток 24 А вместо 32 А. Потеряете ~1,5 кВт мощности, зато автомат не будет греться и зарядка будет работать стабильно. Зарядка за ночь всё равно завершится.
+                    </div>
+                </div>
+                <p>Работа обычно <b>15–30 тыс. рублей</b>, сама станция - от 10 тыс. за базовую китайскую до 50+ тыс. за брендовую с Wi-Fi, NFC, балансировкой.</p>
+                <div class="note note-warning">
+                    <div class="note-icon">⚠️</div>
+                    <div>
+                        <b>Осторожно: оригинальная зарядка Xiaomi 11 кВт.</b> Продаётся в приложении <a href="/master-account.html#download">Xiaomi Auto</a> за ~1000$ и выглядит привлекательно. Но для YU7 она даст те же 7 кВт - потому что трёхфазная: каждая фаза выдаёт ~3,6 кВт, машина берёт только одну фазу, итого ~3,6 кВт. Чтобы получить 7 кВт, нужна <b>однофазная 32А</b> станция, а не трёхфазная 11 кВт. Несколько владельцев клуба купили эту зарядку по незнанию и остались разочарованы.
+                    </div>
+                </div>
+                <h2>Ночная зарядка - самый дешёвый способ</h2>
+                <p>Большинство владельцев в клубе используют именно этот режим: машина остаётся на зарядке ночью по ночному тарифу и к утру готова с нужным уровнем заряда. YU7 умеет это делать автоматически.</p>
+                <h3>Как настроить</h3>
+                <ul>
+                    <li>В настройках зарядки укажи <b>время планируемого выезда</b> - машина сама вычислит когда начать заряжаться, чтобы успеть к нужному времени
+                    </li>
+                    <li>Оставь кабель подключённым - зарядка стартует автоматически по расписанию</li>
+                    <li>Одновременно можно настроить <b>прогрев батареи и салона</b> перед выездом - тогда утром садишься в тёплую машину с прогретой батареей, не теряя заряд на прогрев во время движения
+                    </li>
+                </ul>
+                <div class="note note-warning">
+                    <div class="note-icon">🕐</div>
+                    <div>
+                        <b>Нюанс московского времени:</b> в настройках машины часовой пояс может не совпадать с местным. Владельцы из Москвы и МО отмечают смещение на <b>−5 часов</b> - если выставляешь выезд в 8:00, машина трактует это как 3:00 ночи. Проверь расписание на первой зарядке и скорректируй, если нужно.
+                    </div>
+                </div>
+                <h3>Сколько стоит зарядить YU7 ночью</h3>
+                <p>Ориентир по Московской области (ночной тариф ~4 ₽/кВт·ч):</p>
+                <ul>
+                    <li>Зарядка от 15% до 90% (≈75 кВт·ч) - около <b>300 рублей</b>
+                    </li>
+                    <li>Полная зарядка с нуля (≈100 кВт·ч) - около <b>400 рублей</b>
+                    </li>
+                    <li>Ежемесячно при пробеге 150 км/день - около <b>2 000–3 000 рублей</b>
+                    </li>
+                </ul>
+                <p>Тарифы различаются по регионам - смотри свой ночной тариф и считай от него. Ночная зарядка от wallbox 7 кВт - <b>самый экономичный</b> способ эксплуатации YU7.</p>
+                <h2>DC-зарядка для дома - новый класс устройств</h2>
+                <p>Это самое интересное и относительно новое. Последние 2–3 года на рынок пришли <b>компактные DC-станции</b>, которые можно поставить дома, в гараже или во дворе частного дома. Работают они иначе, чем AC-wallbox.</p>
+                <h3>В чём разница: AC vs DC</h3>
+                <p>Главный принцип: <b>батарея электромобиля хранит постоянный ток (DC)</b>. Ток из сети всегда переменный (AC). Где-то должно произойти преобразование. Вся разница - где именно.</p>
+                <div class="compare">
+                    <div class="compare-col compare-ac">
+                        <div class="compare-title">AC-зарядка</div>
+                        <div class="compare-subtitle">Преобразование - внутри машины</div>
+                        <ul class="compare-list">
+                            <li>Сеть → станция → <b>бортовой инвертор машины</b> → батарея
+                            </li>
+                            <li>Ограничено мощностью инвертора YU7 (11 кВт)</li>
+                            <li>Станция дешевле: 10–50 тыс. ₽</li>
+                            <li>Работает с 1 фазой, не требует серьёзной электрики</li>
+                            <li>Мягче для батареи, щадит ресурс</li>
+                            <li>Медленнее: 7 кВт × 10 ч = ночная зарядка</li>
+                        </ul>
+                    </div>
+                    <div class="compare-col compare-dc">
+                        <div class="compare-title">DC-зарядка</div>
+                        <div class="compare-subtitle">Преобразование - в самой станции</div>
+                        <ul class="compare-list">
+                            <li>Сеть → <b>преобразователь в станции</b> → сразу в батарею
+                            </li>
+                            <li>Обходит бортовой инвертор, быстрее</li>
+                            <li>Станция дороже: 80–450 тыс. ₽</li>
+                            <li>Обычно требует 3 фазы 380В и отдельную линию</li>
+                            <li>Большая и тяжёлая, нужно место на стене или опоре</li>
+                            <li>Быстрее: 20 кВт × 3 ч = полная зарядка</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>Зачем DC дома, если есть быстрые зарядки на трассе</h3>
+                <p>Домашняя DC - это про <b>удобство и мощность при наличии 3-х фаз</b>. Она решает три задачи, которые AC-станция не закрывает:</p>
+                <ul>
+                    <li>
+                        <b>Использование всех трёх фаз</b> - особенно важно для YU7, который по AC берёт только 1 фазу. DC-станция потребляет сеть трёхфазно и отдаёт всё в батарею.
+                    </li>
+                    <li>
+                        <b>Зимой в мороз</b> - AC 3,5 кВт уходит почти весь на обогрев батареи, а не в ёмкость. DC 20 кВт даёт мощность и на прогрев, и на заряд.
+                    </li>
+                    <li>
+                        <b>Быстрое пополнение когда надо</b> - если приехал вечером с 15%, а утром ехать далеко, на AC придётся долго ждать. DC - 3 часа и полная батарея.
+                    </li>
+                </ul>
+                <h3>Когда DC дома имеет смысл</h3>
+                <ul>
+                    <li>В доме заведены <b>3 фазы по 5+ кВт</b> каждая (минимум 15 кВт суммарно)
+                    </li>
+                    <li>YU7 <b>Max</b> с батареей 101,7 кВт·ч - на больших батареях разница со временем зарядки ощутимее
+                    </li>
+                    <li>Ежедневные пробеги <b>от 150 км</b> - часто нужно быстро пополнять
+                    </li>
+                    <li>Зимой машина стоит <b>на улице</b>, а не в тёплом гараже
+                    </li>
+                    <li>Важна <b>возможность уехать через час-два</b>, а не через ночь
+                    </li>
+                </ul>
+                <h3>Когда DC дома - перебор</h3>
+                <ul>
+                    <li>В доме только 1 фаза или выделено менее 15 кВт</li>
+                    <li>Машина - YU7 RWD/Pro, пробеги небольшие (до 100 км/день)</li>
+                    <li>Машина ночует в тёплом гараже</li>
+                    <li>Есть рядом публичные быстрые зарядки</li>
+                    <li>Просто жалко денег - AC 7 кВт справится со 95% задач</li>
+                </ul>
+                <div class="note note-info">
+                    <div class="note-icon">💡</div>
+                    <div>
+                        <b>Важный нюанс для владельцев Max:</b> 101,7 кВт·ч батареи NMC-типа при ежедневной DC-зарядке могут ускорять деградацию (исследование Geotab: у машин, использующих DC более 3 раз в месяц в тёплом климате, деградация на 10% выше через 4 года). На AC такого эффекта нет. Поэтому <b>как основной ежедневный режим лучше AC</b>, а DC - как дополнительный «быстрый» сценарий 1–2 раза в неделю.
+                    </div>
+                </div>
+                <h2>Модели DC-станций для дома</h2>
+                <p>Ниже - ориентиры по моделям, которые сейчас доступны на российском и белорусском рынках. Цены ориентировочные, меняются; смотрите актуальные прайсы у продавцов.</p>
+                <div class="models">
+                    <div class="model model-highlight">
+                        <div class="model-head">
+                            <div class="model-name">Портативная DC 20 кВт GB/T <span class="model-badge">Доступна в РФ</span>
+                            </div>
+                            <div class="model-power">GB/T DC · 20 кВт · 380В · 3 фазы</div>
+                        </div>
+                        <div class="model-body">
+                            <div class="model-photo">
+                                <img src="/dc20_charger.jpg" alt="Портативная DC-зарядка 20 кВт GB/T на колёсиках" loading="lazy">
+                                <div class="model-photo-caption">Корпус, пистолет GB/T DC и шильдик: 20KW EV Charger · Vin 300–445V · Vout 200–1000V · Output 0–60A</div>
+                            </div>
+                            <p>Компактная напольная DC-зарядка на колёсиках с ручкой - один из самых доступных вариантов домашней DC-зарядки на рынке РФ. Продаётся у частных продавцов и небольших компаний, обычно в наличии, можно проверить при покупке.</p>
+                            <p><b>Как устроена:</b> это <b>внешний инвертор</b>. Он принимает переменный ток из трёхфазной сети 380В и преобразует его в постоянный. Два кабеля: от сети до блока 5 м, от блока до машины 2,2 м с коннектором GB/T DC. Нагрузка на три фазы делится равномерно - по 32 А каждая. Мощность регулируется от 1 до 20 кВт.</p>
+                            <p><b>Принципиальное отличие от AC-wallbox:</b> обходит бортовой инвертор YU7 - машина принимает готовый постоянный ток напрямую в батарею, без ограничения в 11 кВт.</p>
+                            <ul>
+                                <li>
+                                    <b>Подключение:</b> 3 фазы 380В, 32 А на фазу - нужен отдельный автомат и линия
+                                </li>
+                                <li>
+                                    <b>Зарядка 0→80%:</b> примерно 4 часа при 20 кВт
+                                </li>
+                                <li>
+                                    <b>Плюс:</b> мобильная - на колёсиках, можно переставить или увезти на дачу
+                                </li>
+                                <li>
+                                    <b>Плюс:</b> значительно дешевле брендовых аналогов
+                                </li>
+                                <li>
+                                    <b>Минус:</b> нет приложения, управление физическими кнопками
+                                </li>
+                                <li>
+                                    <b>Минус:</b> громоздкая, шумит при работе
+                                </li>
+                                <li>
+                                    <b>Минус:</b> нет официального сервиса - ремонт за свой счёт
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="model-head">
+                            <div class="model-name">NIO GB/T DC <span class="model-badge">Taobao</span>
+                            </div>
+                            <div class="model-power">11 кВт · 16 А · DC</div>
+                        </div>
+                        <div class="model-body">
+                            <p>Оригинальная домашняя DC-станция от NIO - оптимальный выбор если выделенная мощность ограничена (<b>15 кВт на дом</b>). Потребляет по 16 А с каждой из трёх фаз, суммарно ~11 кВт, а машине отдаёт постоянным током - больше, чем любой AC-wallbox для YU7.</p>
+                            <p>Владельцы клуба заказывают напрямую с Taobao. Цена ориентировочно <b>6 000–6 800 юаней</b> (≈80–90 тыс. ₽ с доставкой). Регулировка мощности, встроенный кабель с GB/T DC.</p>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="model-head">
+                            <div class="model-name">Wattsaving HQ22 Neo</div>
+                            <div class="model-power">GB/T DC · 22 кВт</div>
+                        </div>
+                        <div class="model-body">
+                            <p>Самая популярная DC-станция для дома в сегменте. С 2024 года - официальный поставщик DC-станций на 11 и 20 кВт для <b>NIO</b>. Настенная, размеры 590×350×162 мм, вес 18 кг, кабель 5 м с GB/T DC коннектором.</p>
+                            <p><b>Особенности:</b> регулировка мощности в приложении (7/11/16/22 кВт), Bluetooth, 2 NFC-карты, тихий режим до 45 дБ. Подключение - 3 фазы 380В.</p>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="model-head">
+                            <div class="model-name">NIO GB/T DC</div>
+                            <div class="model-power">11 кВт · 16 А</div>
+                        </div>
+                        <div class="model-body">
+                            <p>Оригинальная станция от NIO для личного использования. Мощность регулируется, встроенный кабель с GB/T DC. Более скромная по мощности, чем Wattsaving, но от известного производителя авто.</p>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="model-head">
+                            <div class="model-name">Pandora Slim 20 ECO</div>
+                            <div class="model-power">GB/T DC · 20 кВт</div>
+                        </div>
+                        <div class="model-body">
+                            <p>Российская разработка (Pandora). Встроенный кабель GB/T. Ценовой сегмент выше - около 440 тыс. ₽. Плюс - локальная поддержка и ремонтопригодность в РФ.</p>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="model-head">
+                            <div class="model-name">Pandora Slim 3D</div>
+                            <div class="model-power">GB/T · пофазная балансировка</div>
+                        </div>
+                        <div class="model-body">
+                            <p>Премиальная модель Pandora с умной пофазной балансировкой мощности. Собирает свободную мощность по каждой из трёх фаз, ускоряя зарядку - заявляют «до 2× по сравнению с обычными DC-станциями».</p>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="model-head">
+                            <div class="model-name">Tary GB/T DC</div>
+                            <div class="model-power">20 или 40 кВт</div>
+                        </div>
+                        <div class="model-body">
+                            <p>Есть две версии - 20 кВт (портативная, идеально для дома) и 40 кВт (напольная, для небольших коммерческих объектов). Встроенный кабель, GB/T DC.</p>
+                        </div>
+                    </div>
+                    <div class="model">
+                        <div class="model-head">
+                            <div class="model-name">EVCar GB/T CL-40</div>
+                            <div class="model-power">DC · 40 кВт</div>
+                        </div>
+                        <div class="model-body">
+                            <p>Мощная напольная станция на 40 кВт, версии с одним (01G) или двумя пистолетами (02G). Скорее для больших частных хозяйств или маленького бизнеса, чем для одиночного гаража.</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>На что смотреть при выборе DC-станции</h3>
+                <ul>
+                    <li>
+                        <b>Регулировка мощности</b> - критически важно. В приложении или на корпусе должна быть возможность ставить 7/11/16/20/22 кВт под свою сеть. Без регулировки можно словить вылет автомата в доме, если мощность не выделена полностью.
+                    </li>
+                    <li>
+                        <b>Приложение для управления</b> - хотя бы Bluetooth-коннект. Возможность смотреть статистику, запускать зарядку по таймеру на ночной тариф, управлять удалённо.
+                    </li>
+                    <li>
+                        <b>NFC-карта или PIN</b> - если станция стоит на улице, ограничение доступа критично. Иначе любой сосед подключится.
+                    </li>
+                    <li>
+                        <b>Класс защиты IP</b> - для улицы нужно минимум IP54, лучше IP65. Для гаража достаточно IP44.
+                    </li>
+                    <li>
+                        <b>Длина кабеля</b> - 5 метров стандарт, но если станция далеко от парковки, имеет смысл 7 м.
+                    </li>
+                    <li>
+                        <b>Гарантия и поставщик в РФ</b> - DC-станция это сложная электроника. Если сломается, ремонт в Китае по запчастям = месяцы простоя.
+                    </li>
+                </ul>
+                <div class="note note-warning">
+                    <div class="note-icon">🔧</div>
+                    <div>
+                        <b>Про установку:</b> DC-станцию нельзя подключить сомостоятельно - нужен электрик с допуском. Требуется отдельная линия 380В, автомат соответствующей ампеража (обычно 3P на 40–63 А в зависимости от модели), УЗО типа B (не обычное А - это важно для DC), хорошее заземление. Установка стоит 20–50 тыс. ₽ в зависимости от сложности.
+                    </div>
+                </div>
+                <h2>Что выбрать: сравнительная таблица</h2>
+                <table class="calc-table">
+                    <thead>
+                        <tr>
+                            <th>Сценарий</th>
+                            <th>Решение</th>
+                            <th>Примерный бюджет</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Редко езжу, есть розетка 16 А</td>
+                            <td>Комплектная 3,5 кВт</td>
+                            <td>Ноль (в комплекте)</td>
+                        </tr>
+                        <tr>
+                            <td>Частный дом, 1 фаза, пробеги 50–150 км/день</td>
+                            <td>AC wallbox 7 кВт</td>
+                            <td>25–50 тыс. ₽</td>
+                        </tr>
+                        <tr>
+                            <td>3 фазы, YU7 RWD/Pro, экономлю</td>
+                            <td>AC wallbox 7 кВт на 1 фазе</td>
+                            <td>25–50 тыс. ₽</td>
+                        </tr>
+                        <tr>
+                            <td>3 фазы, YU7 Max, хочу быструю</td>
+                            <td>DC станция 20–22 кВт</td>
+                            <td>80–200 тыс. ₽</td>
+                        </tr>
+                        <tr>
+                            <td>Премиум, полный контроль над нагрузкой</td>
+                            <td>DC с пофазной балансировкой</td>
+                            <td>400–500 тыс. ₽</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="note note-info">
+                    <div class="note-icon">💡</div>
+                    <div>
+                        <b>Главный совет:</b> если есть любая возможность установить wallbox - ставьте wallbox. Зарядка от розетки - это запасной вариант для поездок к друзьям/родителям/на дачу, но не основной способ обслуживания машины. Для 95% владельцев YU7 <b>AC-станция на 7 кВт</b> - оптимальный выбор по цене и функциональности. DC имеет смысл только при наличии 3 фаз, больших пробегов и желания иметь «быструю зарядку у себя во дворе».
+                    </div>
+                </div>
+                </div>
+        </div>
+        <footer>
+            <div class="container">
+                <p>Виды зарядных станций для YU7 · справочник владельца Xiaomi YU7</p>
+                <p style="margin-top: 14px;"><span class="signature">© Herbert Wells</span></p>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>

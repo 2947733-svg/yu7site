@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Телематика и SIM Xiaomi YU7 · YU7.site</title>
+        <meta name="description" content="Блок телематики Xiaomi YU7: китайская eSIM, связь с серверами Xiaomi в России, восстановление связи, способы получить интернет в машине.">
+        <meta name="author" content="Herbert Wells">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/article.css?v=4">
+        <!-- === SEO meta auto-generated 2026-04-27 === -->
+        <link rel="canonical" href="https://yu7.site/telematics.html">
+        <meta property="og:url" content="https://yu7.site/telematics.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Телематика и SIM Xiaomi YU7 · YU7.site">
+        <meta property="og:description" content="Блок телематики Xiaomi YU7: китайская eSIM, связь с серверами Xiaomi в России, восстановление связи, способы получить интернет в машине.">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Телематика и SIM Xiaomi YU7 · YU7.site">
+        <meta name="twitter:description" content="Блок телематики Xiaomi YU7: китайская eSIM, связь с серверами Xiaomi в России, восстановление связи, способы получить интернет в машине.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Телематика и SIM Xiaomi YU7","name":"Телематика и SIM Xiaomi YU7 · YU7.site","description":"Блок телематики Xiaomi YU7: китайская eSIM, связь с серверами Xiaomi в России, восстановление связи, способы получить интернет в машине.","url":"https://yu7.site/telematics.html","inLanguage":"ru-RU","author":{"@type":"Person","name":"Herbert Wells"},"publisher":{"@type":"Organization","name":"YU7.site","logo":{"@type":"ImageObject","url":"https://yu7.site/icon-512.png"}},"image":"https://yu7.site/assets/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://yu7.site/telematics.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yu7.site/"},{"@type":"ListItem","position":2,"name":"Телематика и SIM Xiaomi YU7","item":"https://yu7.site/telematics.html"}]}]}
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container header-inner">
+                <a href="/" class="logo"><span class="logo-dot"></span>YU7.site</a>
+                <a href="/" class="back-link">← На главную</a>
+            </div>
+        </header>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="/">Главная</a> · <span>Телематика и SIM</span>
+            </nav>
+            <article class="article">
+                <h1>Телематика и SIM Xiaomi YU7</h1>
+                <p class="lead">Главная техническая боль владельца YU7 в России - машина «не видит» серверы Xiaomi.</p>
+                <h2>Что такое блок телематики</h2>
+                <p>Это электронный модуль внутри YU7, который отвечает за связь машины с серверами Xiaomi. Внутри блока стоят <b>две китайские eSIM-карты</b> - они вшиты в плату и заранее активированы у китайских мобильных операторов.</p>
+                <p>Через эту телематику машина получает:</p>
+                <ul>
+                    <li>
+                        <b>Обновления ПО (OTA)</b>
+                    </li>
+                    <li>
+                        <b>HD-карты для автопилота</b>
+                    </li>
+                    <li>
+                        <b>Связь с приложением</b> (удалённое управление, локация, Sentry-камеры)
+                    </li>
+                    <li>
+                        <b>Облачная синхронизация</b> настроек, музыки, голосовых команд
+                    </li>
+                    <li>
+                        <b>Обновление сертификатов</b> для критичных функций ADAS
+                    </li>
+                </ul>
+                <h2>Что происходит в России</h2>
+                <p>Когда машина пересекает границу Китая, китайские eSIM <b>теряют связь</b> - они зарегистрированы только в китайских сетях без data-роуминга.</p>
+                <div class="note note-warning">
+                    <div class="note-icon">📡</div>
+                    <div>
+                        <b>Машина «выехала из КНР и для Xiaomi перестала существовать».</b> Это критически важно понимать. Все облачные функции - отваливаются. Уведомления об ошибках продолжают копиться в логах машины, но Xiaomi их не видит.
+                    </div>
+                </div>
+                <p>Что отваливается без связи:</p>
+                <ul>
+                    <li>Полноценный автопилот NOA</li>
+                    <li>Удалённое управление через приложение (только если Hotspot не настроен)</li>
+                    <li>Sentry mode с удалённым просмотром</li>
+                    <li>Автоматические OTA-обновления</li>
+                    <li>Голосовое управление через облако (Siri-аналог Xiao Ai)</li>
+                    <li>Обновление сертификатов ADAS - могут начать выпадать ошибки</li>
+                </ul>
+                <h2>Симптомы «отваливающейся» телематики</h2>
+                <p>Если машина видит eSIM, но обновления не приходят, могут быть такие проявления:</p>
+                <ul>
+                    <li>Машина «ограничена 140 км/ч», даже после прохождения обкатки</li>
+                    <li>Не запускается режим Boost</li>
+                    <li>В приложении машина показывается «синей» вместо «зелёной»</li>
+                    <li>Иногда ограничения снимаются после раздачи интернета на машину, но возвращаются через пару дней</li>
+                    <li>Регулярно вылетают предупреждения «требуется обновление сертификатов»</li>
+                </ul>
+                <h2>Решение 1: Раздача интернета</h2>
+                <p>Самый распространённый способ:</p>
+                <ol>
+                    <li>Включаешь Hotspot на телефоне (любая сим, в т.ч. российская)</li>
+                    <li>В машине подключаешься к этому Hotspot через Wi-Fi</li>
+                    <li>Многие функции начинают работать (открытие из приложения, музыка из стримов)</li>
+                </ol>
+                <p>Но <b>OTA-обновления и связь с серверами Xiaomi через российский IP не пройдут</b> - Xiaomi проверяет геолокацию по IP.</p>
+                <h2>Решение 2: Активация eSIM через клубный сервис</h2>
+                <p>Компания XMETA (см. <a href="/service.html">раздел про сервис</a>) делает <b>модификацию блока телематики</b>, чтобы он начал принимать обычные SIM-карты с международным роумингом. Это не штатная функция, а модификация, поэтому подходит не всем.</p>
+                <p>Что входит в процедуру:</p>
+                <ul>
+                    <li>Перешивка прошивки блока телематики</li>
+                    <li>Подмена сертификата и идентификации SIM</li>
+                    <li>Установка eSIM с международным data-роумингом</li>
+                    <li>По запросу — установка приложений (заранее прислать список, подготовят под YU7)</li>
+                </ul>
+                <p>Актуальные цены, сроки и список услуг — на странице <a href="/service.html">клубного сервиса</a> и в канале <a href="https://t.me/xmetaru" target="_blank" rel="noopener">@xmetaru</a>. После восстановления связи OTA-обновления приходят удалённо.</p>
+                <h2>Где находится блок телематики</h2>
+                <p>В отличие от SU7, в YU7 блок телематики расположен в ногах у пассажира переднего, для доступа, необходимо снимать все пороги, ковролин, там будет блок мультимедии, внутри него плата телематики. Будьте осторожны к блоку подводится антифриз. Стоимость ошибки 800 000+ руб.</p>
+                <p>Если нужно посмотреть / найти / отключить - обращайся в клубный сервис.</p>
+                <h2>Когда eSIM может «ожить»</h2>
+                <p>Известный сценарий: если машина <b>находится у границ Китая</b>, eSIM зарегистрируется в китайской сети, обновятся сертификаты, прилетит OTA-обновление. После возвращения в РФ - некоторое время функции могут работать, пока сертификаты не устареют снова.</p>
+                <h2>Что не помогает</h2>
+                <ul>
+                    <li>Впаивать отдельную <b>обычную SIM,</b>&nbsp;обновления OTA приходить не будут.
+                    </li>
+                    <li>Использовать <b>российский 4G</b> через Hotspot - даст интернет, но не активирует функции, привязанные к китайскому IP.
+                    </li>
+                    <li>Использовать <b>обычный VPN</b> с китайским сервером - не работает, машина обращается к серверам через специфичные API.
+                    </li>
+                </ul>
+                <div class="source-box">
+                    <div class="label">Источник</div>
+                    По обсуждениям в чате клуба © 2024—2026 - около 120 сообщений по теме телематики и связи. Это одна из самых активно обсуждаемых тем после октября 2025.
+                </div>
+            </article>
+        </div>
+        <footer>
+            <div class="container">
+                <p>Телематика YU7 · YU7.site</p>
+                <p style="margin-top: 14px;"><span class="signature">© Herbert Wells</span></p>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>

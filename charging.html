@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Зарядка и батарея Xiaomi YU7 · YU7.site</title>
+        <meta name="description" content="Всё про зарядку Xiaomi YU7: зарядная станция Xiaomi, замена батарейки в ключе, режим разряда (V2L), что делать если авто обесточено. Материалы из закрепов клуба.">
+        <meta name="author" content="Herbert Wells">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <style>:root {
+    --bg: #0a0a0b;
+    --bg-2: #121215;
+    --card: #17171c;
+    --card-hover: #1d1d24;
+    --border: #26262d;
+    --border-light: #33333c;
+    --text: #ececf1;
+    --text-dim: #9a9aa8;
+    --text-muted: #6b6b78;
+    --accent: #ff6900;
+    --accent-soft: #ff9a3c;
+    --blue: #4a9eff;
+    --green: #3ecf8e;
+    --red: #ef4444;
+    --yellow: #fbbf24;
+}
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+  html {
+    scroll-behavior: smooth;
+}
+
+  body {
+    font-family: 'Manrope', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 15% 5%, rgba(255, 105, 0, 0.1), transparent 45%),
+      radial-gradient(circle at 85% 90%, rgba(74, 158, 255, 0.06), transparent 45%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+  a {
+    color: inherit;
+    text-decoration: none;
+}
+
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 11, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+}
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+}
+
+  .logo {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+  .logo-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+}
+
+  .back-link {
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+  .back-link:hover {
+    color: var(--accent);
+}
+
+  /* HERO */
+  .hero {
+    padding: 48px 0 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+}
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+  .hero-eyebrow::before {
+    content: "";
+    width: 18px;
+    height: 1px;
+    background: var(--accent);
+}
+
+  .hero h1 {
+    font-size: clamp(28px, 6vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 14px;
+}
+
+  .hero h1 .hl {
+    background: linear-gradient(90deg, #ff6900, #ff9a3c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+  .hero p {
+    color: var(--text-dim);
+    font-size: 16px;
+    max-width: 640px;
+}
+
+  /* SECTION */
+  .section {
+    margin-bottom: 36px;
+}
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+  /* ARTICLES */
+  .articles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+  .article {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+    transition: all .2s;
+    position: relative;
+}
+
+  .article.ready {
+    cursor: pointer;
+}
+
+  .article.ready:hover {
+    border-color: var(--accent);
+    background: var(--card-hover);
+    transform: translateX(2px);
+}
+
+  .article.wip {
+    opacity: 0.72;
+    cursor: default;
+}
+
+  .article-icon {
+    font-size: 26px;
+    line-height: 1;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-2);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+  .article.ready .article-icon {
+    background: rgba(255, 105, 0, 0.1);
+    border: 1px solid rgba(255, 105, 0, 0.2);
+}
+
+  .article-content {
+    min-width: 0;
+}
+
+  .article-title {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+}
+
+  .article-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+  .article-status {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+  .article-status.ready {
+    background: rgba(62, 207, 142, 0.15);
+    color: var(--green);
+}
+
+  .article-status.wip {
+    background: var(--border);
+    color: var(--text-muted);
+}
+
+  .article-arrow {
+    font-size: 22px;
+    color: var(--text-muted);
+    transition: transform .2s, color .2s;
+}
+
+  .article.ready:hover .article-arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+  @media (max-width: 520px) {
+    .article {
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+    }
+    .article-status, .article-arrow {
+        grid-column: 2;
+        justify-self: start;
+    }
+    .article-arrow {
+        display: none;
+    }
+}
+
+  /* INFO BOX */
+  .info {
+    background: linear-gradient(135deg, rgba(74,158,255,0.08), rgba(74,158,255,0.02));
+    border: 1px solid rgba(74,158,255,0.22);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 14px;
+    line-height: 1.55;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+  .info-icon {
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 1px;
+}
+
+  .info b {
+    color: var(--blue);
+}
+
+  /* FOOTER */
+  footer {
+    padding: 40px 0 30px;
+    margin-top: 50px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+  footer p {
+    margin-bottom: 6px;
+}
+
+  footer .signature {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+  footer .source {
+    color: var(--text-dim);
+    margin-top: 10px;
+}
+
+  footer .source a {
+    color: var(--accent);
+    border-bottom: 1px dashed rgba(255,105,0,0.4);
+}</style>
+        <!-- === SEO meta auto-generated 2026-04-27 === -->
+        <link rel="canonical" href="https://yu7.site/charging.html">
+        <meta property="og:url" content="https://yu7.site/charging.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Зарядка и батарея Xiaomi YU7 · YU7.site">
+        <meta property="og:description" content="Всё про зарядку Xiaomi YU7: зарядная станция Xiaomi, замена батарейки в ключе, режим разряда (V2L), что делать если авто обесточено. Материалы из закрепов клуба.">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Зарядка и батарея Xiaomi YU7 · YU7.site">
+        <meta name="twitter:description" content="Всё про зарядку Xiaomi YU7: зарядная станция Xiaomi, замена батарейки в ключе, режим разряда (V2L), что делать если авто обесточено. Материалы из закрепов клуба.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Всё про питание Xiaomi YU7","name":"Зарядка и батарея Xiaomi YU7 · YU7.site","description":"Всё про зарядку Xiaomi YU7: зарядная станция Xiaomi, замена батарейки в ключе, режим разряда (V2L), что делать если авто обесточено. Материалы из закрепов клуба.","url":"https://yu7.site/charging.html","inLanguage":"ru-RU","author":{"@type":"Person","name":"Herbert Wells"},"publisher":{"@type":"Organization","name":"YU7.site","logo":{"@type":"ImageObject","url":"https://yu7.site/icon-512.png"}},"image":"https://yu7.site/assets/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://yu7.site/charging.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yu7.site/"},{"@type":"ListItem","position":2,"name":"Всё про питание Xiaomi YU7","item":"https://yu7.site/charging.html"}]}]}
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="container nav-inner">
+                <a href="/" class="logo"> <span class="logo-dot"></span>
+      YU7.site </a>
+                <a href="/" class="back-link">← На главную</a>
+            </div>
+        </nav>
+        <div class="container">
+            <section class="hero">
+                <div class="hero-eyebrow">⚡ Зарядка и батарея</div>
+                <h1>Всё про питание<br><span class="hl">Xiaomi YU7</span></h1>
+                <p>Зарядная станция, сетевые адаптеры, режим V2L (отдача энергии), тонкости зимней эксплуатации батареи и что делать, если авто обесточено. Материалы из закрепов клуба.</p>
+            </section>
+            <!-- СТАНЦИЯ И КАБЕЛИ -->
+            <div class="section">
+                <div class="section-title">Станция и зарядные кабели</div>
+                <div class="articles">
+                    <a class="article ready" href="/charging-station.html"> <div class="article-icon">🔌</div> <div class="article-content">
+                            <div class="article-title">Инструкция к зарядной станции Xiaomi</div>
+                            <div class="article-desc">7 и 11 кВт, характеристики, индикатор, PDF-инструкция</div>
+                        </div> <div class="article-status ready">Готово</div> <div class="article-arrow">→</div> </a>
+                    <a class="article ready" href="/adapters.html"> <div class="article-icon">🔗</div> <div class="article-content">
+                            <div class="article-title">Адаптеры и переходники - что купить в РФ</div>
+                            <div class="article-desc">GB/T, Type 2, CCS Combo 2 - 4 уровня набора, цены, подводные камни</div>
+                        </div> <div class="article-status ready">Готово</div> <div class="article-arrow">→</div> </a>
+                    <a class="article ready" href="/home220.html"> <div class="article-icon">🔌</div> <div class="article-content">
+                            <div class="article-title">Виды зарядных станций: 220В, 380В и DC</div>
+                            <div class="article-desc">От розетки до DC 20 кВт - как выбрать, что нужно от электрики, сколько стоит</div>
+                        </div> <div class="article-status ready">Готово</div> <div class="article-arrow">→</div> </a>
+                </div>
+            </div>
+            <!-- БАТАРЕЯ -->
+            <div class="section">
+                <div class="section-title">Батарея: эксплуатация</div>
+                <div class="articles">
+                    <a class="article ready" href="/winter.html"> <div class="article-icon">❄️</div> <div class="article-content">
+                            <div class="article-title">Зимняя эксплуатация батареи</div>
+                            <div class="article-desc">Прогрев, реальный запас хода, советы при −20 °C и ниже</div>
+                        </div> <div class="article-status ready">Готово</div> <div class="article-arrow">→</div> </a>
+                    <a class="article ready" href="/v2l.html"> <div class="article-icon">🔋</div> <div class="article-content">
+                            <div class="article-title">Режим разряда (V2L) - отдача энергии</div>
+                            <div class="article-desc">Питание бытовых приборов от авто: розетки, мощность, ограничения</div>
+                        </div> <div class="article-status ready">Готово</div> <div class="article-arrow">→</div> </a>
+                    <a class="article ready" href="/soc-range.html"> <div class="article-icon">📊</div> <div class="article-content">
+                            <div class="article-title">SOC, деградация, реальный пробег</div>
+                            <div class="article-desc">Как читать показания, что считается нормой, графики из приложения</div>
+                        </div> <div class="article-status ready">Готово</div> <div class="article-arrow">→</div> </a>
+                </div>
+            </div>
+            <!-- АВАРИЙНЫЕ СИТУАЦИИ -->
+            <div class="section">
+                <div class="section-title">Если что-то пошло не так</div>
+                <div class="articles">
+                    <a class="article ready" href="/no-power.html"> <div class="article-icon">⚠️</div> <div class="article-content">
+                            <div class="article-title">Авто обесточено: пошаговая инструкция</div>
+                            <div class="article-desc">Как попасть внутрь, где аварийные контакты 12В, прикурить или буксировать</div>
+                        </div> <div class="article-status ready">Готово</div> <div class="article-arrow">→</div> </a>
+                    <a class="article ready" href="/battery-key.html"> <div class="article-icon">🔑</div> <div class="article-content">
+                            <div class="article-title">Замена батарейки в ключе</div>
+                            <div class="article-desc">Тип CR2450, порядок действий, как вскрыть брелок без поломки</div>
+                        </div> <div class="article-status ready">Готово</div> <div class="article-arrow">→</div> </a>
+                </div>
+            </div>
+            <!-- ИСТОЧНИКИ -->
+            <div class="section">
+                <div class="info">
+                    <div class="info-icon">📚</div>
+                    <div>
+                        <b>Источник материалов:</b> закреплённое сообщение FAQ по зарядке и батарее из чата © 2024—2026. Оригинальные посты и фото - авторства участников клуба. По мере готовности материалы будут появляться здесь в виде отдельных статей.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <p>Зарядка и батарея Xiaomi YU7 · справочник владельца</p>
+                <p style="margin-top: 14px;"><span class="signature">© Herbert Wells</span></p>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>

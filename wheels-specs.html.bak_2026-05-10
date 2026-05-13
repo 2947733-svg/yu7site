@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Параметры шин и дисков Xiaomi YU7 · YU7.site</title>
+        <meta name="description" content="Заводские размеры шин и дисков Xiaomi YU7: R19, R20, R21, разболтовка PCD, центральное отверстие, клиренс. FAQ владельца.">
+        <meta name="author" content="Herbert Wells">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/article.css?v=4">
+        <style>.spec-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 18px 0;
+    font-size: 14px;
+}
+  .spec-table th, .spec-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+  .spec-table th {
+    background: var(--bg-2);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+  .spec-table tr:last-child td {
+    border-bottom: none;
+}
+  .spec-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: var(--accent);
+}
+  .video-card {
+    display: block;
+    background: var(--card, #17171c);
+    border: 1px solid var(--border, #26262d);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 16px 0;
+    transition: border-color .15s;
+    text-decoration: none;
+    color: inherit;
+}
+  .video-card:hover { border-color: var(--accent, #ff6900); }
+  .video-author {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent, #ff6900);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+  .video-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+  .video-meta {
+    font-size: 13px;
+    color: var(--text-muted, #6b6b78);
+}</style>
+        <!-- === SEO meta auto-generated 2026-04-27 === -->
+        <link rel="canonical" href="https://yu7.site/wheels-specs.html">
+        <meta property="og:url" content="https://yu7.site/wheels-specs.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Параметры шин и дисков Xiaomi YU7 · YU7.site">
+        <meta property="og:description" content="Заводские размеры шин и дисков Xiaomi YU7: R19, R20, R21, разболтовка PCD, центральное отверстие, клиренс. FAQ владельца.">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Параметры шин и дисков Xiaomi YU7 · YU7.site">
+        <meta name="twitter:description" content="Заводские размеры шин и дисков Xiaomi YU7: R19, R20, R21, разболтовка PCD, центральное отверстие, клиренс. FAQ владельца.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Параметры шин и дисков Xiaomi YU7","name":"Параметры шин и дисков Xiaomi YU7 · YU7.site","description":"Заводские размеры шин и дисков Xiaomi YU7: R19, R20, R21, разболтовка PCD, центральное отверстие, клиренс. FAQ владельца.","url":"https://yu7.site/wheels-specs.html","inLanguage":"ru-RU","author":{"@type":"Person","name":"Herbert Wells"},"publisher":{"@type":"Organization","name":"YU7.site","logo":{"@type":"ImageObject","url":"https://yu7.site/icon-512.png"}},"image":"https://yu7.site/assets/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://yu7.site/wheels-specs.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yu7.site/"},{"@type":"ListItem","position":2,"name":"Параметры шин и дисков Xiaomi YU7","item":"https://yu7.site/wheels-specs.html"}]}]}
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container header-inner">
+                <a href="/" class="logo"><span class="logo-dot"></span>YU7.site</a>
+                <a href="/" class="back-link">← На главную</a>
+            </div>
+        </header>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="/">Главная</a> · <span>Шины и диски</span> · <span>Параметры</span>
+            </nav>
+            <article class="article">
+                <h1>Параметры шин и дисков Xiaomi YU7</h1>
+                <p class="lead">Заводские размеры всех трёх версий и базовые параметры для подбора неоригинальных дисков.</p>
+                <h2>Заводские шины</h2>
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Размер</th>
+                            <th>Перед</th>
+                            <th>Зад</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>R19</b> (база)</td>
+                            <td class="spec-val">245/55 R19 107W</td>
+                            <td class="spec-val">245/55 R19 107W</td>
+                        </tr>
+                        <tr>
+                            <td><b>R20</b></td>
+                            <td class="spec-val">245/50 R20 105W</td>
+                            <td class="spec-val">245/50 R20 105W</td>
+                        </tr>
+                        <tr>
+                            <td><b>R21</b> (топ)</td>
+                            <td class="spec-val">245/45 R21 104W</td>
+                            <td class="spec-val">275/40 R21 107W</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>На R19 и R20 - одинарные размеры по обеим осям. На R21 и R22 - <b>разноширокие</b>: задние шире.</p>
+                <h3>На что обращать внимание при подборе шин</h3>
+                <ul>
+                    <li><b>Индекс нагрузки</b> - по мануалу не ниже <b>104</b> на колесо (это около 900 кг на одно колесо). Заводская комплектация R19/R20 идёт с запасом - индекс <b>105–107</b>.</li>
+                    <li><b>Индекс скорости</b> - заводской <b>W</b> (270 км/ч). Это требование под максимальную скорость YU7 по сертификату (240 км/ч). Для зимних шин допустимо опуститься до <b>H</b> (210 км/ч): зимой такие скорости не катают.</li>
+                    <li><b>Сезонность</b> - заводские шины летние. На зиму нужен отдельный комплект; на R21 ассортимент особенно ограничен - про варианты см. блок «Шины на R21» ниже.</li>
+                </ul>
+                <h2>Параметры дисков</h2>
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th>Значение</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Разболтовка (PCD)</td>
+                            <td class="spec-val">5 × 114,3</td>
+                        </tr>
+                        <tr>
+                            <td>Центральное отверстие (CB)</td>
+                            <td class="spec-val">64,5 мм</td>
+                        </tr>
+                        <tr>
+                            <td>Резьба колёсного болта</td>
+                            <td class="spec-val">M14 × 1,5</td>
+                        </tr>
+                        <tr>
+                            <td>Базовая ось: 20"</td>
+                            <td class="spec-val">8.0J, вылет ET 38,5</td>
+                        </tr>
+                        <tr>
+                            <td>Передняя ось: 21"</td>
+                            <td class="spec-val">8.0J, вылет ET 36</td>
+                        </tr>
+                        <tr>
+                            <td>Задняя ось: 21"</td>
+                            <td class="spec-val">9.5J, вылет ET 42</td>
+                        </tr>
+                        <tr>
+                            <td>Передняя ось: 22"&nbsp;под 265/40/22</td>
+                            <td class="spec-val">9J, вылет ET 32</td>
+                        </tr>
+                        <tr>
+                            <td>Задняя ось: 22" под 295/35/22</td>
+                            <td class="spec-val">10.5J, вылет ET 44</td>
+                        </tr>
+                        <tr>
+                            <td>Момент затяжки</td>
+                            <td class="spec-val">180&plusmn;15 Н·м</td>
+                        </tr>
+                        <tr>
+                            <td>Допуск балансировки</td>
+                            <td class="spec-val">≤ 10 г</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Эти параметры не одинаковы для разных версий и размеров. Правильные вылеты лучше всего согласовывать с изготовителями кованных дисков (Vestis и т.п.).</p>
+                <h2>Клиренс</h2>
+                <ul>
+                    <li>
+                        <b>YU7 Pro / Max:</b> пневмоподвеска, клиренс регулируется от <b>147 до 222 мм</b> (диапазон 75 мм)
+                    </li>
+                    <li>
+                        <b>YU7 RWD:</b> без пневмы, клиренс фиксированный
+                    </li>
+                </ul>
+                <h2>Что такое CDC</h2>
+                <p>В топовой комплектации YU7 в дополнение к пневмоподвеске стоят <b>адаптивные амортизаторы</b> с электронным управлением жёсткостью — система называется <b>CDC</b> (Continuous Damping Control, непрерывное управление демпфированием).</p>
+                <p>Что это значит на практике:</p>
+                <ul>
+                    <li>На каждом амортизаторе стоит электромагнитный клапан, который регулирует поток гидравлической жидкости</li>
+                    <li>Блок управления опрашивает датчики (вертикальное ускорение кузова, угол поворота руля, скорость, нажатие педалей) сотни раз в секунду и меняет жёсткость каждого амортизатора отдельно</li>
+                    <li>На неровности один амортизатор «расслабляется», чтобы поглотить удар; в повороте все четыре «зажимаются», чтобы убрать крены; при резком торможении задние твердеют, чтобы стабилизировать машину</li>
+                </ul>
+                <p>Это не «настройка подвески от водителя» — это автоматика, которая работает постоянно. Водитель только выбирает <b>общий профиль езды</b> в настройках планшета, а CDC внутри этого профиля адаптируется под каждое мгновение.</p>
+                <p>На младших комплектациях YU7 без CDC стоят обычные пассивные амортизаторы. Какие именно комплектации YU7 идут с CDC, а какие без — уточняйте по конкретной версии (см. раздел про комплектации в <a href="/cncap.html">обзоре безопасности</a> и в официальном мануале).</p>
+                <a href="https://youtu.be/JYKSpx3iP4I" target="_blank" class="video-card" rel="noopener"> <div class="video-author">YU7.site · апрель 2026</div> <div class="video-title">Что такое CDC в Xiaomi YU7 - простыми словами</div> <div class="video-meta">Короткий разбор работы адаптивных амортизаторов: электромагнитный клапан, опрос датчиков, поведение в поворотах и при торможении.</div> </a>
+                <h2>Какой размер выбрать</h2>
+                <ul>
+                    <li>
+                        <b>R19</b> - даёт максимальный запас хода и комфорт. Лучший выбор для зимы и тех, кто ездит на дальние расстояния
+                    </li>
+                    <li>
+                        <b>R20</b> - <b>R21 -&nbsp;</b>золотая середина. По опыту клуба именно R20 даёт оптимальное поведение пневмоподвески
+                    </li>
+                    <li>
+                        <b>R22</b> - лучше всего смотрится, но даёт более жёсткий ход.
+                    </li>
+                    <li>
+                        <p><strong>Стук подвески.</strong> У многих владельцев Xiaomi YU7 встречаются жалобы на глухой стук или бряканье подвески при проезде мелких неровностей, особенно на низкой скорости. Чаще всего звук описывают как глухой короткий удар спереди или сзади. Причина может быть разной — от конструктивной особенности работы стоек и опор до крепежа или элементов подвески; единого источника проблемы пока не нашли. Если стук повторяется регулярно — лучше не откладывать диагностику.</p>
+                    </li>
+                    <li>По обсуждениям в клубном чате владельцы пробовали разные пути: замену втулок стабилизатора, проверку и протяжку крепежа, перекалибровку пневмоподвески, а также замену стоек и амортизаторов. По опыту участников, втулки проблему не решают полностью. Основная версия активных владельцев сводится к особенностям амортизаторов или пневмостоек и их калибровки.</li>
+                    <li>
+                        <p><strong>Шины на R21.</strong><br> Со штатными размерами R21 для Xiaomi YU7, особенно в зимних вариантах, выбор на рынке ограничен. Поэтому владельцы чаще идут двумя путями: либо ищут штатную разноширокую резину, либо ставят более доступный компромиссный размер. Самый доступный и рекомендуемый вариант — <strong>255/45 R21 спереди и 285/40 R21 сзади</strong>. Те, кто не хочет искать редкие размеры и переплачивать, чаще советуют собирать отдельный зимний комплект на <strong>R20</strong>, где выбор шин заметно больше.</p>
+                    </li>
+                </ul>
+                <h2>Связанные статьи</h2>
+                <ul>
+                    <li>
+                        <a href="/tpms.html">Датчики давления (TPMS)</a> - давление, прописка датчиков, типичные ошибки
+                    </li>
+                    <li>
+                        <a href="/jack-mode.html">Режим домкрата</a> - обязательно перед любым шиномонтажом на пневме
+                    </li>
+                    <li>
+                        <a href="/alignment.html">Развал-схождение</a> - нюансы для пневмоподвески
+                    </li>
+                </ul>
+                <div class="source-box">
+                    <div class="label">Источники</div>
+                    Технические параметры сверены с открытыми источниками: <a href="https://en.wikipedia.org/wiki/Xiaomi_YU7" target="_blank" rel="noopener">Wikipedia</a>, <a href="https://www.wheel-size.com/" target="_blank" rel="noopener">Wheel-size.com</a>, <a href="https://evkx.net/models/xiaomi/yu7/" target="_blank" rel="noopener">EVKX.net</a>, документация производителей тюнинг-аксессуаров (BONOSS). Опыт эксплуатации - из чата клуба © 2024—2026. Отдельная благоарность <a href="https://t.me/Nplmstv" target="_blank" rel="noopener">Евгению</a> за помошь в подборе правильных вылетов.
+                </div>
+            </article>
+        </div>
+        <footer>
+            <div class="container">
+                <p>Параметры шин и дисков · YU7.site</p>
+                <p style="margin-top: 14px;"><span class="signature">© Herbert Wells</span></p>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>

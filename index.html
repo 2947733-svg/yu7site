@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/favicon.ico" sizes="any">
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="theme-color" content="#0a0a0b">
+        <title>YU7.site · Всё про Xiaomi YU7 - справочник владельца</title>
+        <meta name="description" content="Независимый справочник для владельцев Xiaomi YU7: заказ из Китая, активация, ПО, зарядка, обслуживание, HyperTask команды, документы и видеообзоры. По материалам клуба @XiaomiEVclub.">
+        <meta name="author" content="Herbert Wells">
+        <meta property="og:title" content="YU7.site — справочник владельца Xiaomi YU7">
+        <meta property="og:description" content="Всё про Xiaomi YU7: от заказа до обслуживания. HyperTask команды, инструкции, видео и документы.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://yu7.site">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;600&display=swap" rel="stylesheet">
+        <style>:root {
+    --bg: #0a0a0b;
+    --bg-2: #121215;
+    --card: #17171c;
+    --card-hover: #1d1d24;
+    --border: #26262d;
+    --border-light: #33333c;
+    --text: #ececf1;
+    --text-dim: #9a9aa8;
+    --text-muted: #6b6b78;
+    --accent: #ff6900;
+    --accent-soft: #ff9a3c;
+    --blue: #4a9eff;
+    --green: #3ecf8e;
+    --purple: #a78bfa;
+    --pink: #f472b6;
+    --yellow: #fbbf24;
+}
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+  html {
+    scroll-behavior: smooth;
+}
+
+  body {
+    font-family: 'Manrope', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 15% 5%, rgba(255, 105, 0, 0.1), transparent 45%),
+      radial-gradient(circle at 85% 90%, rgba(74, 158, 255, 0.06), transparent 45%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+  a {
+    color: inherit;
+    text-decoration: none;
+}
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10, 10, 11, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+}
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+}
+
+  .logo {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+  .logo-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+}
+
+  .nav-links {
+    display: flex;
+    gap: 22px;
+    font-size: 14px;
+    color: var(--text-dim);
+}
+
+  .nav-links a:hover {
+    color: var(--accent);
+}
+  @media (max-width: 640px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+  /* HERO */
+  .hero {
+    padding: 80px 0 60px;
+    text-align: center;
+    position: relative;
+}
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 6px 14px;
+    border: 1px solid rgba(255, 105, 0, 0.3);
+    border-radius: 40px;
+    margin-bottom: 24px;
+    background: rgba(255, 105, 0, 0.05);
+}
+
+  .hero-eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent);
+}
+
+  .hero h1 {
+    font-size: clamp(38px, 8vw, 72px);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+  .hero h1 .hl {
+    background: linear-gradient(135deg, #ff6900 0%, #ff9a3c 50%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+  .hero p {
+    color: var(--text-dim);
+    font-size: clamp(16px, 2.5vw, 19px);
+    max-width: 620px;
+    margin: 0 auto 36px;
+}
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #0a0a0b;
+    font-weight: 700;
+    padding: 14px 26px;
+    border-radius: 40px;
+    font-size: 15px;
+    transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 10px 40px -10px rgba(255, 105, 0, 0.5);
+}
+
+  .hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px -10px rgba(255, 105, 0, 0.7);
+}
+
+  .hero-cta::after {
+    content: "→";
+    transition: transform .2s;
+}
+
+  .hero-cta:hover::after {
+    transform: translateX(4px);
+}
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+  .hero-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #0a0a0b;
+    font-weight: 700;
+    padding: 14px 26px;
+    border-radius: 40px;
+    font-size: 15px;
+    transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 10px 40px -10px rgba(255, 105, 0, 0.5);
+}
+
+  .hero-cta-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px -10px rgba(255, 105, 0, 0.7);
+}
+
+  .hero-cta-secondary svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+  /* QUICK START */
+  .quick-start {
+    padding: 40px 0 20px;
+}
+
+  .section-title {
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+  .section-subtitle {
+    color: var(--text-dim);
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+  .quick-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 14px;
+}
+
+  .quick-card {
+    background: linear-gradient(135deg, var(--card) 0%, var(--bg-2) 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: all .25s;
+    position: relative;
+    overflow: hidden;
+}
+
+  .quick-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s;
+}
+
+  .quick-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+  .quick-card:hover::before {
+    transform: scaleX(1);
+}
+
+  .quick-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+}
+
+  .quick-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+  .quick-desc {
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+  /* CATEGORIES */
+  .categories {
+    padding: 60px 0 30px;
+}
+
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+  .cat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all .2s;
+    cursor: pointer;
+    position: relative;
+}
+
+  .cat-card:hover {
+    background: var(--card-hover);
+    border-color: var(--border-light);
+    transform: translateY(-2px);
+}
+
+  .cat-icon {
+    font-size: 26px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+  .cat-title {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+  .cat-count {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+  .cat-soon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    padding: 2px 6px;
+    background: var(--border);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+  .cat-card.ready .cat-soon {
+    background: rgba(62, 207, 142, 0.15);
+    color: var(--green);
+}
+
+  /* TOP ARTICLES */
+  .top-articles {
+    padding: 60px 0 30px;
+}
+
+  .articles-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(17, auto);
+    gap: 8px 12px;
+}
+
+  .article-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all .2s;
+    min-width: 0;
+}
+
+  .article-row:hover {
+    border-color: var(--accent);
+    background: var(--card-hover);
+}
+
+  .article-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-muted);
+    min-width: 34px;
+    flex-shrink: 0;
+}
+
+  .article-row:hover .article-number {
+    color: var(--accent);
+}
+
+  .article-text {
+    flex: 1;
+    min-width: 0;
+}
+
+  .article-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+  .article-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+  .article-arrow {
+    font-size: 22px;
+    color: var(--text-muted);
+    transition: transform .2s, color .2s;
+    flex-shrink: 0;
+}
+
+  .article-row:hover .article-arrow {
+    color: var(--accent);
+    transform: translateX(4px);
+}
+
+  @media (max-width: 900px) {
+    .articles-list {
+      grid-template-columns: 1fr;
+      grid-auto-flow: row;
+      grid-template-rows: none;
+      gap: 10px;
+    }
+    .article-row { padding: 16px 18px; gap: 16px; }
+    .article-number { font-size: 22px; min-width: 38px; }
+    .article-title { font-size: 16px; }
+}
+
+  /* ABOUT */
+  .about {
+    padding: 60px 0;
+    margin-top: 40px;
+    background: linear-gradient(180deg, transparent, rgba(255,105,0,0.03));
+    border-top: 1px solid var(--border);
+}
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+}
+  @media (max-width: 720px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+  .about h2 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+  .about p {
+    color: var(--text-dim);
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+
+  .about a {
+    color: var(--accent);
+    border-bottom: 1px dashed rgba(255,105,0,0.4);
+}
+
+  .source-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+  .source-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+  .source-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+  .source-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: var(--bg-2);
+    border-radius: 8px;
+    font-size: 13px;
+    transition: background .2s;
+    min-width: 0;
+}
+
+  .source-item:hover {
+    background: var(--border);
+}
+
+  .source-name {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+  .source-handle {
+    margin-left: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+  @media (max-width: 900px) {
+    .source-list { grid-template-columns: 1fr; gap: 10px; }
+    .source-item { padding: 10px 12px; font-size: 14px; }
+    .source-name { white-space: normal; overflow: visible; text-overflow: clip; }
+    .source-handle { font-size: 12px; }
+}
+
+  /* FOOTER */
+  footer {
+    padding: 40px 0 30px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+  footer p {
+    margin-bottom: 6px;
+}
+
+  footer .signature {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+  /* Animations on load */
+  @keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  .hero > * {
+    animation: fadeUp .6s ease-out backwards;
+}
+
+  .hero-eyebrow {
+    animation-delay: 0s;
+}
+
+  .hero h1 {
+    animation-delay: .1s;
+}
+
+  .hero p {
+    animation-delay: .2s;
+}
+
+  .hero-cta {
+    animation-delay: .3s;
+}
+
+  .hero-actions {
+    animation-delay: .3s;
+}
+
+  /* SEARCH */
+  .nav-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-search-icon {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    display: none; /* hidden on desktop, shown on mobile via media query */
+    align-items: center;
+    justify-content: center;
+    transition: color .15s;
+  }
+  .nav-search-icon:hover { color: var(--accent); }
+  .nav-search-box {
+    display: flex; /* always visible on desktop */
+    align-items: center;
+    gap: 8px;
+    background: var(--card);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 0 10px;
+    height: 34px;
+    width: 240px;
+    transition: border-color .15s;
+  }
+  .nav-search-box:focus-within { border-color: var(--accent); }
+  .nav-search-ico { color: var(--text-muted); flex-shrink: 0; }
+  .nav-search-box input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    width: 100%;
+  }
+  .nav-search-box input::placeholder { color: var(--text-muted); }
+  .nav-search-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 12px;
+    padding: 2px;
+    line-height: 1;
+    flex-shrink: 0;
+    display: none; /* only needed in mobile overlay mode */
+  }
+  .nav-search-close:hover { color: var(--text); }
+  .search-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 360px;
+    background: var(--card);
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    overflow: hidden;
+    z-index: 200;
+  }
+  .search-dropdown.open { display: block; }
+  .search-result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    transition: background .15s;
+  }
+  .search-result:last-child { border-bottom: none; }
+  .search-result:hover { background: var(--card-hover); }
+  .search-result-text { flex: 1; min-width: 0; }
+  .search-result-title {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .search-result-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .search-result-arrow {
+    color: var(--text-muted);
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .search-empty {
+    padding: 20px 16px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  .search-result mark {
+    background: rgba(255,105,0,0.25);
+    color: inherit;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+  @media (max-width: 640px) {
+    .nav-search-icon { display: flex; }
+    .nav-search-box { display: none; }
+    .nav-search-box.open {
+      display: flex;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      width: 100%;
+      height: 58px;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      z-index: 100;
+      padding: 0 16px;
+    }
+    .nav-search-close { display: block; }
+    .search-dropdown {
+      position: fixed;
+      top: 58px;
+      left: 0; right: 0;
+      width: 100%;
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+  }</style>
+            <!-- === SEO meta auto-generated 2026-05-06 === -->
+        <link rel="canonical" href="https://yu7.site/">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="YU7.site · Всё про Xiaomi YU7 - справочник владельца">
+        <meta name="twitter:description" content="Независимый справочник для владельцев Xiaomi YU7: заказ из Китая, активация, ПО, зарядка, обслуживание, HyperTask команды, документы и видеообзоры. По материалам клуба @XiaomiEVclub.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"YU7.site","alternateName":"Xiaomi YU7 справочник владельца","url":"https://yu7.site/","inLanguage":"ru-RU","description":"Независимый справочник для владельцев Xiaomi YU7: заказ из Китая, активация, ПО, зарядка, обслуживание, HyperTask команды, документы и видеообзоры. По материалам клуба @XiaomiEVclub.","publisher":{"@type":"Organization","name":"YU7.site","logo":{"@type":"ImageObject","url":"https://yu7.site/icon-512.png"}}},{"@type":"Organization","name":"YU7.site","url":"https://yu7.site/","logo":"https://yu7.site/icon-512.png"}]}
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="container nav-inner">
+                <a href="/" class="logo"> <span class="logo-dot"></span>
+      YU7.site </a>
+                <div class="nav-links">
+                    <a href="#start">С чего начать</a>
+                    <a href="#categories">Разделы</a>
+                    <a href="#about">О проекте</a>
+                </div>
+                <div class="nav-search" id="navSearch">
+                    <button type="button" class="nav-search-icon" id="searchToggle" aria-label="Поиск">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    </button>
+                    <div class="nav-search-box" id="searchBox">
+                        <svg class="nav-search-ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        <input type="search" id="searchInput" placeholder="Поиск по сайту…" autocomplete="off" spellcheck="false">
+                        <button type="button" class="nav-search-close" id="searchClose" aria-label="Закрыть">✕</button>
+                    </div>
+                    <div class="search-dropdown" id="searchDropdown"></div>
+                </div>
+            </div>
+        </nav>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-eyebrow">XIAOMI YU7 · справочник владельца</div>
+                <h1>Всё про <span class="hl">Xiaomi YU7</span><br>в одном месте</h1>
+                <p>От заказа из Китая и получения китайского номера до HyperTask команд, обновлений ПО, ТО и ремонта. Знания клуба владельцев - в удобном формате.</p>
+                <div class="hero-actions">
+                    <a href="#start" class="hero-cta">Начать знакомство</a>
+                    <a href="/voice-commands.html" class="hero-cta-secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                            <line x1="12" y1="19" x2="12" y2="22"></line>
+                        </svg>Голосовые команды</a>
+                </div>
+            </div>
+        </section>
+        <!-- QUICK START -->
+        <section class="quick-start" id="start">
+            <div class="container">
+                <h2 class="section-title">С чего начать</h2>
+                <p class="section-subtitle">Если ты только планируешь покупку или уже ждёшь свой YU7 - начни отсюда</p>
+                <div class="quick-grid">
+                    <a href="/order-china.html" class="quick-card"> <div class="quick-num">01 / ЗАКАЗ</div> <div class="quick-title">Как заказать YU7 из Китая</div> <div class="quick-desc">Посредники, сроки, растаможка, расчёт стоимости</div> </a>
+                    <a href="/china-phone.html" class="quick-card"> <div class="quick-num">02 / АККАУНТ</div> <div class="quick-title">Получение китайского номера</div> <div class="quick-desc">Зачем нужен, где купить, как активировать Mi ID</div> </a>
+                    <a href="/master-account.html" class="quick-card"> <div class="quick-num">03 / АКТИВАЦИЯ</div> <div class="quick-title">Первый запуск и Мастер-аккаунт</div> <div class="quick-desc">Что такое МА, как его передают, на что влияет</div> </a>
+                    <a href="/language.html" class="quick-card"> <div class="quick-num">04 / ЯЗЫК</div> <div class="quick-title">Английский язык интерфейса</div> <div class="quick-desc">Как переключить авто с китайского на English</div> </a>
+                </div>
+            </div>
+        </section>
+        <!-- CATEGORIES -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h2 class="section-title">Все разделы</h2>
+                <p class="section-subtitle">16 тематических разделов</p>
+                <div class="cat-grid">
+                    <a href="/docs.html" class="cat-card ready"> <div class="cat-icon">📄</div> <div class="cat-title">Документы</div> <div class="cat-count">Конфигуратор, мануал</div> </a>
+                    <a href="/activation.html" class="cat-card ready"> <div class="cat-icon">🔐</div> <div class="cat-title">Активация авто</div> <div class="cat-count">Первый запуск, ключи</div> </a>
+                    <a href="/telematics.html" class="cat-card ready"> <div class="cat-icon">📶</div> <div class="cat-title">Телематика и SIM</div> <div class="cat-count">eSIM, связь</div> </a>
+                    <a href="/ota.html" class="cat-card ready"> <div class="cat-icon">🔄</div> <div class="cat-title">ПО и прошивка</div> <div class="cat-count">OTA, обновления</div> </a>
+                    <a href="/apps.html" class="cat-card ready"> <div class="cat-icon">📱</div> <div class="cat-title">Планшет и телефон</div> <div class="cat-count">Популярные приложения на экране YU7</div> </a>
+                    <a href="/charging.html" class="cat-card ready"> <div class="cat-icon">⚡</div> <div class="cat-title">Зарядка и батарея</div> <div class="cat-count">Всё про питаниеXiaomi YU7</div> </a>
+                    <a href="/maintenance.html" class="cat-card ready"> <div class="cat-icon">🔧</div> <div class="cat-title">ТО и обслуживание</div> <div class="cat-count">График и регламент</div> </a>
+                    <a href="/repair.html" class="cat-card ready"> <div class="cat-icon">🛠</div> <div class="cat-title">Ремонт</div> <div class="cat-count">Запчасти, кузов</div> </a>
+                    <a href="/wheels-specs.html" class="cat-card ready"> <div class="cat-icon">🛞</div> <div class="cat-title">Шины и диски</div> <div class="cat-count">Параметры шин и дисков Xiaomi YU7</div> </a>
+                    <a href="/detailing.html" class="cat-card ready"> <div class="cat-icon">✨</div> <div class="cat-title">Тюнинг и детейлинг</div> <div class="cat-count">Плёнка, керамика</div> </a>
+                    <a href="/xiaomi_yu7_hypertask.html" class="cat-card ready"> <div class="cat-icon">🎯</div> <div class="cat-title">HyperTask команды</div> <div class="cat-count">31 команда</div> </a>
+                    <a href="/voice-commands.html" class="cat-card ready"> <div class="cat-icon">🎙️</div> <div class="cat-title">Голосовые команды</div> <div class="cat-count">43 команды · с произношением</div> </a>
+                    <a href="/reviews.html" class="cat-card ready"> <div class="cat-icon">🎬</div> <div class="cat-title">Видеообзоры</div> <div class="cat-count">Подборка роликов</div> </a>
+                    <a href="/cncap.html" class="cat-card ready"> <div class="cat-icon">🛡</div> <div class="cat-title">Безопасность</div> <div class="cat-count">C-NCAP, краш-тесты</div> </a>
+                    <a href="/insurance.html" class="cat-card ready"> <div class="cat-icon">💰</div> <div class="cat-title">Страхование</div> <div class="cat-count">КАСКО и ОСАГО</div> </a>
+                    <a href="/service.html" class="cat-card ready"> <div class="cat-icon">🏙️</div> <div class="cat-title">Клубный сервис</div> <div class="cat-count">Москва · СПб</div> </a>
+                </div>
+            </div>
+        </section>
+        <!-- TOP ARTICLES -->
+        <section class="top-articles" id="articles">
+            <div class="container">
+                <h2 class="section-title">Топ-материалы</h2>
+                <p class="section-subtitle">Полный FAQ владельца YU7 - 34 статьи</p>
+                <div class="articles-list">
+                    <a href="/voice-commands.html" class="article-row"> <div class="article-number">01</div> <div class="article-text">
+                            <div class="article-title">Голосовые команды с произношением</div>
+                            <div class="article-meta">43 команды с TTS</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/no-power.html" class="article-row"> <div class="article-number">02</div> <div class="article-text">
+                            <div class="article-title">Если авто обесточено - что делать</div>
+                            <div class="article-meta">критично для каждого владельца</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/xiaomi_yu7_hypertask.html" class="article-row"> <div class="article-number">03</div> <div class="article-text">
+                            <div class="article-title">HyperTask - 31 готовая команда для YU7</div>
+                            <div class="article-meta">автоматизации жестами и временем</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/charging-station.html" class="article-row"> <div class="article-number">04</div> <div class="article-text">
+                            <div class="article-title">Зарядная станция Xiaomi - инструкция</div>
+                            <div class="article-meta">7 и 11 кВт, PDF для скачивания</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/adapters.html" class="article-row"> <div class="article-number">05</div> <div class="article-text">
+                            <div class="article-title">Адаптеры и переходники в РФ</div>
+                            <div class="article-meta">по опыту 400+ обсуждений в клубе</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/home220.html" class="article-row"> <div class="article-number">06</div> <div class="article-text">
+                            <div class="article-title">Виды зарядных станций: 220В, 380В и DC</div>
+                            <div class="article-meta">от розетки до DC 20 кВт</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/v2l.html" class="article-row"> <div class="article-number">07</div> <div class="article-text">
+                            <div class="article-title">V2L - питание от автомобиля</div>
+                            <div class="article-meta">как использовать YU7 как розетку</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/winter.html" class="article-row"> <div class="article-number">08</div> <div class="article-text">
+                            <div class="article-title">Зимняя эксплуатация батареи</div>
+                            <div class="article-meta">запас хода и прогрев</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/soc-range.html" class="article-row"> <div class="article-number">09</div> <div class="article-text">
+                            <div class="article-title">SOC, пробег, деградация батареи</div>
+                            <div class="article-meta">сколько реально проедешь</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/battery-key.html" class="article-row"> <div class="article-number">10</div> <div class="article-text">
+                            <div class="article-title">Замена батарейки в ключе - CR2450</div>
+                            <div class="article-meta">2 минуты, видео-инструкция</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/apps.html" class="article-row"> <div class="article-number">11</div> <div class="article-text">
+                            <div class="article-title">Популярные приложения на планшете - Huako</div>
+                            <div class="article-meta">ярлыки Telegram, WhatsApp, YouTube</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/language.html" class="article-row"> <div class="article-number">12</div> <div class="article-text">
+                            <div class="article-title">Перевод интерфейса YU7 на английский</div>
+                            <div class="article-meta">видео-инструкция</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/china-phone.html" class="article-row"> <div class="article-number">13</div> <div class="article-text">
+                            <div class="article-title">Получение китайского номера</div>
+                            <div class="article-meta">eSender, передача МА, дополнительные водители</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/wheels-specs.html" class="article-row"> <div class="article-number">14</div> <div class="article-text">
+                            <div class="article-title">Параметры шин и дисков YU7</div>
+                            <div class="article-meta">R19/R20/R21, PCD, клиренс</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/tpms.html" class="article-row"> <div class="article-number">15</div> <div class="article-text">
+                            <div class="article-title">Датчики давления (TPMS)</div>
+                            <div class="article-meta">давление, ошибки, замена</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/jack-mode.html" class="article-row"> <div class="article-number">16</div> <div class="article-text">
+                            <div class="article-title">Режим домкрата перед шиномонтажом</div>
+                            <div class="article-meta">обязательно для пневмы</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/alignment.html" class="article-row"> <div class="article-number">17</div> <div class="article-text">
+                            <div class="article-title">Развал-схождение для YU7</div>
+                            <div class="article-meta">нюансы для пневмоподвески</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/order-china.html" class="article-row"> <div class="article-number">18</div> <div class="article-text">
+                            <div class="article-title">Заказ Xiaomi YU7 из Китая</div>
+                            <div class="article-meta">растаможка, утильсбор, маршрут Хоргос</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/master-account.html" class="article-row"> <div class="article-number">19</div> <div class="article-text">
+                            <div class="article-title">Мастер-аккаунт (МА) и семейный доступ</div>
+                            <div class="article-meta">что это, как принять, ФА</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/maintenance.html" class="article-row"> <div class="article-number">20</div> <div class="article-text">
+                            <div class="article-title">График ТО Xiaomi YU7</div>
+                            <div class="article-meta">регламент, гарантия, что не нужно делать</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/insurance.html" class="article-row"> <div class="article-number">21</div> <div class="article-text">
+                            <div class="article-title">КАСКО и ОСАГО для YU7</div>
+                            <div class="article-meta">компании, цены, нюансы</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/service.html" class="article-row"> <div class="article-number">22</div> <div class="article-text">
+                            <div class="article-title">Клубный сервис в Москве и СПб</div>
+                            <div class="article-meta">что делают, как записаться</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/ota.html" class="article-row"> <div class="article-number">23</div> <div class="article-text">
+                            <div class="article-title">Обновление ПО (OTA)</div>
+                            <div class="article-meta">через сервис, через раздачу интернета</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/carplay.html" class="article-row"> <div class="article-number">24</div> <div class="article-text">
+                            <div class="article-title">Apple CarPlay на YU7</div>
+                            <div class="article-meta">подключение, типичные проблемы</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/cncap.html" class="article-row"> <div class="article-number">25</div> <div class="article-text">
+                            <div class="article-title">Безопасность YU7 - C-NCAP, конструкция</div>
+                            <div class="article-meta">кузов, активные системы, краш-тесты</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/detailing.html" class="article-row"> <div class="article-number">26</div> <div class="article-text">
+                            <div class="article-title">Детейлинг и плёнка</div>
+                            <div class="article-meta">оклейка, керамика, защита</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/docs.html" class="article-row"> <div class="article-number">27</div> <div class="article-text">
+                            <div class="article-title">Документы и руководства</div>
+                            <div class="article-meta">мануал, конфигуратор, гарантии</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/activation.html" class="article-row"> <div class="article-number">28</div> <div class="article-text">
+                            <div class="article-title">Первый запуск YU7</div>
+                            <div class="article-meta">QR, обкатка 300 км, Valet mode</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/keys.html" class="article-row"> <div class="article-number">29</div> <div class="article-text">
+                            <div class="article-title">Ключи - NFC, Bluetooth, Face ID</div>
+                            <div class="article-meta">5 способов открыть машину</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/sentry.html" class="article-row"> <div class="article-number">30</div> <div class="article-text">
+                            <div class="article-title">Режим охраны (Sentry mode)</div>
+                            <div class="article-meta">запись камер, расход батареи</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/pilot.html" class="article-row"> <div class="article-number">31</div> <div class="article-text">
+                            <div class="article-title">Автопилот и Pilot Assistant</div>
+                            <div class="article-meta">что работает в РФ, активация</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/telematics.html" class="article-row"> <div class="article-number">32</div> <div class="article-text">
+                            <div class="article-title">Телематика и SIM</div>
+                            <div class="article-meta">eSIM, восстановление связи</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/repair.html" class="article-row"> <div class="article-number">33</div> <div class="article-text">
+                            <div class="article-title">Ремонт и запчасти</div>
+                            <div class="article-meta">поставщики, кузов, типичные проблемы</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                    <a href="/reviews.html" class="article-row"> <div class="article-number">34</div> <div class="article-text">
+                            <div class="article-title">Видеообзоры Xiaomi YU7</div>
+                            <div class="article-meta">проверенные ролики на русском</div>
+                        </div> <div class="article-arrow">→</div> </a>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div>
+                        <h2>О проекте</h2>
+                        <p>YU7.site - независимый справочник для владельцев китайского электрокроссовера Xiaomi YU7. Здесь собрано всё самое нужное: от оформления заказа в Китае до тонкостей обслуживания, обновлений ПО и полезных автоматизаций HyperTask.</p>
+                        <p>Этот сайт - независимая база знаний, собранная на основе опыта русскоязычного сообщества владельцев Xiaomi YU7. Мы не занимаемся продажами, не оказываем платных услуг и не публикуем информацию за деньги. Всё делается для того, чтобы полезные данные, инструкции и реальные наблюдения были собраны в одном месте. Поддержать проект можно <a href="https://pay.cloudtips.ru/p/a9ed2c99" target="_blank">добровольным донатом</a>.</p>
+                        <p>Нашли ошибку или хотите предложить материал — напишите в <a href="https://t.me/Herbert_Wells" target="_blank" rel="noopener">ЛС</a>.</p>
+                    </div>
+                    <div class="source-box">
+                        <div class="source-label">Источники материалов</div>
+                        <div class="source-list">
+                            <a href="https://t.me/XiaomiEVclub" target="_blank" class="source-item"> <span>💬</span> <span class="source-name">Xiaomi SU7 / YU7 Club Chat</span> <span class="source-handle">@XiaomiEVclub</span> </a>
+                            <a href="https://t.me/GreenAgenda" target="_blank" class="source-item"> <span>📢</span> <span class="source-name">Green Agenda — канал клуба</span> <span class="source-handle">@GreenAgenda</span> </a>
+                            <a href="https://t.me/xiaomiautoclub" target="_blank" class="source-item"> <span>🚗</span> <span class="source-name">Xiaomi Auto Club — SU7, YU7, Ultra</span> <span class="source-handle">@xiaomiautoclub</span> </a>
+                            <a href="https://t.me/YU7Xiaomi" target="_blank" class="source-item"> <span>💬</span> <span class="source-name">YU7 Xiaomi — сообщество владельцев</span> <span class="source-handle">@YU7Xiaomi</span> </a>
+                            <a href="https://t.me/Xiaomi_SU7_ru" target="_blank" class="source-item"> <span>💬</span> <span class="source-name">Xiaomi SU7 YU7 Club</span> <span class="source-handle">@Xiaomi_SU7_ru</span> </a>
+                            <a href="https://t.me/Xiaomi_auto_club" target="_blank" class="source-item"> <span>💬</span> <span class="source-name">Xiaomi Auto Club</span> <span class="source-handle">@Xiaomi_auto_club</span> </a>
+                            <a href="https://t.me/xiaomi_cars_forum" target="_blank" class="source-item"> <span>💬</span> <span class="source-name">Xiaomi Cars Forum</span> <span class="source-handle">@xiaomi_cars_forum</span> </a>
+                            <a href="https://t.me/xiaomi_ev_parts" target="_blank" class="source-item"> <span>🔧</span> <span class="source-name">Xiaomi EV Parts — запчасти</span> <span class="source-handle">@xiaomi_ev_parts</span> </a>
+                            <a href="https://t.me/XiaomiEVru" target="_blank" class="source-item"> <span>💬</span> <span class="source-name">Владельцы Xiaomi EV</span> <span class="source-handle">@XiaomiEVru</span> </a>
+                            <a href="https://t.me/evenergy55" target="_blank" rel="noopener" class="source-link"><span class="source-icon">⚡</span> EVEnergy — зарядки и аксессуары @evenergy55</a>
+                    <a href="https://t.me/xmetaru" target="_blank" class="source-item"> <span>🔧</span> <span class="source-name">XMETA.RU — EV Сервис</span> <span class="source-handle">@xmetaru</span> </a>
+                            <a href="https://t.me/XiaomiY7MAX" target="_blank" class="source-item"> <span>💬</span> <span class="source-name">Xiaomi YU7</span> <span class="source-handle">@XiaomiY7MAX</span> </a>
+                            <a href="https://t.me/xiaomi_carclub" target="_blank" class="source-item"> <span>💬</span> <span class="source-name">Xiaomi YU7 — чат</span> <span class="source-handle">@xiaomi_carclub</span> </a>
+                            <a href="https://www.xiaomiev.com/" target="_blank" class="source-item"> <span>🌐</span> <span class="source-name">Xiaomi EV — офиц. сайт</span> <span class="source-handle">xiaomiev.com</span> </a>
+                            <a href="https://www.douyin.com" target="_blank" class="source-item"> <span>🎬</span> <span class="source-name">Douyin / Bilibili</span> <span class="source-handle">видео-обзоры</span> </a>
+                        </div>
+                        <p style="margin-top: 16px; font-size: 12px; color: var(--text-muted); line-height: 1.5;">
+          Благодарим администраторов клуба и всех энтузиастов, собравших эту базу знаний. Если вы автор какого-либо материала и хотите внести корректировки - свяжитесь через <a href="https://t.me/Herbert_Wells" target="_blank" rel="noopener">ЛС</a>. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <p>© 2026 YU7.site - независимый справочник владельца Xiaomi YU7</p>
+                <p>Сайт не является официальным ресурсом Xiaomi Inc. Все товарные знаки принадлежат их владельцам.</p>
+                <p style="margin-top: 14px;"> <span class="signature">© Herbert Wells</span> </p>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script>
+(function(){
+  // Full-text search index is loaded lazily on first search-box open.
+  // File: /search-index.json (~250 KB, one-time download, then cached by the browser)
+  var PAGES = null;
+  var loadingPromise = null;
+
+  function loadIndex(){
+    if (PAGES) return Promise.resolve(PAGES);
+    if (loadingPromise) return loadingPromise;
+    loadingPromise = fetch('/search-index.json', {cache: 'force-cache'})
+      .then(function(r){ return r.json(); })
+      .then(function(data){ PAGES = data; return PAGES; })
+      .catch(function(){ PAGES = []; return PAGES; });
+    return loadingPromise;
+  }
+
+  var toggle=document.getElementById('searchToggle');
+  var box=document.getElementById('searchBox');
+  var input=document.getElementById('searchInput');
+  var close=document.getElementById('searchClose');
+  var dropdown=document.getElementById('searchDropdown');
+
+  function openSearch(){
+    box.classList.add('open');
+    input.focus();
+    loadIndex(); // prefetch on open
+  }
+  function closeSearch(){
+    box.classList.remove('open');
+    dropdown.classList.remove('open');
+    input.value='';
+    dropdown.innerHTML='';
+  }
+
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function highlight(text, q){
+    // Case-insensitive highlight of q inside text. text must be HTML-escaped already.
+    var qEsc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return text.replace(new RegExp('('+qEsc+')', 'gi'), '<mark>$1</mark>');
+  }
+
+  function makeSnippet(text, q, len){
+    // Find first occurrence of q in text (case-insensitive), return a window around it.
+    if (!text) return '';
+    var lower = text.toLowerCase();
+    var idx = lower.indexOf(q.toLowerCase());
+    if (idx === -1) return '';
+    var before = Math.max(0, idx - 40);
+    var after = Math.min(text.length, idx + q.length + (len - 40 - q.length));
+    var snippet = text.slice(before, after);
+    if (before > 0) snippet = '…' + snippet;
+    if (after < text.length) snippet = snippet + '…';
+    return highlight(escapeHtml(snippet), q);
+  }
+
+  function scorePage(p, q){
+    // Higher score = better match. 0 = no match.
+    var ql = q.toLowerCase();
+    var titleL = p.title.toLowerCase();
+    var metaL = (p.meta || '').toLowerCase();
+    var textL = (p.text || '').toLowerCase();
+
+    if (titleL.indexOf(ql) !== -1) return 100;
+    if (metaL.indexOf(ql) !== -1) return 50;
+    if (textL.indexOf(ql) !== -1) return 10;
+    return 0;
+  }
+
+  function render(results, q){
+    if (results.length === 0){
+      dropdown.innerHTML = '<div class="search-empty">Ничего не найдено</div>';
+      return;
+    }
+    dropdown.innerHTML = results.slice(0, 8).map(function(p){
+      var titleHtml = highlight(escapeHtml(p.title), q);
+      var metaHtml = highlight(escapeHtml(p.meta || ''), q);
+      // If title/meta already matches, show meta as subtitle; otherwise show text snippet.
+      var sub = metaHtml;
+      if (p._score === 10) {
+        var sn = makeSnippet(p.text, q, 120);
+        if (sn) sub = sn;
+      }
+      return '<a href="'+p.url+'" class="search-result">'+
+        '<div class="search-result-text">'+
+          '<div class="search-result-title">'+titleHtml+'</div>'+
+          '<div class="search-result-meta">'+sub+'</div>'+
+        '</div>'+
+        '<div class="search-result-arrow">→</div>'+
+      '</a>';
+    }).join('');
+  }
+
+  function runSearch(q){
+    if (!PAGES) {
+      dropdown.innerHTML = '<div class="search-empty">Загрузка индекса…</div>';
+      dropdown.classList.add('open');
+      loadIndex().then(function(){ if (input.value.trim().toLowerCase() === q) runSearch(q); });
+      return;
+    }
+    var results = [];
+    for (var i = 0; i < PAGES.length; i++){
+      var s = scorePage(PAGES[i], q);
+      if (s > 0) {
+        PAGES[i]._score = s;
+        results.push(PAGES[i]);
+      }
+    }
+    results.sort(function(a,b){ return b._score - a._score; });
+    render(results, q);
+    dropdown.classList.add('open');
+  }
+
+  toggle.addEventListener('click', openSearch);
+  close.addEventListener('click', closeSearch);
+  input.addEventListener('focus', loadIndex); // desktop: preload on focus
+
+  input.addEventListener('input', function(){
+    var q = this.value.trim();
+    if (q.length < 2){
+      dropdown.classList.remove('open');
+      dropdown.innerHTML = '';
+      return;
+    }
+    runSearch(q);
+  });
+
+  document.addEventListener('click', function(e){
+    if (document.getElementById('navSearch').contains(e.target)) return;
+    // Mobile: full close (clears input, hides overlay).
+    // Desktop: keep query in the input, just hide dropdown.
+    if (window.matchMedia('(max-width: 640px)').matches) {
+      closeSearch();
+    } else {
+      dropdown.classList.remove('open');
+    }
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeSearch();
+  });
+})();
+</script>
+    </body>
+</html>

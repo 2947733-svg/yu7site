@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Развал-схождение Xiaomi YU7 · YU7.site</title>
+        <meta name="description" content="Когда делать развал-схождение Xiaomi YU7 и нюансы для пневмоподвески. Краткая FAQ владельца.">
+        <meta name="author" content="Herbert Wells">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/article.css?v=4">
+    </head>
+    <body>
+        <header>
+            <div class="container header-inner">
+                <a href="/" class="logo"><span class="logo-dot"></span>YU7.site</a>
+                <a href="/" class="back-link">← На главную</a>
+            </div>
+        </header>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="/">Главная</a> · <span>Шины и диски</span> · <span>Развал-схождение</span>
+            </nav>
+            <article class="article">
+                <h1>Развал-схождение Xiaomi YU7</h1>
+                <p class="lead">Когда нужно делать и какие нюансы для машины с пневмой.</p>
+                <h2>Когда делать развал-схождение</h2>
+                <ul>
+                    <li>Заметил неравномерный износ резины</li>
+                    <li>Машину уводит в сторону на ровной дороге</li>
+                    <li>После замены пневмостойки или серьёзного удара колесом в яму</li>
+                    <li>Поставил неоригинальные диски с другим вылетом</li>
+                </ul>
+                <p>YU7 приходит с завода с нормальными настройками - без причины делать сход не нужно.</p>
+                <h2>Где делать</h2>
+                <p>Подойдёт любой нормальный 3D-стенд. Никаких специфических приборов под YU7 не требуется. Но <b>обязательно</b> предупреди мастера про пневмоподвеску, если у тебя YU7 Pro или Max. Перед стендом включи <a href="/jack-mode.html">режим домкрата</a>, параметры дисков и шин - в <a href="/wheels-specs.html">отдельной статье</a>.</p>
+                <div class="note note-warning">
+                    <div class="note-icon">📐</div>
+                    <div>
+                        <b>Перед заездом на стенд</b> на версиях с пневмой нужно зафиксировать подвеску в одном положении высоты - иначе автоматическая регулировка клиренса будет менять параметры в процессе замеров. Хороший мастер сам про это знает (как с Audi Q7, Porsche Cayenne и подобными), но обязательно проговори.
+                    </div>
+                </div>
+                <h2>Если уводит в сторону</h2>
+                <p>Перед поездкой на сход-развал - проверь по порядку:</p>
+                <ol>
+                    <li>Давление во всех 4 колёсах одинаковое</li>
+                    <li>Нет разности производителя резины перед/зад</li>
+                    <li>Если оба пункта норма - ехать на стенд</li>
+                </ol>
+                <p>На YU7 заводской развал обычно в норме. Чаще проблема в давлении или неоднородной резине.</p>
+                <h2>Заводские углы установки колёс</h2>
+                <p>Конкретные значения схождения, развала и кастера для передней и задней оси по официальному руководству Xiaomi YU7. Эти цифры пригодятся мастеру на 3D-стенде как референс.</p>
+                <figure style="margin:24px 0;padding:0;">
+                    <a href="/assets/manual/alignment-specs.jpg" target="_blank" rel="noopener">
+                        <img src="/assets/manual/alignment-specs.jpg" alt="Заводские углы установки колёс Xiaomi YU7 — официальный мануал" style="display:block;width:100%;height:auto;border:1px solid var(--border);border-radius:8px;">
+                    </a>
+                    <figcaption style="font-size:13px;color:var(--text-muted);margin-top:8px;text-align:center;">Заводские углы установки колёс Xiaomi YU7 — страница из официального руководства пользователя. Источник: канал <a href="https://t.me/XiaomiEVclub" target="_blank" rel="noopener">@XiaomiEVclub</a>.</figcaption>
+                </figure>
+                </article>
+        </div>
+        <footer>
+            <div class="container">
+                <p>Развал-схождение YU7 · YU7.site</p>
+                <p style="margin-top: 14px;"><span class="signature">© Herbert Wells</span></p>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>

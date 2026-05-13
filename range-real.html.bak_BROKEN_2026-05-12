@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Реальный запас хода Xiaomi YU7 - тесты на трассе и в городе · YU7.site</title>
+        <meta name="description" content="Реальный запас хода Xiaomi YU7 на трассе, в городе, зимой. Расхождение с CLTC до 35 процентов. Расход кВт·ч/100 км по версиям Standard, Pro, Max и условиям езды.">
+        <meta name="author" content="Herbert Wells">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/article.css?v=4">
+        <style>.spec-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 18px 0;
+    font-size: 14px;
+}
+  .spec-table th, .spec-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+  .spec-table th {
+    background: var(--bg-2);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+  .spec-table tr:last-child td {
+    border-bottom: none;
+}
+  .spec-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: var(--accent);
+}</style>
+        <!-- === SEO meta auto-generated 2026-04-27 === -->
+        <link rel="canonical" href="https://yu7.site/range-real.html">
+        <meta property="og:url" content="https://yu7.site/range-real.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Реальный запас хода Xiaomi YU7 - тесты на трассе и в городе · YU7.site">
+        <meta property="og:description" content="Реальный запас хода Xiaomi YU7 на трассе, в городе, зимой. Расхождение с CLTC до 35 процентов. Расход кВт·ч/100 км по версиям Standard, Pro, Max и условиям езды.">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Реальный запас хода Xiaomi YU7 - тесты на трассе и в городе · YU7.site">
+        <meta name="twitter:description" content="Реальный запас хода Xiaomi YU7 на трассе, в городе, зимой. Расхождение с CLTC до 35 процентов. Расход кВт·ч/100 км по версиям Standard, Pro, Max и условиям езды.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Реальный запас хода Xiaomi YU7","name":"Реальный запас хода Xiaomi YU7 - тесты на трассе и в городе · YU7.site","description":"Реальный запас хода Xiaomi YU7 на трассе, в городе, зимой. Расхождение с CLTC до 35 процентов. Расход кВт·ч/100 км по версиям Standard, Pro, Max и условиям езды.","url":"https://yu7.site/range-real.html","inLanguage":"ru-RU","author":{"@type":"Person","name":"Herbert Wells"},"publisher":{"@type":"Organization","name":"YU7.site","logo":{"@type":"ImageObject","url":"https://yu7.site/icon-512.png"}},"image":"https://yu7.site/assets/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://yu7.site/range-real.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yu7.site/"},{"@type":"ListItem","position":2,"name":"Реальный запас хода Xiaomi YU7","item":"https://yu7.site/range-real.html"}]}]}
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container header-inner">
+                <a href="/" class="logo"><span class="logo-dot"></span>YU7.site</a>
+                <a href="/" class="back-link">← На главную</a>
+            </div>
+        </header>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="/">Главная</a> · <span>Эксплуатация</span> · <span>Реальный запас хода</span>
+            </nav>
+            <article class="article">
+                <h1>Реальный запас хода Xiaomi YU7</h1>
+                <p class="lead">Сколько YU7 реально проезжает на одной зарядке - по тестам владельцев и независимых тестеров. Главное: цифры CLTC из проспекта Xiaomi - <b>не то же самое</b>, что в реальной езде.</p>
+
+                <h2>Главное в одной таблице</h2>
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Версия</th>
+                            <th>CLTC<br>(заводское)</th>
+                            <th>Трасса 100 км/ч<br>(лето, +20 °C)</th>
+                            <th>Город<br>(лето)</th>
+                            <th>Трасса зимой<br>(−10 °C)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>YU7</b> (RWD)</td>
+                            <td class="spec-val">830 км</td>
+                            <td class="spec-val">~600 км</td>
+                            <td class="spec-val">~580 км</td>
+                            <td class="spec-val">~430 км</td>
+                        </tr>
+                        <tr>
+                            <td><b>YU7 Pro</b></td>
+                            <td class="spec-val">770 км</td>
+                            <td class="spec-val">~520 км</td>
+                            <td class="spec-val">~530 км</td>
+                            <td class="spec-val">~390 км</td>
+                        </tr>
+                        <tr>
+                            <td><b>YU7 Max</b></td>
+                            <td class="spec-val">760 км</td>
+                            <td class="spec-val">~500 км</td>
+                            <td class="spec-val">~520 км</td>
+                            <td class="spec-val">~390 км</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="font-size:13px;color:var(--text-muted);">Цифры реальных тестов - средние по обзорам владельцев и независимых тестеров. Разброс ±10 % в зависимости от стиля езды, шин, давления и климата.</p>
+
+                <h2>Почему реальные цифры меньше CLTC</h2>
+                <p><b>CLTC</b> (China Light-duty Vehicle Test Cycle) - китайский лабораторный цикл, сильно завышенный относительно европейского WLTP и тем более американского EPA. Это не «обман» Xiaomi, это особенность стандарта. CLTC меряет на стендах при +25 °C с минимальной нагрузкой и плавной ездой.</p>
+                <p>В реальной жизни на запас хода влияют:</p>
+                <ul>
+                    <li><b>Скорость</b> - аэродинамическое сопротивление растёт квадратично. На 130 км/ч расход на 30–40 % выше, чем на 90</li>
+                    <li><b>Температура</b> - при −10 °C батарея отдаёт ~70 % ёмкости, плюс расход на обогрев салона</li>
+                    <li><b>Шины R21</b> - больше пятно контакта, больше вес, меньше запас по сравнению с R19/R20</li>
+                    <li><b>Стиль езды</b> - агрессивные ускорения и торможения «съедают» 10–15 %</li>
+                    <li><b>Климат-контроль</b> - +0,5–1 кВт·ч/час летом, +1,5–3 зимой</li>
+                </ul>
+
+                <h2>Расход в кВт·ч/100 км (по условиям)</h2>
+                <p>Это более объективный показатель чем «км запаса». Делишь ёмкость батареи на расход - получаешь запас хода в данных условиях.</p>
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Условия</th>
+                            <th>YU7 RWD</th>
+                            <th>YU7 Pro</th>
+                            <th>YU7 Max</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Город, лето (+20 °C)</td>
+                            <td class="spec-val">15–17</td>
+                            <td class="spec-val">17–19</td>
+                            <td class="spec-val">19–21</td>
+                        </tr>
+                        <tr>
+                            <td>Трасса 100 км/ч, лето</td>
+                            <td class="spec-val">15–17</td>
+                            <td class="spec-val">18–20</td>
+                            <td class="spec-val">20–22</td>
+                        </tr>
+                        <tr>
+                            <td>Трасса 130 км/ч, лето</td>
+                            <td class="spec-val">22–24</td>
+                            <td class="spec-val">25–27</td>
+                            <td class="spec-val">28–30</td>
+                        </tr>
+                        <tr>
+                            <td>Город, зима (−10 °C)</td>
+                            <td class="spec-val">22–25</td>
+                            <td class="spec-val">24–27</td>
+                            <td class="spec-val">26–29</td>
+                        </tr>
+                        <tr>
+                            <td>Трасса 100 км/ч, зима</td>
+                            <td class="spec-val">22–25</td>
+                            <td class="spec-val">25–28</td>
+                            <td class="spec-val">26–28</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="font-size:13px;color:var(--text-muted);">Цифры из реальных тестов клуба и независимых обзоров (3DNews, Moscow Tesla Club, владельческие тесты на Drive2/Drom).</p>
+
+                <h2>Что съедает запас сильнее всего</h2>
+
+                <h3>1. Скорость на трассе</h3>
+                <p>На скорости от 100 км/ч расход растёт нелинейно. Если едешь 90 - получишь близко к CLTC. Если едешь 130 - минус 30–40 % от заявленного. На 150 км/ч (если есть где) - минус 50 %.</p>
+                <p><b>Практика:</b> на дальних перегонах оптимально 100–110 км/ч. Это компромисс «успеть и не подзаряжаться лишний раз».</p>
+
+                <h3>2. Холод</h3>
+                <p>При −10 °C ёмкость батареи временно падает на ~30 %. Дополнительно энергия уходит на обогрев салона и тёплый «кожух» батареи. Итог: зимой запас хода в 1,5–2 раза меньше летнего.</p>
+                <p><b>YU7 Max лучше переносит зиму</b> - у него NMC-батарея против LFP у RWD/Pro. NMC на холоде теряет меньше. Если планируешь зиму в Сибири - Max объективно лучше.</p>
+
+                <h3>3. Шины и давление</h3>
+                <p>Заводское давление - <b>2,9 бар</b> (см. <a href="/tpms.html">давление</a>). Если упало до 2,3 бар - расход растёт на 10–15 %. Регулярная проверка давления экономит 30–60 км запаса.</p>
+                <p>R21 шины «съедают» примерно на 5–7 % больше чем R19. Если зимой стоит выбор - комплект R20 (компромисс) или комплект R19 (максимум запаса).</p>
+
+                <h3>4. Скорость зарядки и саморазряд</h3>
+                <p>В режиме Sentry (запись с камер) машина теряет 2–3 % в сутки даже не двигаясь - это значит, что после 5 дней простоя из 100 % останется 85–90 %. Если уезжаешь надолго - выключи Sentry или поставь на зарядку.</p>
+
+                <h2>Тепловой насос - что он даёт</h2>
+                <p>В YU7 стоит <b>тепловой насос</b> - не «электрическая печка», а реверсивный кондиционер, который зимой переносит тепло из внешнего воздуха в салон. Это в 2–3 раза эффективнее обычного электронагревателя.</p>
+                <p>На практике это значит, что зимой YU7 расходует на обогрев салона ~1,5–2 кВт·ч/час против ~3–4 у машин без теплового насоса. По итогу за зиму ты экономишь 50–80 км запаса хода.</p>
+
+                <h2>Как поставить личный «потолок» запаса</h2>
+                <ol>
+                    <li>Заряди до 100 % (для дальней поездки - можно, обычно лучше 80 % чтобы беречь батарею)</li>
+                    <li>Сбрось счётчик «средний расход» в меню «Поездка»</li>
+                    <li>Проедь типичный для тебя маршрут 100–200 км</li>
+                    <li>Посмотри расход в кВт·ч/100 км. Подели ёмкость (96,3 для RWD/Pro, 101,7 для Max) на этот расход × 100</li>
+                    <li>Это твой реальный запас в твоих условиях</li>
+                </ol>
+
+                <h2>Связанные материалы</h2>
+                <ul>
+                    <li><a href="/winter.html">Зимняя эксплуатация</a> - как правильно ездить и заряжать YU7 в холода</li>
+                    <li><a href="/soc-range.html">Ёмкость батареи и циклы</a> - сколько заряд-разрядов выдержит и как сохранить ёмкость на 5+ лет</li>
+                    <li><a href="/charging-station.html">Зарядка дома</a> - 220В и 380В, что выбрать</li>
+                    <li><a href="/wheels-specs.html">Шины и диски</a> - давление, индексы нагрузки</li>
+                    <li><a href="/prices.html">Цена и комплектации</a> - какая версия лучше для твоих условий</li>
+                </ul>
+
+                </article>
+        </div>
+        <footer>
+            <div class="container">
+                <p>Реальный запас хода Xiaomi YU7 · YU7.site</p>
+                <p style="margin-top: 14px;"><span class="signature">© Herbert Wells</span></p>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>

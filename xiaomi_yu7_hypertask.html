@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Xiaomi YU7 · HyperTask команды</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@400;600&display=swap" rel="stylesheet">
+        <style>:root {
+    --bg: #0a0a0b;
+    --bg-2: #121215;
+    --card: #17171c;
+    --card-hover: #1c1c22;
+    --border: #26262d;
+    --text: #ececf1;
+    --text-dim: #9a9aa8;
+    --text-muted: #6b6b78;
+    --accent: #ff6900;
+    --accent-soft: #ff6900;
+    --blue: #4a9eff;
+    --green: #3ecf8e;
+}
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+  body {
+    font-family: 'Manrope', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 20% 10%, rgba(255, 105, 0, 0.08), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(74, 158, 255, 0.06), transparent 40%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 10px 18px 60px;
+}
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 11, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+}
+
+  .nav-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+}
+
+  .logo {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+  .logo-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+}
+
+  .back-link {
+    font-size: 13px;
+    color: var(--text-dim);
+    text-decoration: none;
+}
+
+  .back-link:hover {
+    color: var(--accent);
+}
+
+  /* HERO */
+  .hero {
+    padding: 36px 0 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+}
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+  .hero-eyebrow::before {
+    content: "";
+    width: 18px;
+    height: 1px;
+    background: var(--accent);
+}
+
+  .hero h1 {
+    font-size: clamp(30px, 7vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 12px;
+}
+
+  .hero h1 .hl {
+    background: linear-gradient(90deg, #ff6900, #ff9a3c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+  .hero p {
+    color: var(--text-dim);
+    font-size: 15px;
+    max-width: 580px;
+}
+
+  /* SECTION */
+  .section {
+    margin-top: 36px;
+}
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+  /* PLATFORM GRID */
+  .platforms {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+  .platform {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color .2s, transform .2s, background .2s;
+}
+
+  .platform:hover, .platform:active {
+    border-color: var(--accent);
+    background: var(--card-hover);
+    transform: translateY(-1px);
+}
+
+  .platform-name {
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+  .platform-name span.zh {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+  .platform-note {
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+  .platform-url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    margin-top: 4px;
+    word-break: break-all;
+}
+
+  /* SEARCH HINT */
+  .search-hint {
+    background: linear-gradient(135deg, rgba(255,105,0,0.08), rgba(255,105,0,0.02));
+    border: 1px solid rgba(255,105,0,0.25);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 14px;
+}
+
+  .search-hint .icon {
+    font-size: 18px;
+    margin-top: 1px;
+}
+
+  .search-hint b {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: var(--accent);
+    font-size: 16px;
+}
+
+  .search-hint code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    background: rgba(255,255,255,0.07);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+  /* COMMAND LIST */
+  .category-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255,105,0,0.12);
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+  .category-badge.blue {
+    background: rgba(74,158,255,0.12);
+    color: var(--blue);
+}
+
+  .category-badge.green {
+    background: rgba(62,207,142,0.12);
+    color: var(--green);
+}
+
+  .cmd {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+  .cmd-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+  .cmd-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+  .cmd-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    background: rgba(255,105,0,0.1);
+    color: var(--accent);
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid rgba(255,105,0,0.2);
+    transition: all .15s;
+    user-select: all;
+}
+
+  .cmd-code:hover {
+    background: rgba(255,105,0,0.2);
+}
+
+  .cmd-code.copied {
+    background: rgba(62,207,142,0.15);
+    border-color: rgba(62,207,142,0.4);
+    color: var(--green);
+}
+
+  .cmd-zh {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+  /* VIDEO CARDS */
+  .video {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--text);
+    margin-bottom: 10px;
+    transition: border-color .2s, background .2s;
+}
+
+  .video:hover, .video:active {
+    border-color: var(--accent);
+    background: var(--card-hover);
+}
+
+  .video-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+  .video-platform {
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.05);
+    color: var(--text-dim);
+}
+
+  .video-platform.douyin {
+    background: rgba(255,105,0,0.12);
+    color: var(--accent);
+}
+
+  .video-platform.bilibili {
+    background: rgba(255, 102, 153, 0.12);
+    color: #ff6699;
+}
+
+  .video-platform.weibo {
+    background: rgba(230,45,45,0.12);
+    color: #e62d2d;
+}
+
+  .video-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+  .video-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+}
+
+  .video-url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    word-break: break-all;
+    margin-top: 2px;
+}
+
+  /* FOOTER NOTE */
+  .footer-note {
+    margin-top: 40px;
+    padding: 18px;
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+  .footer-note b {
+    color: var(--text);
+}
+
+  @media (max-width: 480px) {
+    .cmd-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}</style>
+            <!-- === SEO meta auto-generated 2026-05-06 === -->
+        <link rel="canonical" href="https://yu7.site/xiaomi_yu7_hypertask.html">
+        <meta property="og:url" content="https://yu7.site/xiaomi_yu7_hypertask.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Xiaomi YU7 · HyperTask команды">
+        <meta property="og:description" content="Подборка рабочих 9-значных кодов HyperTask для Xiaomi YU7, топовые видео с обзорами и площадки, где их искать.">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Xiaomi YU7 · HyperTask команды">
+        <meta name="twitter:description" content="Подборка рабочих 9-значных кодов HyperTask для Xiaomi YU7, топовые видео с обзорами и площадки, где их искать.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"HyperTask команды для Xiaomi YU7","name":"Xiaomi YU7 · HyperTask команды","description":"Подборка рабочих 9-значных кодов HyperTask для Xiaomi YU7, топовые видео с обзорами и площадки, где их искать.","url":"https://yu7.site/xiaomi_yu7_hypertask.html","inLanguage":"ru-RU","author":{"@type":"Person","name":"Herbert Wells"},"publisher":{"@type":"Organization","name":"YU7.site","logo":{"@type":"ImageObject","url":"https://yu7.site/icon-512.png"}},"image":"https://yu7.site/assets/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://yu7.site/xiaomi_yu7_hypertask.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yu7.site/"},{"@type":"ListItem","position":2,"name":"HyperTask команды","item":"https://yu7.site/xiaomi_yu7_hypertask.html"}]}]}
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-inner">
+                <a href="/" class="logo"> <span class="logo-dot"></span>
+      YU7.site </a>
+                <a href="/" class="back-link">← На главную</a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="hero">
+                <div class="hero-eyebrow">Xiaomi HyperTask · 小米超级任务</div>
+                <h1>Полезные команды<br><span class="hl">для Xiaomi YU7</span></h1>
+                <p>Подборка рабочих 9-значных кодов HyperTask, топовые ролики с их обзорами и площадки, где можно найти ещё. Нажми на код - он скопируется.</p>
+            </div>
+            <!-- КАК ЭТО РАБОТАЕТ -->
+            <div class="section">
+                <div class="section-title">Как вводить команды</div>
+                <div class="footer-note" style="margin-top:0">
+                    На экране машины открой приложение <b>小米超级任务 (Xiaomi HyperTask)</b> → нажми кнопку <b>«ввести код» (输入分享码)</b> → вбей 9-значный номер → одним нажатием импортируй задачу. Если в задаче есть устройства Mi Home (米家) - их нужно будет выбрать вручную.
+                </div>
+            </div>
+            <!-- ПЛОЩАДКИ -->
+            <div class="section">
+                <div class="section-title">Где искать - популярные площадки</div>
+                <div class="platforms">
+                    <a href="https://www.douyin.com" class="platform" target="_blank"> <div class="platform-name">Douyin <span class="zh">抖音</span>
+                        </div> <div class="platform-note">🔥 самая большая база роликов</div> <div class="platform-url">douyin.com</div> </a>
+                    <a href="https://www.bilibili.com" class="platform" target="_blank"> <div class="platform-name">Bilibili <span class="zh">哔哩哔哩</span>
+                        </div> <div class="platform-note">🔥 длинные разборы и гайды</div> <div class="platform-url">bilibili.com</div> </a>
+                    <a href="https://www.xiaohongshu.com" class="platform" target="_blank"> <div class="platform-name">Xiaohongshu <span class="zh">小红书</span>
+                        </div> <div class="platform-note">подборки владельцев, лайфстайл</div> <div class="platform-url">xiaohongshu.com</div> </a>
+                    <a href="https://weibo.com" class="platform" target="_blank"> <div class="platform-name">Weibo <span class="zh">微博</span>
+                        </div> <div class="platform-note">свежие новости и посты</div> <div class="platform-url">weibo.com</div> </a>
+                    <a href="https://www.kuaishou.com" class="platform" target="_blank"> <div class="platform-name">Kuaishou <span class="zh">快手</span>
+                        </div> <div class="platform-note">альтернатива Douyin</div> <div class="platform-url">kuaishou.com</div> </a>
+                    <a href="https://www.xchuxing.com" class="platform" target="_blank"> <div class="platform-name">Xchuxing <span class="zh">新出行</span>
+                        </div> <div class="platform-note">авто-комьюнити, длинные списки</div> <div class="platform-url">xchuxing.com</div> </a>
+                </div>
+                <div class="search-hint" style="margin-top:14px">
+                    <div class="icon">🔍</div>
+                    <div>
+                        <b>小米YU7 超级任务 分享码</b>
+                        <br>
+                        Вбивай именно эту фразу иероглифами в поиск Douyin / Bilibili - выдаёт сотни роликов с кодами. Можно сузить: добавить <code>冬季</code> (зимние), <code>充电</code> (зарядка), <code>空调</code> (климат) и т.д.
+                    </div>
+                </div>
+            </div>
+            <!-- ТОП-РОЛИКИ -->
+            <div class="section">
+                <div class="section-title">Топ-ролики с подборками кодов</div>
+                <a href="https://www.bilibili.com/video/BV1tUhwzjExa/" class="video" target="_blank"> <div class="video-head">
+                        <span class="video-platform bilibili">Bilibili</span>
+                        <span>Официальный Xiaomi · 13k просмотров</span>
+                    </div> <div class="video-title">一支视频 了解小米超级任务</div> <div class="video-desc">«Одно видео - и ты знаешь всё про HyperTask». Обзор от официального аккаунта Xiaomi Auto: как создавать, как делиться.</div> <div class="video-url">bilibili.com/video/BV1tUhwzjExa</div> </a>
+                <a href="https://www.douyin.com/shipin/7554224265978234921" class="video" target="_blank"> <div class="video-head">
+                        <span class="video-platform douyin">Douyin</span>
+                        <span>Большая сборка «прикольных» кодов</span>
+                    </div> <div class="video-title">小米超级任务好玩的分享码 · Забавные коды</div> <div class="video-desc">Подборка: звук Jarvis при посадке, Железный Человек, звук QQ-гонок, режим «Лэй Цзюня», приветствия и прощания.</div> <div class="video-url">douyin.com/shipin/7554224265978234921</div> </a>
+                <a href="https://www.douyin.com/shipin/7530828212721715209" class="video" target="_blank"> <div class="video-head">
+                        <span class="video-platform douyin">Douyin</span>
+                        <span>10 самых полезных кодов в одном посте</span>
+                    </div> <div class="video-title">小米yu7 超级任务设置 · Настройка команд</div> <div class="video-desc">Узкая дорога 360°, быстрое охлаждение, режим лета, отключение фар при зарядке, массаж в дороге.</div> <div class="video-url">douyin.com/shipin/7530828212721715209</div> </a>
+                <a href="https://www.douyin.com/shipin/7554951011946154023" class="video" target="_blank"> <div class="video-head">
+                        <span class="video-platform douyin">Douyin</span>
+                        <span>Безопасность · Звуки передач</span>
+                    </div> <div class="video-title">档位提示音分享码 · Звук при переключении передач</div> <div class="video-desc">«Коды звуков передач - чтобы избежать случайного включения не той передачи и ДТП».</div> <div class="video-url">douyin.com/shipin/7554951011946154023</div> </a>
+                <a href="https://www.xchuxing.com/ins/961813" class="video" target="_blank"> <div class="video-head">
+                        <span class="video-platform">Xchuxing</span>
+                        <span>📋 Самый большой мастер-список сети</span>
+                    </div> <div class="video-title">小米汽车超级任务，全网总结 · Все HyperTask в одном посте</div> <div class="video-desc">Огромная статья на авто-форуме Xchuxing - сотни команд по категориям: зарядка, климат, двери/окна, комфорт, вождение, мультимедиа. Лучший источник для системного изучения.</div> <div class="video-url">xchuxing.com/ins/961813</div> </a>
+                <a href="https://www.xchuxing.com/ins/1010984" class="video" target="_blank"> <div class="video-head">
+                        <span class="video-platform">Xchuxing</span>
+                        <span>❄️ Зимняя подборка</span>
+                    </div> <div class="video-title">小米超级任务分享码·冬季专题 · HyperTask для зимы</div> <div class="video-desc">Подогревы руля и сидений, автопрогрев, размораживание стёкол, обогрев батареи - всё автоматически.</div> <div class="video-url">xchuxing.com/ins/1010984</div> </a>
+            </div>
+            <!-- ОТДЕЛЬНЫЕ КОМАНДЫ, ПО КАТЕГОРИЯМ -->
+            <div class="section">
+                <div class="section-title">Зарядка · 充电相关</div>
+                <span class="category-badge">🔋 Charging</span>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Выключать фары во время зарядки</div>
+                            <div class="cmd-zh">充电时关闭大灯</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">529 738 221</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Массаж водителю при зарядке</div>
+                            <div class="cmd-zh">充电主驾舒缓</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">666 670 566</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Массаж пассажиру при зарядке</div>
+                            <div class="cmd-zh">充电副驾舒缓</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">041 169 446</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Голосовое оповещение о завершении зарядки</div>
+                            <div class="cmd-zh">充电完成播报语音</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">101 015 891</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Оповещение о низком заряде батареи</div>
+                            <div class="cmd-zh">电量低播报语音</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">101 015 887</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Климат · 空调 / 空气</div>
+                <span class="category-badge blue">❄️ Climate</span>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Режим быстрого охлаждения</div>
+                            <div class="cmd-zh">极速降温</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">953 450 660</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Быстрое охлаждение (слабее)</div>
+                            <div class="cmd-zh">极速降温减弱</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">152 693 536</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Мягкий режим кондиционера</div>
+                            <div class="cmd-zh">温和空调模式</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">783 889 222</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Летний режим кондиционера</div>
+                            <div class="cmd-zh">夏日空调模式</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">720 707 503</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Предупреждение о сильном загрязнении воздуха</div>
+                            <div class="cmd-zh">空气重度污染警告</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">101 015 881</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Двери · Окна · Свет</div>
+                <span class="category-badge green">🚪 Doors &amp; Lights</span>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Авто-закрытие окон на высокой скорости</div>
+                            <div class="cmd-zh">高速关窗</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">969 956 241</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Авто-закрытие окон при наборе скорости</div>
+                            <div class="cmd-zh">车速提高自动关窗</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">620 865 450</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Напоминание пассажирам о выходе (забытые вещи)</div>
+                            <div class="cmd-zh">乘客下车提醒</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">755 545 800</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Ночью при выходе - автоматически включать свет в салоне</div>
+                            <div class="cmd-zh">夜间下车自动开启车内灯</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">101 015 874</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Напоминание, если открыли дверь без постановки на паркинг</div>
+                            <div class="cmd-zh">未驻车开门警告</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">101 015 880</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Снимать детский замок на паркинге</div>
+                            <div class="cmd-zh">驻车自动解除童锁</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">101 015 872</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Безопасность и вождение</div>
+                <span class="category-badge">🛡️ Safety</span>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Отключение предупреждения превышения скорости &laquo;необходимо в ручную отключить ползунок)</div>
+                            <div class="cmd-zh">Speed Of Sound</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">382 564 218</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Режим «узкая дорога 360°» (камеры кругового обзора на узких улицах)</div>
+                            <div class="cmd-zh">窄路辅助360</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">841 764 680</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Выход из 360° при наборе скорости</div>
+                            <div class="cmd-zh">提速退出360</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">029 208 456</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">N-передача → автоматически открывать окно водителя</div>
+                            <div class="cmd-zh">N档自动打开主驾车窗</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">373 152 168</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Авто-удаление запотевания при низкой температуре</div>
+                            <div class="cmd-zh">低温自动除雾</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">101 015 866</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Выключить звук низкой скорости и уведомлений при посадке водителя</div>
+                            <div class="cmd-zh">Low Exterior Off</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">047 194 131</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Комфорт и массаж</div>
+                <span class="category-badge blue">💆 Comfort</span>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Расслабляющий режим для длинной поездки</div>
+                            <div class="cmd-zh">长途驾驶舒缓</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">994 115 005</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Массажный режим на длинную поездку</div>
+                            <div class="cmd-zh">长途按摩模式</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">501 650 088</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Авто-массаж водителю</div>
+                            <div class="cmd-zh">主驾自动按摩</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">101 015 875</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Подогрев руля - слабый режим, автоматически</div>
+                            <div class="cmd-zh">自动方向盘加热弱档</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">101 015 324</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Заднюю дверь открыл → переднее пассажирское сиденье вперёд</div>
+                            <div class="cmd-zh">后排开门副驾位置前移</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">612 413 622</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section-title">Фан-команды · развлечения</div>
+                <span class="category-badge green">🎮 Fun</span>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Включение музыки при посадке в машину</div>
+                            <div class="cmd-zh">Play Music</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">418 136 560</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Приветствие при посадке в машину</div>
+                            <div class="cmd-zh">上车打招呼</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">216 434 217</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Прощание при выходе</div>
+                            <div class="cmd-zh">下车再见</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">426 597 328</div>
+                    </div>
+                </div>
+                <div class="cmd">
+                    <div class="cmd-top">
+                        <div>
+                            <div class="cmd-title">Звуки из QQ-гонок (режим «Рено») - для ностальгии</div>
+                            <div class="cmd-zh">琳琅天上 · QQ飞车雷诺</div>
+                        </div>
+                        <div class="cmd-code" onclick="copyCode(this)">557 873 071</div>
+                    </div>
+                </div>
+            </div>
+            <!-- ФУТЕР -->
+            <div class="section">
+                <div class="section-title">Важно</div>
+                <div class="footer-note">
+                    <b>1.</b> Коды работают на <b>Xiaomi YU7</b> (все версии) и <b>SU7</b> после обновления HyperOS (актуальная версия) и выше.<br>
+                    <br>
+                    <b>2.</b> Некоторые задачи требуют дополнительных устройств Mi Home (米家) - их нужно выбирать вручную при импорте.<br>
+                    <br>
+                    <b>3.</b> Авторы команд - обычные владельцы, Xiaomi официально такие подборки не поддерживает. Всё проверено сообществом, но перед использованием - почитай описание задачи на экране.<br>
+                    <br>
+                    <b>4.</b> Свежие коды удобнее всего искать на Douyin по запросу <span style="font-family:'Noto Sans SC',sans-serif;color:var(--accent)">小米超级任务 分享码</span>.
+                </div>
+            </div>
+        </div>
+        <script>
+  function copyCode(el) {
+    const code = el.textContent.replace(/\s+/g, '');
+    navigator.clipboard.writeText(code).then(() => {
+      const original = el.textContent;
+      el.classList.add('copied');
+      el.textContent = '✓ скопировано';
+      setTimeout(() => {
+        el.classList.remove('copied');
+        el.textContent = original;
+      }, 1200);
+    }).catch(() => {
+      // fallback — просто подсветка
+      el.classList.add('copied');
+      setTimeout(() => el.classList.remove('copied'), 1000);
+    });
+  }
+</script>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>

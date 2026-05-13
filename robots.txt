@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /_pgbackup/
+Disallow: /_pginfo/
+Disallow: /pinegrow.json
+Disallow: /notes/
+
+Sitemap: https://yu7.site/sitemap.xml

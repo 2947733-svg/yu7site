@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Обновление ПО Xiaomi YU7 - OTA и через сервис · YU7.site</title>
+        <meta name="description" content="Как обновить прошивку Xiaomi YU7 в России: OTA по воздуху не работает без китайской связи, обновление через клубный сервис, особенности версий ПО.">
+        <meta name="author" content="Herbert Wells">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/article.css?v=4">
+        <!-- === SEO meta auto-generated 2026-04-27 === -->
+        <link rel="canonical" href="https://yu7.site/ota.html">
+        <meta property="og:url" content="https://yu7.site/ota.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Обновление ПО Xiaomi YU7 - OTA и через сервис · YU7.site">
+        <meta property="og:description" content="Как обновить прошивку Xiaomi YU7 в России: OTA по воздуху не работает без китайской связи, обновление через клубный сервис, особенности версий ПО.">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Обновление ПО Xiaomi YU7 - OTA и через сервис · YU7.site">
+        <meta name="twitter:description" content="Как обновить прошивку Xiaomi YU7 в России: OTA по воздуху не работает без китайской связи, обновление через клубный сервис, особенности версий ПО.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Обновление ПО Xiaomi YU7","name":"Обновление ПО Xiaomi YU7 - OTA и через сервис · YU7.site","description":"Как обновить прошивку Xiaomi YU7 в России: OTA по воздуху не работает без китайской связи, обновление через клубный сервис, особенности версий ПО.","url":"https://yu7.site/ota.html","inLanguage":"ru-RU","author":{"@type":"Person","name":"Herbert Wells"},"publisher":{"@type":"Organization","name":"YU7.site","logo":{"@type":"ImageObject","url":"https://yu7.site/icon-512.png"}},"image":"https://yu7.site/assets/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://yu7.site/ota.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yu7.site/"},{"@type":"ListItem","position":2,"name":"Обновление ПО Xiaomi YU7","item":"https://yu7.site/ota.html"}]}]}
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="container header-inner">
+                <a href="/" class="logo"><span class="logo-dot"></span>YU7.site</a>
+                <a href="/" class="back-link">← На главную</a>
+            </div>
+        </header>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="/">Главная</a> · <span>ПО и прошивка</span> · <span>Обновление ПО</span>
+            </nav>
+            <article class="article">
+                <h1>Обновление ПО Xiaomi YU7</h1>
+                <p class="lead">Главная боль владельца YU7 в России: OTA по воздуху не работает без китайской связи.</p>
+                <h2>Главное</h2>
+                <ul>
+                    <li>В Китае YU7 обновляется <b>OTA по воздуху</b> через мобильную связь автомобиля (две китайские eSIM в блоке телематики)
+                    </li>
+                    <li>В России <b>китайская eSIM не работает</b> - машина не имеет связи с серверами Xiaomi
+                    </li>
+                    <li>Поэтому в РФ обновления делают <b>через клубный сервис</b> в Москве или Санкт-Петербурге (E.N.SERVICE или XMETA, см. <a href="/service.html">статью про сервис</a>)
+                    </li>
+                    <li>Альтернативы нет,&nbsp;<b>раздача интернета</b> с китайской симки или смартфона с китайской прошивкой ничего не даёт
+                    </li>
+                </ul>
+                <h2>Зачем вообще обновляться</h2>
+                <p>Xiaomi регулярно выпускает обновления, которые меняют функциональность машины:</p>
+                <ul>
+                    <li>Улучшение работы автопилота (LCC, AEB, Pilot Assistant)</li>
+                    <li>Новые функции в HyperOS (Sentry mode, голосовое управление)</li>
+                    <li>Исправление багов</li>
+                    <li>Изменение поведения рекуперации, ограничения скорости, круиза</li>
+                    <li>Иногда - новые опции (например, обновление 1.9.7 убрало проблему с BT-ключами)</li>
+                </ul>
+                <div class="note note-warning">
+                    <div class="note-icon">⚠️</div>
+                    <div>
+                        <b>Не каждое обновление - улучшение.</b> В клубе спорят: на новых прошивках рекуперация стала &laquo;слабее&raquo; (на 100% - хуже, чем на старых на 70%), максимальная скорость для адаптивного круиза ограничена 140 км/ч (раньше было 160+), некоторые функции урезали. Перед обновлением - спроси в чате клуба, что нового и стоит ли.
+                    </div>
+                </div>
+                <h2>Способ 1 - через клубный сервис</h2>
+                <p>Самый надёжный способ для России:</p>
+                <ol>
+                    <li>Записываешься в <a href="/service.html">клубный сервис</a> (E.N.SERVICE или XMETA в Москве или Санкт-Петербурге)
+                    </li>
+                    <li>Привозишь машину</li>
+                    <li>Сервис подключается к машине через своё оборудование</li>
+                    <li>Заливают актуальную прошивку</li>
+                    <li>Проверяют корректность установки</li>
+                </ol>
+                <p>Плюсы: <b>гарантированно</b>, всегда актуальная версия, диагностика побочных проблем. Минус - поездка в сервис (для регионов).</p>
+                                <h2>Сколько стоит обновление в РФ</h2>
+                <p>По обсуждениям в каналах @XiaomiEVclub и @XiaomiY7MAX, цены у клубных провайдеров (на 05.2026):</p>
+                <h3>Восстановление связи с серверами Xiaomi</h3>
+                <ul>
+                    <li><b>SU7:</b> 130 000 ₽</li>
+                    <li><b>YU7:</b> 140 000 ₽</li>
+                </ul>
+                <p>Разовая операция. После восстановления связи машина сама подтягивает свежие прошивки по воздуху — <b>обновления самой машины становятся бесплатными</b>, в том числе прошивки ключей.</p>
+                <h3>Обновление приложений Машины</h3>
+                <ul>
+                    <li>Если связь уже восстановлена — <b>50 000 ₽</b></li>
+                    <li>Отдельно, без восстановленной связи — <b>80 000 ₽</b></li>
+                </ul>
+                <div class="note note-info">
+                    <div class="note-icon">💡</div>
+                    <div>
+                        Цены примерные, по обсуждениям в клубе. Перед обращением уточняйте актуальный прайс у конкретного провайдера.
+                    </div>
+                </div>
+                <h2>Способ 2 - рядом с границей Китая</h2>
+                <p>У некоторых владельцев обновление появляется, когда автомобиль находится рядом с китайским регионом обслуживания и имеет доступ к Базовым Станциям КНР.</p>
+                <div class="note note-info">
+                    <div class="note-icon">📡</div>
+                    <div>
+                        <b>Российская роуминговая CN SIM-карта не поможет</b> - машина обращается к китайским серверам Xiaomi, которые проверяют гео-локацию по IP и др параметрам.
+                    </div>
+                </div>
+                <h2>Как получить новую прошивку (с восстановленной связью)</h2>
+                <p>Если связь восстановлена и машина видит серверы Xiaomi — обновления приходят сами, но ускорить процесс можно так:</p>
+                <ul>
+                    <li>Новые версии (например, 1.16) приходят сначала <b>бета-тестерам по приглашению</b> через приложение Xiaomi Auto. Чтобы получить — пройти регистрацию-приглашение в приложении (приходит уведомление)</li>
+                    <li>Запуск установки делается <b>с телефона</b>, не из меню машины</li>
+                    <li>Если в машине пишет «у вас последняя версия» — ждать приглашения или массового релиза</li>
+                    <li>Серверы обновлений менее загружены <b>после 19:00 МСК</b> — старое наблюдение клуба</li>
+                </ul>
+                <h2>Какая прошивка стоит у меня</h2>
+                <p>Точное расположение версии ПО в меню зависит от самой версии прошивки. Универсально:</p>
+                <ul>
+                    <li>На планшете открой <b>Настройки</b>
+                    </li>
+                    <li>Найди раздел «О машине» / «Об устройстве» / «Обновление ПО»</li>
+                    <li>Версия будет указана в формате типа &laquo;1.10.0&raquo; или &laquo;Xiaomi HyperOS 1.10.x&raquo;</li>
+                </ul>
+                <div class="note note-warning">
+                    <div class="note-icon">🇷🇺</div>
+                    <div>
+                        <b>Русификация слетает после обновления.</b> Если интерфейс был русифицирован не с завода — после OTA русификацию нужно делать заново. Это норма, не баг. См. <a href="/language.html">статью про язык интерфейса</a>.
+                    </div>
+                </div>
+                <h2>Что делать если обновление прервалось</h2>
+                <div class="note note-danger">
+                    <div class="note-icon">🚨</div>
+                    <div>
+                        <b>Не выключай машину во время обновления.</b> Прерывание может привести к «кирпичу» - машина не сможет загрузиться. Если такое всё же произошло - срочно в клубный сервис, восстанавливать через диагностическое оборудование.
+                    </div>
+                </div>
+                <p>Обновление обычно занимает <b>30–90 минут</b>. На это время:</p>
+                <ul>
+                    <li>Машина должна стоять</li>
+                    <li>Уровень заряда батареи - минимум 30%</li>
+                    <li>12В аккумулятор - в норме</li>
+                    <li>Wi-Fi-соединение стабильное</li>
+                </ul>
+                <h2>Глобальная прошивка с английским языком</h2>
+                <p>Xiaomi периодически анонсирует «глобальную» прошивку с английским голосовым управлением, для рынков за пределами Китая. На 2026 год такой прошивки массово ещё нет, машины в РФ обновляются на стандартные китайские версии (английский интерфейс при этом доступен - см. <a href="/language.html">статью про язык</a>).</p>
+                <h2>Откат прошивки</h2>
+                <p>Самостоятельно - <b>невозможно</b>. Загрузчик YU7 закрыт, скачать APK прошивки и установить нельзя. Если очень нужно вернуть старую версию - только через клубный сервис, и то не во всех случаях возможно.</p>
+                <h2>Как настроить время на YU7</h2>
+                <p>Самостоятельно — <b>никак</b>. Это самый задаваемый вопрос среди новых владельцев YU7 в РФ: машина показывает китайское время, и переключателя в настройках для смены часового пояса нет. Реальное решение — <b>только через клубный сервис</b>: они подключаются к машине и меняют часовой пояс через диагностическое ПО.</p>
+                <p>После восстановления связи с серверами Xiaomi время может начать обновляться автоматически по геолокации, но в стандартной офлайн-конфигурации в РФ это не работает.</p>
+                <div class="source-box">
+                    <div class="label">Источник</div>
+                    По обсуждениям в ТГ чатах&nbsp;- около 290 сообщений по теме обновлений за период 2025&#8211;2026.
+                </div>
+            </article>
+        </div>
+        <footer>
+            <div class="container">
+                <p>Обновление ПО YU7 · YU7.site</p>
+                <p style="margin-top: 14px;"><span class="signature">© Herbert Wells</span></p>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>

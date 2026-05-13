@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/favicon.ico" sizes="any">
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="theme-color" content="#0a0a0b">
+        <title>Голосовые команды Xiaomi YU7 - с произношением · YU7.site</title>
+        <meta name="description" content="Шпаргалка голосовых команд для Xiaomi YU7: иероглифы, транскрипция на русском, перевод. Нажми на команду — услышишь правильное произношение. Составил Herbert Wells.">
+        <meta name="author" content="Herbert Wells">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>:root {
+    --bg: #0a0a0b;
+    --bg-2: #121215;
+    --card: #17171c;
+    --card-hover: #1d1d24;
+    --border: #26262d;
+    --border-light: #33333c;
+    --text: #ececf1;
+    --text-dim: #9a9aa8;
+    --text-muted: #6b6b78;
+    --accent: #ff6900;
+    --accent-soft: #ff9a3c;
+    --blue: #4a9eff;
+    --green: #3ecf8e;
+    --purple: #a78bfa;
+    --pink: #f472b6;
+    --yellow: #fbbf24;
+    --red: #ef4444;
+}
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+  html {
+    scroll-behavior: smooth;
+}
+
+  body {
+    font-family: 'Manrope', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 15% 5%, rgba(255, 105, 0, 0.1), transparent 45%),
+      radial-gradient(circle at 85% 90%, rgba(74, 158, 255, 0.06), transparent 45%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+  a {
+    color: inherit;
+    text-decoration: none;
+}
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 11, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+}
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+}
+
+  .logo {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+  .logo-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+}
+
+  .back-link {
+    font-size: 13px;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+  .back-link:hover {
+    color: var(--accent);
+}
+
+  /* HERO */
+  .hero {
+    padding: 48px 0 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+}
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+  .hero-eyebrow::before {
+    content: "";
+    width: 18px;
+    height: 1px;
+    background: var(--accent);
+}
+
+  .hero h1 {
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 12px;
+}
+
+  .hero h1 .hl {
+    background: linear-gradient(90deg, #ff6900, #ff9a3c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+  .hero p {
+    color: var(--text-dim);
+    font-size: 15px;
+    max-width: 620px;
+    margin-bottom: 4px;
+}
+
+  /* HOW IT WORKS */
+  .how-box {
+    background: linear-gradient(135deg, rgba(255,105,0,0.08), rgba(255,105,0,0.02));
+    border: 1px solid rgba(255,105,0,0.25);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+  .how-icon {
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+  .how-text {
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+  .how-text b {
+    color: var(--accent);
+}
+
+  .how-text kbd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    background: rgba(255,255,255,0.08);
+    padding: 2px 8px;
+    border-radius: 5px;
+    border: 1px solid var(--border-light);
+}
+
+  /* CONTROLS */
+  .controls {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+  .prefix-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: linear-gradient(135deg, rgba(74,158,255,0.1), rgba(167,139,250,0.08));
+    border: 1px solid rgba(74,158,255,0.3);
+    border-radius: 10px;
+    transition: all .2s;
+    user-select: none;
+}
+
+  .prefix-toggle:hover {
+    border-color: var(--blue);
+    background: linear-gradient(135deg, rgba(74,158,255,0.18), rgba(167,139,250,0.12));
+}
+
+  .prefix-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    cursor: pointer;
+}
+
+  .prefix-toggle input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--blue);
+    cursor: pointer;
+}
+
+  .prefix-toggle-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+  .prefix-toggle-title {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+  .prefix-toggle-sub {
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+  .prefix-toggle-sub .zh {
+    font-family: 'Noto Sans SC', sans-serif;
+    color: var(--blue);
+    font-weight: 600;
+}
+
+  .prefix-play {
+    background: var(--blue);
+    color: #0a0a0b;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .15s, box-shadow .15s;
+}
+
+  .prefix-play:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(74,158,255,0.5);
+}
+
+  .search-box {
+    position: relative;
+}
+
+  .search-box input {
+    width: 100%;
+    background: var(--bg-2);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    padding: 12px 14px 12px 42px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color .15s;
+}
+
+  .search-box input:focus {
+    border-color: var(--accent);
+}
+
+  .search-box::before {
+    content: "🔍";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+  .categories-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+  .cat-chip {
+    background: var(--bg-2);
+    border: 1px solid var(--border-light);
+    color: var(--text-dim);
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .15s;
+    user-select: none;
+}
+
+  .cat-chip:hover {
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+  .cat-chip.active {
+    background: var(--accent);
+    color: #0a0a0b;
+    border-color: var(--accent);
+}
+
+  /* VOICE SELECTOR */
+  .voice-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+
+  .voice-selector select {
+    background: var(--bg-2);
+    border: 1px solid var(--border-light);
+    color: var(--text);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    flex: 1;
+    min-width: 180px;
+}
+
+  .voice-selector button {
+    background: transparent;
+    border: 1px solid var(--border-light);
+    color: var(--text-dim);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+  .voice-selector button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+  /* CATEGORY SECTIONS */
+  .cat-section {
+    margin-bottom: 32px;
+}
+
+  .cat-section.hidden {
+    display: none;
+}
+
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+  .cat-emoji {
+    font-size: 22px;
+}
+
+  .cat-name {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+  .cat-count {
+    margin-left: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+  .cat-note {
+    margin: -6px 0 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
+
+  /* COMMAND CARD */
+  .cmd {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+    align-items: center;
+    transition: all .2s;
+    cursor: pointer;
+    position: relative;
+}
+
+  .cmd:hover {
+    background: var(--card-hover);
+    border-color: var(--border-light);
+    transform: translateX(2px);
+}
+
+  .cmd.playing {
+    border-color: var(--accent);
+    background: linear-gradient(135deg, rgba(255,105,0,0.12), var(--card));
+    box-shadow: 0 0 0 1px var(--accent), 0 4px 20px -5px rgba(255,105,0,0.4);
+}
+
+  .cmd.hidden {
+    display: none;
+}
+
+  .cmd-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+  .cmd-ru {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+}
+
+  .cmd-zh {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0;
+}
+
+  .cmd-translit {
+    font-size: 13px;
+    color: var(--text-dim);
+    font-style: italic;
+}
+
+  .cmd-prefix-preview {
+    display: none;
+    font-size: 12px;
+    color: var(--blue);
+    font-family: 'Noto Sans SC', sans-serif;
+    background: rgba(74,158,255,0.08);
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-top: 4px;
+}
+
+  body.with-prefix .cmd-prefix-preview {
+    display: inline-block;
+}
+
+  .cmd-play {
+    background: var(--accent);
+    color: #0a0a0b;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .15s, box-shadow .15s;
+    flex-shrink: 0;
+}
+
+  .cmd-play:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 18px rgba(255,105,0,0.5);
+}
+
+  .cmd.playing .cmd-play {
+    animation: pulse 1s ease-in-out infinite;
+}
+  @keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 28px rgba(255,105,0,0.7);
+    }
+}
+
+  /* EMPTY STATE */
+  .empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+}
+
+  .empty-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+    opacity: 0.4;
+}
+
+  /* TTS WARNING */
+  .tts-warning {
+    display: none;
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #fca5a5;
+}
+
+  .tts-warning.active {
+    display: block;
+}
+
+  .tts-warning b {
+    color: #ef4444;
+}
+
+  /* FOOTER */
+  footer {
+    padding: 40px 0 30px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+  footer p {
+    margin-bottom: 6px;
+}
+
+  footer .signature {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+  footer .source {
+    color: var(--text-dim);
+    margin-top: 10px;
+}
+
+  footer .source a {
+    color: var(--accent);
+    border-bottom: 1px dashed rgba(255,105,0,0.4);
+}
+  @media (max-width: 540px) {
+    .cmd-zh {
+        font-size: 15px;
+    }
+    .cmd-ru {
+        font-size: 14px;
+    }
+    .cmd-translit {
+        font-size: 12px;
+    }
+    .cmd-play {
+        width: 40px;
+        height: 40px;
+    }
+}</style>
+        <!-- === SEO meta auto-generated 2026-04-27 === -->
+        <link rel="canonical" href="https://yu7.site/voice-commands.html">
+        <meta property="og:url" content="https://yu7.site/voice-commands.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Голосовые команды Xiaomi YU7 - с произношением · YU7.site">
+        <meta property="og:description" content="Шпаргалка голосовых команд для Xiaomi YU7: иероглифы, транскрипция на русском, перевод. Нажми на команду — услышишь правильное произношение. Составил Herbert Wells.">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Голосовые команды Xiaomi YU7 - с произношением · YU7.site">
+        <meta name="twitter:description" content="Шпаргалка голосовых команд для Xiaomi YU7: иероглифы, транскрипция на русском, перевод. Нажми на команду — услышишь правильное произношение. Составил Herbert Wells.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Голосовые команды с произношением","name":"Голосовые команды Xiaomi YU7 - с произношением · YU7.site","description":"Шпаргалка голосовых команд для Xiaomi YU7: иероглифы, транскрипция на русском, перевод. Нажми на команду — услышишь правильное произношение. Составил Herbert Wells.","url":"https://yu7.site/voice-commands.html","inLanguage":"ru-RU","author":{"@type":"Person","name":"Herbert Wells"},"publisher":{"@type":"Organization","name":"YU7.site","logo":{"@type":"ImageObject","url":"https://yu7.site/icon-512.png"}},"image":"https://yu7.site/assets/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://yu7.site/voice-commands.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yu7.site/"},{"@type":"ListItem","position":2,"name":"Голосовые команды с произношением","item":"https://yu7.site/voice-commands.html"}]}]}
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="container nav-inner">
+                <a href="/" class="logo"> <span class="logo-dot"></span>
+      YU7.site </a>
+                <a href="/" class="back-link">← На главную</a>
+            </div>
+        </nav>
+        <div class="container">
+            <section class="hero">
+                <div class="hero-eyebrow">Xiaomi YU7 · голосовые команды</div>
+                <h1>Голосовые команды<br><span class="hl">с произношением</span></h1>
+                <p>Иероглифы, транскрипция на русском и перевод. Нажми <b>▶</b> - услышишь, как команда звучит на китайском. Работает в любом современном браузере.</p>
+            </section>
+            <div class="how-box">
+                <div class="how-icon">💡</div>
+                <div class="how-text">
+                    <b>Как пользоваться:</b> нажимай на кнопку <kbd>▶</kbd> рядом с любой командой - браузер произнесёт её голосом. Если включить переключатель <b>«С приветствием Сяо Ай»</b> ниже - в начало команды автоматически добавится обращение <kbd>小爱同学</kbd>, как в реальном разговоре с машиной.
+                </div>
+            </div>
+            <div id="ttsWarning" class="tts-warning">
+                <b>Предупреждение:</b>&nbsp;если ваш браузер не поддерживает синтез речи или нет китайского голоса. Попробуйте обновить Chrome, Edge или Safari - там китайский обычно работает из коробки.
+            </div>
+            <div class="controls">
+                <!-- Prefix toggle -->
+                <div class="prefix-toggle">
+                    <label for="prefixToggle" class="prefix-toggle-label">
+                        <input type="checkbox" id="prefixToggle" checked>
+                        <span class="prefix-toggle-text">
+                            <span class="prefix-toggle-title">Добавлять приветствие <span class="zh">小爱同学</span>
+                            </span>
+                            <span class="prefix-toggle-sub">Сяо Ай тун-сюэ - обращение к голосовому ассистенту (как «Привет, Сири»)</span>
+                        </span>
+                    </label>
+                    <button type="button" class="prefix-play" id="prefixPlay" title="Произнести только приветствие" onclick="playPrefix();">▶</button>
+                </div>
+                <!-- Search -->
+                <div class="search-box">
+                    <input type="text" id="search" placeholder="Поиск: багажник, окно, температура...">
+                </div>
+                <!-- Category filter -->
+                <div class="categories-filter" id="catFilter">
+                    <div class="cat-chip active" data-cat="all">Все</div>
+                    <div class="cat-chip" data-cat="activation">Активация</div>
+                    <div class="cat-chip" data-cat="doors">Двери / багажник</div>
+                    <div class="cat-chip" data-cat="charging">Зарядка</div>
+                    <div class="cat-chip" data-cat="windows">Окна / зеркала</div>
+                    <div class="cat-chip" data-cat="climate">Климат</div>
+                    <div class="cat-chip" data-cat="media">Мультимедиа</div>
+                    <div class="cat-chip" data-cat="parking">Парковка</div>
+                    <div class="cat-chip" data-cat="info">Проверка</div>
+                </div>
+                <!-- Voice selector -->
+                <div class="voice-selector">
+                    <span>🗣️ Голос:</span>
+                    <select id="voiceSelect"></select>
+                    <button type="button" onclick="testVoice()">Тест</button>
+                </div>
+            </div>
+            <div id="commandsContainer"></div>
+            <div id="emptyState" class="empty" style="display: none;">
+                <div class="empty-icon">🔍</div>
+                <div>По запросу ничего не найдено</div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <p>Голосовые команды Xiaomi YU7 · с русской транскрипцией и переводом</p>
+                <p style="margin-top: 14px;"><span class="signature">© Herbert Wells</span></p>
+            </div>
+        </footer>
+        <script>
+  // ========== ДАННЫЕ ==========
+  const PREFIX = {
+    zh: '小爱同学',
+    translit: 'Сяо Ай тун-сюэ',
+    ru: 'Привет, Сяо Ай'
+  };
+
+  const CATEGORIES = {
+    activation:  { name: 'Активация',       emoji: '🎙️', note: 'Режим, в котором можно говорить команды напрямую, без приветствия «Сяо Ай тун-сюэ»' },
+    doors:       { name: 'Двери / багажник', emoji: '🚪' },
+    charging:    { name: 'Зарядка',          emoji: '🔌' },
+    windows:     { name: 'Окна / зеркала',  emoji: '🪟' },
+    climate:     { name: 'Климат',          emoji: '❄️' },
+    media:       { name: 'Мультимедиа',     emoji: '🎵' },
+    parking:     { name: 'Парковка',        emoji: '🅿️' },
+    info:        { name: 'Проверка',        emoji: 'ℹ️' },
+  };
+
+  const COMMANDS = [
+    // Активация
+    { cat: 'activation', zh: '打开免唤醒',         translit: 'да-кай мянь хуань-син',                         ru: 'Включи режим без активации' },
+    { cat: 'activation', zh: '关闭免唤醒',         translit: 'гуань-би мянь хуань-син',                       ru: 'Выключи режим без активации' },
+    { cat: 'activation', zh: '设置免唤醒为仅限主驾', translit: 'шэ-чжи мянь хуань-син вэй цзинь-сянь чжу-цзя',  ru: 'Прямые команды — только водителю', noPrefix: true },
+    { cat: 'activation', zh: '设置免唤醒为跟随音区', translit: 'шэ-чжи мянь хуань-син вэй гэнь-суэй инь-цюй',   ru: 'Прямые команды — для всех в салоне', noPrefix: true },
+
+    // Двери/багажник
+    { cat: 'doors', zh: '打开后备箱', translit: 'да-кай хо-бэй-сян',   ru: 'Открой багажник' },
+    { cat: 'doors', zh: '关闭后备箱', translit: 'гуань-би хо-бэй-сян', ru: 'Закрой багажник' },
+    { cat: 'doors', zh: '打开前备箱', translit: 'да-кай цянь-бэй-сян',   ru: 'Открой передний багажник (фрунк)' },
+    { cat: 'doors', zh: '关闭前备箱', translit: 'гуань-би цянь-бэй-сян', ru: 'Закрой передний багажник (фрунк)' },
+    { cat: 'doors', zh: '打开中控锁', translit: 'да-кай чжун-кун-со',   ru: 'Разблокируй центральный замок' },
+    { cat: 'doors', zh: '锁车',       translit: 'со-чэ',                ru: 'Заблокируй машину' },
+
+    // Зарядка
+    { cat: 'charging', zh: '打开充电口', translit: 'да-кай чун-дянь-коу',   ru: 'Открой лючок зарядки' },
+    { cat: 'charging', zh: '关闭充电口', translit: 'гуань-би чун-дянь-коу', ru: 'Закрой лючок зарядки' },
+
+    // Окна / зеркала
+    { cat: 'windows', zh: '打开车窗',   translit: 'да-кай чэ-чуан',     ru: 'Открой окна' },
+    { cat: 'windows', zh: '关闭车窗',   translit: 'гуань-би чэ-чуан',   ru: 'Закрой окна' },
+    { cat: 'windows', zh: '折叠后视镜', translit: 'чжэ-дэ хо-ши-цзин',  ru: 'Сложи зеркала' },
+    { cat: 'windows', zh: '加热后视镜', translit: 'цзя-жэ хо-ши-цзин',  ru: 'Обогрей зеркала' },
+
+    // Климат
+    { cat: 'climate', zh: '打开空调',     translit: 'да-кай кун-тяо',          ru: 'Включи кондиционер' },
+    { cat: 'climate', zh: '关闭空调',     translit: 'гуань-би кун-тяо',        ru: 'Выключи кондиционер' },
+    { cat: 'climate', zh: '设置温度到22度', translit: 'шэ-чжи вэнь-ду дао эр-ши-эр ду', ru: 'Температура 22 °C' },
+    { cat: 'climate', zh: '开启座椅通风', translit: 'кай-ци цзо-и тун-фэн',    ru: 'Включи вентиляцию сидений' },
+    { cat: 'climate', zh: '关闭座椅通风', translit: 'гуань-би цзо-и тун-фэн',  ru: 'Выключи вентиляцию сидений' },
+    { cat: 'climate', zh: '开启座椅加热', translit: 'кай-ци цзо-и цзя-жэ',     ru: 'Включи подогрев сидений' },
+    { cat: 'climate', zh: '关闭座椅加热', translit: 'гуань-би цзо-и цзя-жэ',   ru: 'Выключи подогрев сидений' },
+    { cat: 'climate', zh: '打开座椅按摩',   translit: 'да-кай цзо-и ань-мо',        ru: 'Включи массаж сиденья' },
+    { cat: 'climate', zh: '关闭座椅按摩',   translit: 'гуань-би цзо-и ань-мо',      ru: 'Выключи массаж сиденья' },
+    { cat: 'climate', zh: '打开方向盘加热', translit: 'да-кай фан-сян-пань цзя-жэ', ru: 'Включи обогрев руля' },
+    { cat: 'climate', zh: '关闭方向盘加热', translit: 'гуань-би фан-сян-пань цзя-жэ', ru: 'Выключи обогрев руля' },
+    { cat: 'climate', zh: '打开后窗除霜',   translit: 'да-кай хо-чуан чу-шуан',     ru: 'Включи обогрев заднего стекла' },
+    { cat: 'climate', zh: '关闭后窗除霜',   translit: 'гуань-би хо-чуан чу-шуан',   ru: 'Выключи обогрев заднего стекла' },
+    { cat: 'climate', zh: '打开雨刮',       translit: 'да-кай юй-гуа',              ru: 'Включи дворники' },
+    { cat: 'climate', zh: '关闭雨刮',       translit: 'гуань-би юй-гуа',            ru: 'Выключи дворники' },
+
+    // Навигация
+    // (убрана — Xiaomi использует AMap/Baidu, в РФ не работает)
+
+    // Мультимедиа
+    { cat: 'media', zh: '播放音乐',     translit: 'бо-фан инь-юэ',   ru: 'Воспроизведи музыку' },
+    { cat: 'media', zh: '暂停音乐',     translit: 'цзан-тин инь-юэ', ru: 'Пауза' },
+    { cat: 'media', zh: '下一首',       translit: 'ся-и-шоу',        ru: 'Следующая песня' },
+    { cat: 'media', zh: '上一首',       translit: 'шан-и-шоу',       ru: 'Предыдущая песня' },
+    { cat: 'media', zh: '音量调高',     translit: 'ин-лян тяо-гао',  ru: 'Громче' },
+    { cat: 'media', zh: '音量调低',     translit: 'ин-лян тяо-ди',   ru: 'Тише' },
+    { cat: 'media', zh: '开启无麦K歌',  translit: 'кай-ци у-май кэй-гэ', ru: 'Караоке без микрофона' },
+
+    // Парковка
+    { cat: 'parking', zh: '我要泊车', translit: 'во яо бо-чэ',  ru: 'Запусти парковку' },
+    { cat: 'parking', zh: '退出泊车', translit: 'туй-чу бо-чэ', ru: 'Выйди из парковки' },
+
+    // Проверка
+    { cat: 'info', zh: '告诉我电池电量',     translit: 'гао-су во дянь-чи дянь-лян',         ru: 'Скажи заряд батареи' },
+    { cat: 'info', zh: '升高悬挂',           translit: 'шэн-гао сюань-гуа',                  ru: 'Подними подвеску' },
+    { cat: 'info', zh: '降低悬挂',           translit: 'цзян-ди сюань-гуа',                  ru: 'Опусти подвеску' },
+  ];
+
+  // ========== TTS ==========
+  let voices = [];
+  let selectedVoice = null;
+
+  function loadVoices() {
+    voices = speechSynthesis.getVoices().filter(v =>
+      v.lang.startsWith('zh') || v.lang.startsWith('cmn')
+    );
+    const select = document.getElementById('voiceSelect');
+    select.innerHTML = '';
+
+    if (voices.length === 0) {
+      document.getElementById('ttsWarning').classList.add('active');
+      select.innerHTML = '<option>нет китайского голоса</option>';
+      return;
+    }
+
+    voices.forEach((v, i) => {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = `${v.name} (${v.lang})`;
+      select.appendChild(opt);
+    });
+
+    // Предпочитаем zh-CN
+    const cnVoice = voices.findIndex(v => v.lang === 'zh-CN');
+    selectedVoice = voices[cnVoice >= 0 ? cnVoice : 0];
+    select.value = cnVoice >= 0 ? cnVoice : 0;
+  }
+
+  if ('speechSynthesis' in window) {
+    loadVoices();
+    speechSynthesis.onvoiceschanged = loadVoices;
+  } else {
+    document.getElementById('ttsWarning').classList.add('active');
+  }
+
+  document.getElementById('voiceSelect').addEventListener('change', e => {
+    selectedVoice = voices[e.target.value];
+  });
+
+  function speak(text, cardEl) {
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+
+    // Убрать подсветку с прошлой карточки
+    document.querySelectorAll('.cmd.playing').forEach(el => el.classList.remove('playing'));
+
+    if (cardEl) cardEl.classList.add('playing');
+
+    const voice = selectedVoice;
+    const lang = voice ? voice.lang : 'zh-CN';
+
+    const makeUtter = (phrase) => {
+      const u = new SpeechSynthesisUtterance(phrase);
+      if (voice) u.voice = voice;
+      u.lang = lang;
+      u.rate = 0.9;
+      u.pitch = 1.0;
+      return u;
+    };
+
+    // Проверяем, содержит ли текст приветствие + команду (разделитель ，)
+    const parts = text.split('，');
+
+    if (parts.length > 1) {
+      // Есть приветствие + команда → произносим с паузой 1 сек между ними
+      const prefixUtter = makeUtter(parts[0]);
+      const commandUtter = makeUtter(parts.slice(1).join('，'));
+
+      prefixUtter.onend = () => {
+        // Пауза 1 секунда, потом команда
+        setTimeout(() => {
+          speechSynthesis.speak(commandUtter);
+        }, 1000);
+      };
+
+      commandUtter.onend = () => {
+        if (cardEl) cardEl.classList.remove('playing');
+      };
+      commandUtter.onerror = () => {
+        if (cardEl) cardEl.classList.remove('playing');
+      };
+      prefixUtter.onerror = () => {
+        if (cardEl) cardEl.classList.remove('playing');
+      };
+
+      speechSynthesis.speak(prefixUtter);
+    } else {
+      // Одна фраза без приветствия
+      const utter = makeUtter(text);
+      utter.onend = () => {
+        if (cardEl) cardEl.classList.remove('playing');
+      };
+      utter.onerror = () => {
+        if (cardEl) cardEl.classList.remove('playing');
+      };
+      speechSynthesis.speak(utter);
+    }
+  }
+
+  function playPrefix() {
+    speak(PREFIX.zh, null);
+  }
+
+  function testVoice() {
+    speak('你好，我是小爱同学', null);
+  }
+
+  // ========== РЕНДЕРИНГ ==========
+  function renderCommands() {
+    const container = document.getElementById('commandsContainer');
+    container.innerHTML = '';
+
+    for (const [catKey, catInfo] of Object.entries(CATEGORIES)) {
+      const cmds = COMMANDS.filter(c => c.cat === catKey);
+      if (cmds.length === 0) continue;
+
+      const section = document.createElement('section');
+      section.className = 'cat-section';
+      section.dataset.cat = catKey;
+
+      const header = document.createElement('div');
+      header.className = 'cat-header';
+      header.innerHTML = `
+        <span class="cat-emoji">${catInfo.emoji}</span>
+        <span class="cat-name">${catInfo.name}</span>
+        <span class="cat-count">${cmds.length}</span>
+      `;
+      section.appendChild(header);
+
+      if (catInfo.note) {
+        const note = document.createElement('div');
+        note.className = 'cat-note';
+        note.textContent = catInfo.note;
+        section.appendChild(note);
+      }
+
+      cmds.forEach(cmd => {
+        const card = document.createElement('div');
+        card.className = 'cmd';
+        card.dataset.cat = cmd.cat;
+        card.dataset.search = (cmd.ru + ' ' + cmd.translit + ' ' + cmd.zh).toLowerCase();
+
+        const prefixHint = cmd.noPrefix
+          ? ''
+          : `<span class="cmd-prefix-preview">+ ${PREFIX.zh} ${cmd.zh}</span>`;
+
+        card.innerHTML = `
+          <div class="cmd-content">
+            <div class="cmd-ru">${cmd.ru}</div>
+            <div class="cmd-zh">${cmd.zh}</div>
+            <div class="cmd-translit">${cmd.translit}</div>
+            ${prefixHint}
+          </div>
+          <button class="cmd-play" title="Произнести">▶</button>
+        `;
+
+        card.addEventListener('click', () => {
+          const withPrefix = document.getElementById('prefixToggle').checked && !cmd.noPrefix;
+          const text = withPrefix ? `${PREFIX.zh}，${cmd.zh}` : cmd.zh;
+          speak(text, card);
+        });
+
+        section.appendChild(card);
+      });
+
+      container.appendChild(section);
+    }
+  }
+
+  // ========== ФИЛЬТРЫ ==========
+  function applyFilters() {
+    const query = document.getElementById('search').value.toLowerCase().trim();
+    const activeChip = document.querySelector('.cat-chip.active');
+    const cat = activeChip ? activeChip.dataset.cat : 'all';
+
+    let visibleCount = 0;
+
+    document.querySelectorAll('.cat-section').forEach(section => {
+      let sectionVisible = 0;
+      const sectionCat = section.dataset.cat;
+      const showSection = (cat === 'all' || cat === sectionCat);
+
+      section.querySelectorAll('.cmd').forEach(cmd => {
+        const matchesSearch = !query || cmd.dataset.search.includes(query);
+        const matchesCat = showSection;
+        const visible = matchesSearch && matchesCat;
+        cmd.classList.toggle('hidden', !visible);
+        if (visible) { sectionVisible++; visibleCount++; }
+      });
+
+      section.classList.toggle('hidden', sectionVisible === 0);
+    });
+
+    document.getElementById('emptyState').style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+
+  // ========== ОБРАБОТЧИКИ ==========
+  document.getElementById('search').addEventListener('input', applyFilters);
+
+  document.getElementById('catFilter').addEventListener('click', e => {
+    if (!e.target.classList.contains('cat-chip')) return;
+    document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+    applyFilters();
+  });
+
+  document.getElementById('prefixToggle').addEventListener('change', e => {
+    document.body.classList.toggle('with-prefix', e.target.checked);
+  });
+
+  // Иницииализация
+  renderCommands();
+</script>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>

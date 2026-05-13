@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Xiaomi YU7 зимой - запас хода, прогрев, зимовка · YU7.site</title>
+        <meta name="description" content="Как ведёт себя Xiaomi YU7 в мороз: реальный запас хода при разных температурах, ручной прогрев батареи, как оставить на зимовку. Опыт двух зим из клуба владельцев.">
+        <meta name="author" content="Herbert Wells">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/article.css?v=4">
+        <style>/* Температурная шкала */
+  .temp-scale {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 20px 0;
+}
+  .temp-row {
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+    gap: 14px;
+    align-items: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+}
+  .temp-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-align: center;
+    white-space: nowrap;
+}
+  .temp-label.warm {
+    background: rgba(251,191,36,0.15);
+    color: var(--yellow);
+}
+  .temp-label.cool {
+    background: rgba(74,158,255,0.15);
+    color: var(--blue);
+}
+  .temp-label.cold {
+    background: rgba(167,139,250,0.2);
+    color: #c4b5fd;
+}
+  .temp-label.freeze {
+    background: rgba(239,68,68,0.15);
+    color: var(--red);
+}
+  .temp-info {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.5;
+}
+  .temp-info b {
+    color: var(--text);
+}
+  .temp-km {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent);
+    white-space: nowrap;
+}
+  @media (max-width: 520px) {
+    .temp-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .temp-km {
+        justify-self: start;
+    }
+}
+
+  /* Статистика зимовки */
+  .storage-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+  .storage-row {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--green);
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+}
+  .storage-duration {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--green);
+    padding: 4px 10px;
+    background: rgba(62,207,142,0.1);
+    border-radius: 6px;
+    white-space: nowrap;
+}
+  .storage-text {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.5;
+}
+  .storage-text b {
+    color: var(--text);
+}
+  @media (max-width: 520px) {
+    .storage-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+  /* Dos & don'ts */
+  .do-dont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+}
+  .dd-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+}
+  .dd-card.do {
+    border-top: 3px solid var(--green);
+}
+  .dd-card.dont {
+    border-top: 3px solid var(--red);
+}
+  .dd-title {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+  .dd-card.do .dd-title {
+    color: var(--green);
+}
+  .dd-card.dont .dd-title {
+    color: var(--red);
+}
+  .dd-card ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+  .dd-card li {
+    margin-bottom: 8px;
+}
+  @media (max-width: 560px) {
+    .do-dont {
+        grid-template-columns: 1fr;
+    }
+}</style>
+            <!-- === SEO meta auto-generated 2026-05-06 === -->
+        <link rel="canonical" href="https://yu7.site/winter.html">
+        <meta property="og:url" content="https://yu7.site/winter.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Xiaomi YU7 зимой - запас хода, прогрев, зимовка · YU7.site">
+        <meta property="og:description" content="Как ведёт себя Xiaomi YU7 в мороз: реальный запас хода при разных температурах, ручной прогрев батареи, как оставить на зимовку. Опыт двух зим из клуба владельцев.">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Xiaomi YU7 зимой - запас хода, прогрев, зимовка · YU7.site">
+        <meta name="twitter:description" content="Как ведёт себя Xiaomi YU7 в мороз: реальный запас хода при разных температурах, ручной прогрев батареи, как оставить на зимовку. Опыт двух зим из клуба владельцев.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Xiaomi YU7 зимой","name":"Xiaomi YU7 зимой - запас хода, прогрев, зимовка · YU7.site","description":"Как ведёт себя Xiaomi YU7 в мороз: реальный запас хода при разных температурах, ручной прогрев батареи, как оставить на зимовку. Опыт двух зим из клуба владельцев.","url":"https://yu7.site/winter.html","inLanguage":"ru-RU","author":{"@type":"Person","name":"Herbert Wells"},"publisher":{"@type":"Organization","name":"YU7.site","logo":{"@type":"ImageObject","url":"https://yu7.site/icon-512.png"}},"image":"https://yu7.site/assets/og-image.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://yu7.site/winter.html"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://yu7.site/"},{"@type":"ListItem","position":2,"name":"Зарядка и батарея","item":"https://yu7.site/charging.html"},{"@type":"ListItem","position":3,"name":"Зима","item":"https://yu7.site/winter.html"}]}]}
+        </script>
+            <!-- === FAQPage auto-generated 2026-05-06 === -->
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Почему пишет «батарея холодная» даже когда машина стояла в тёплом гараже?","acceptedAnswer":{"@type":"Answer","text":"Значок относится к температуре внутри батарейного пакета, а не воздуха снаружи. Батарея весом в полтонны промерзает долго и отогревается долго. Если гараж +5 °C, а машина стояла ночь — сам пакет может быть ещё +2, что для быстрой зарядки недостаточно (оптимум — от +15 °C и выше)."}},{"@type":"Question","name":"Можно ли включить одновременно зарядку и прогрев?","acceptedAnswer":{"@type":"Answer","text":"Да, и это правильный сценарий. На медленной зарядке дома машина сама включит прогрев батареи, если температура ниже +5 °C. Плюс можно активировать прогрев салона — за счёт сети, не расходуя заряд. Идеальное использование: приехать, поставить на зарядку, за 20 минут до выезда дать команду «прогрей салон»."}},{"@type":"Question","name":"Сколько расходует машина «в покое» при -15?","acceptedAnswer":{"@type":"Answer","text":"С полностью отключённой охраной и прогревами — 0,1–0,5% в сутки. С включённым стражем — 1–3% в сутки. С прогревом по расписанию — до 5% в сутки (особенно на коротких пробегах, где прогрев по времени дольше самой поездки)."}},{"@type":"Question","name":"Машина пишет 0% на зарядке — что делать?","acceptedAnswer":{"@type":"Answer","text":"Если авто сильно промёрзло и заряд был на минимуме, оно может первые 10–20 минут показывать 0%, но зарядка идёт. Дождитесь, когда батарея прогреется, и процент начнёт расти. Если ничего не меняется 30 минут — возможно, проблема с 12-вольтовым аккумулятором, см. статью «Если авто обесточено»."}}]}
+        </script>
+    </head>
+    <body>
+        <nav>
+            <div class="container nav-inner">
+                <a href="/" class="logo"> <span class="logo-dot"></span>
+      YU7.site </a>
+                <a href="/charging.html" class="back-link">← Зарядка и батарея</a>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="/">Главная</a>
+                <span class="sep">/</span>
+                <a href="/charging.html">Зарядка и батарея</a>
+                <span class="sep">/</span>
+                <span>Зимняя эксплуатация</span>
+            </div>
+            <section class="hero">
+                <div class="hero-eyebrow">❄️ Зима</div>
+                <h1>Xiaomi YU7<br><span class="hl">в мороз</span></h1>
+                <p class="lead">Как ведёт себя машина в холод, на сколько реально хватает заряда, как правильно прогревать батарею и оставлять авто на зимовку. По опыту двух зимних сезонов 2024–25 и 2025–26 в клубе владельцев.</p>
+            </section>
+            <div class="content">
+                <h2>Реальный запас хода по температуре</h2>
+                <p>Главное, что нужно понимать: <b>холод - это не поломка, это физика</b>. Литиевые батареи теряют эффективную ёмкость на морозе (химические реакции замедляются), плюс значительная часть энергии уходит на обогрев салона и поддержание температуры батареи. Это касается любого электромобиля, не только YU7.</p>
+                <p>Вот цифры, которые сложились в клубе за две зимы эксплуатации:</p>
+                <div class="temp-scale">
+                    <div class="temp-row">
+                        <div class="temp-label warm">+10 … +25 °C</div>
+                        <div class="temp-info">Лето. Расход <b>17–23 кВт·ч/100 км</b>. Наилучшие условия - кондиционер работает, но его расход сравним с печкой зимой.
+                        </div>
+                        <div class="temp-km">450–500 км</div>
+                    </div>
+                    <div class="temp-row">
+                        <div class="temp-label cool">0 … -5 °C</div>
+                        <div class="temp-info">Ранняя зима. Расход растёт до <b>23–28 кВт·ч/100 км</b>. Ещё комфортно. Прогрев коротких поездок почти не сказывается.
+                        </div>
+                        <div class="temp-km">370–420 км</div>
+                    </div>
+                    <div class="temp-row">
+                        <div class="temp-label cold">-5 … -15 °C</div>
+                        <div class="temp-info">Обычная зима в Москве. Расход <b>25–30 кВт·ч/100 км</b>. Прогрев батареи и салона ощутимо съедает запас. Идеально тут - зарядка дома.
+                        </div>
+                        <div class="temp-km">320–380 км</div>
+                    </div>
+                    <div class="temp-row">
+                        <div class="temp-label freeze">-15 … -25 °C</div>
+                        <div class="temp-info">Сильный мороз. Расход <b>30–35 кВт·ч/100 км</b>, а на коротких поездках (менее 20 минут) может уходить <b>до 50</b> - прогрев не успевает окупиться километрами.
+                        </div>
+                        <div class="temp-km">280–340 км</div>
+                    </div>
+                </div>
+                <div class="note note-info">
+                    <div class="note-icon">📊</div>
+                    <div>
+                        <b>Полезная деталь:</b> в приложении <a href="https://www.xiaomiev.com/download" target="_blank" rel="noopener">Xiaomi Auto</a> и на экране машины есть разбивка «куда ушла энергия». Там видно, что прогрев салона и поддержание температуры батареи в мороз съедают <b>10–15% от общего расхода</b>. Машина честно это показывает, но не всегда включает в расчёт предполагаемого пробега - поэтому реальные цифры обычно ниже, чем прогноз на приборке.
+                    </div>
+                </div>
+                <h2>Прогрев батареи - что где включить</h2>
+                <p>С версии <b>HyperOS 1.11</b> (появилась в прошивках в конце 2025 года) у YU7 и SU7 добавился <b>ручной предварительный прогрев батареи</b>. До этого функция работала только при навигации к зарядной станции в Китае, в России не срабатывала.</p>
+                <h3>Где включить</h3>
+                <p>Два способа:</p>
+                <ul>
+                    <li>
+                        <b>Через меню:</b> Настройки → Зарядка/разрядка → ручной прогрев батареи
+                    </li>
+                    <li>
+                        <b>Голосом:</b> «Сяо Ай тун-сюэ, прогрей аккумулятор» (小爱同学，给电池加热) или «Включить предварительный прогрев аккумулятора»
+                    </li>
+                </ul>
+                <h3>Когда использовать</h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-body">
+                            <b>Перед быстрой зарядкой на DC-станции.</b> Запусти прогрев <b>за 20–30 минут</b> до приезда на зарядку. Холодная батарея принимает 30–40 кВт вместо обычных 150+, вся быстрая зарядка теряет смысл. Прогретая - выходит на пик сразу.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-body">
+                            <b>Перед дальней поездкой в мороз.</b> Машина сразу поедет с нормальной мощностью и рекуперацией. Без прогрева первые 20–30 минут батарея будет ограничивать и мощность, и рекуперацию.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div class="step-body">
+                            <b>Если стоит на медленной зарядке дома.</b> При температуре батареи ниже +5 °C машина автоматически начинает её греть - и пока идёт зарядка, батарея остаётся тёплой. Дополнительно включать прогрев не нужно.
+                        </div>
+                    </div>
+                </div>
+                <div class="note note-warning">
+                    <div class="note-icon">⚡</div>
+                    <div>
+                        <b>Прогрев ест заряд.</b> ТЭН прогрева потребляет около <b>6–12 кВт</b>. За 30 минут прогрева уходит 3–6 кВт·ч - это около 15–30 км пробега. Если батарея почти пустая, лучше сначала доехать до зарядки и там уже греться при заряде.
+                    </div>
+                </div>
+                <h2>Автоматический подогрев и охлаждение сидений</h2>
+                <p>Отдельная функция HyperOS — машина сама решает, когда включить подогрев или вентиляцию сидений и руля, ориентируясь на температуру в салоне:</p>
+                <ul>
+                    <li>Если в машине холодно — автоматически включается <b>подогрев сидений и руля</b>.</li>
+                    <li>Если жарко — наоборот, включается <b>принудительная вентиляция сидений</b>.</li>
+                    <li>Когда температура нормализовалась — функция отключается тоже автоматически.</li>
+                </ul>
+                <p>Полезно зимой, когда садишься в холодный салон: не нужно вручную крутить подогрев — машина сама поймёт и включит.</p>
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">Источник: канал <a href="https://t.me/XiaomiEVclub" target="_blank" rel="noopener">@XiaomiEVclub</a>, пост <a href="https://t.me/XiaomiEVclub/5358/30015" target="_blank" rel="noopener">#30015</a>.</p>
+                <h2>Зимовка в холодном гараже - что реально</h2>
+                <p>Один из главных зимних вопросов: <b>насколько машина «жрёт» заряд, если просто стоит?</b> По итогам двух сезонов клуб собрал внушительную статистику.</p>
+                <div class="storage-stats">
+                    <div class="storage-row">
+                        <div class="storage-duration">17 дней</div>
+                        <div class="storage-text">80% → 70%. Холодный гараж, <b>охрана включена</b>, прогрев по расписанию включён. Вывод: разрядили сами прогревы.
+                        </div>
+                    </div>
+                    <div class="storage-row">
+                        <div class="storage-duration">23 дня</div>
+                        <div class="storage-text">С 20 ноября по 13 декабря - запас хода <b>439 → 438 км</b> (падение меньше 1%). Всё отключено: охрана, прогрев, ключ убран подальше.
+                        </div>
+                    </div>
+                    <div class="storage-row">
+                        <div class="storage-duration">21 день</div>
+                        <div class="storage-text">50% → 45% в подземном паркинге. Охранник включён, холодильник работает. Стабильные -5% за три недели.</div>
+                    </div>
+                    <div class="storage-row">
+                        <div class="storage-duration">~3 месяца</div>
+                        <div class="storage-text">С 20 ноября до 15 февраля - <b>77% → 75%</b>. Без дозарядки, без прогревов, охрана отключена. Результат: «можно оставлять».
+                        </div>
+                    </div>
+                    <div class="storage-row">
+                        <div class="storage-duration">~3 месяца</div>
+                        <div class="storage-text">С 1 декабря 2025 по 1 марта 2026 - <b>76% → 70%</b>. Под навесом, два прогрева за период. Прогрессивная прошивка v1.11.
+                        </div>
+                    </div>
+                </div>
+                <div class="note note-info">
+                    <div class="note-icon">✅</div>
+                    <div>
+                        <b>Главный вывод:</b> YU7 можно спокойно оставлять на 2–3 месяца без дозарядки, если отключить охрану и прогревы. Саморазряд батареи при минусовой температуре - <b>минимальный</b>, проверено многократно в русских зимних условиях.
+                    </div>
+                </div>
+                <h2>Что делать перед длинной стоянкой</h2>
+                <div class="do-dont">
+                    <div class="dd-card do">
+                        <div class="dd-title">✓ Нужно</div>
+                        <ul>
+                            <li>Зарядить до <b>60–80%</b> (не до 100% - LFP можно, NMC лучше не держать долго на 100%)
+                            </li>
+                            <li>
+                                <b>Отключить «режим стража» (охрану)</b> - это главный пожиратель заряда
+                            </li>
+                            <li>
+                                <b>Отключить прогрев по расписанию</b>, если не планируете ездить
+                            </li>
+                            <li>Выключить холодильник, если есть</li>
+                            <li>Ключ убрать <b>подальше от машины</b> (минимум 5–10 метров), чтобы она не «проснулась» от Bluetooth
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dd-card dont">
+                        <div class="dd-title">✗ Не надо</div>
+                        <ul>
+                            <li>Бояться холода - <b>батарее мороз не страшен</b>, в ней есть терморегуляция
+                            </li>
+                            <li>Включать прогрев «на всякий случай», если не едете - высадит заряд за неделю</li>
+                            <li>Оставлять ключ в бардачке или рядом - машина будет просыпаться каждые несколько часов</li>
+                            <li>Раз в неделю ездить «прогнать батарею» - это только ускоряет разряд</li>
+                            <li>Пытаться держать 100% весь сезон хранения</li>
+                        </ul>
+                    </div>
+                </div>
+                <h2>Зарядка в мороз - особенности</h2>
+                <h3>От розетки на улице</h3>
+                <p>Ключевая засада: в сильный мороз машина параллельно с зарядкой греет батарею, и это <b>забирает до 7 кВт</b>. Если в розетке всего 3,5 кВт (стандартная бытовая), вся мощность уходит на подогрев, а пополнение идёт медленно или вообще стоит на месте. На практике при -20 °C и ниже через обычную розетку заряжаться бессмысленно - поставьте машину в гараж или на тёплую парковку, либо используйте wallbox мощностью хотя бы 7 кВт.</p>
+                <h3>На быстрой DC-зарядке</h3>
+                <p>Без предварительного прогрева холодная батарея принимает <b>30–100 кВт</b> вместо пиковых 150–300. Машина будет «догревать» её сама во время зарядки, поэтому стоять придётся дольше. Решение - включить ручной прогрев за 30 минут до прибытия или поездить на машине 15–20 минут на скорости 80+ км/ч (батарея прогреется от рабочей нагрузки).</p>
+                <div class="note note-warning">
+                    <div class="note-icon">🔋</div>
+                    <div>
+                        <b>Спорный момент про быструю зарядку холодной батареи.</b> В последних прошивках некоторые владельцы замечают, что машина начинает принимать 130 кВт сразу, ещё при значке «батарея холодная». Часть клуба считает это прогрессом, другая - риском для здоровья батареи: при зарядке холодной батареи большими токами ускоряется деградация. Если есть время - лучше прогреть заранее.
+                    </div>
+                </div>
+                <h2>Snow Mode — режим для снега и льда</h2>
+                <p>Отдельный режим вождения для заснеженных и обледенелых дорог. Меняет три вещи одновременно:</p>
+                <ul>
+                    <li><b>Динамика разгона</b> — мощность подаётся плавнее, меньше пробуксовки при старте.</li>
+                    <li><b>Сила рекуперации</b> — снижается, чтобы не было резкой блокировки колёс при отпускании педали газа.</li>
+                    <li><b>ESC/ESP и противобуксовочная система (TCS)</b> — вмешиваются раньше и агрессивнее, помогая удерживать траекторию.</li>
+                </ul>
+                <p><b>Где включить:</b> <code>Settings → Driving → Snow Mode → Turn On</code>.</p>
+                <div class="note note-info">
+                    <div class="note-icon">⚠️</div>
+                    <div>
+                        Чтобы не включать режим заново после каждого выхода из машины, оставляйте включённым <b>Sentry</b> (режим охраны) и не разряжайте машину ниже 20% — иначе Sentry автоматически отключится, и Snow Mode сбросится при следующей посадке.
+                    </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">Источник: канал <a href="https://t.me/XiaomiY7MAX" target="_blank" rel="noopener">@XiaomiY7MAX</a>, пост <a href="https://t.me/XiaomiY7MAX/9/705" target="_blank" rel="noopener">#705</a>.</p>
+                <h2>Частые вопросы зимой</h2>
+                <h3>Почему пишет «батарея холодная» даже когда машина стояла в тёплом гараже?</h3>
+                <p>Значок относится к <b>температуре внутри батарейного пакета</b>, а не воздуха снаружи. Батарея весом в полтонны промерзает долго и отогревается долго. Если гараж +5 °C, а машина стояла ночь - сам пакет может быть ещё +2, что для быстрой зарядки недостаточно (оптимум - от +15 °C и выше).</p>
+                <h3>Можно ли включить одновременно зарядку и прогрев?</h3>
+                <p>Да, и это правильный сценарий. На медленной зарядке дома машина сама включит прогрев батареи, если температура ниже +5 °C. Плюс можно активировать прогрев салона - за счёт сети, не расходуя заряд. Идеальное использование: приехать, поставить на зарядку, за 20 минут до выезда дать команду «прогрей салон».</p>
+                <h3>Сколько расходует машина «в покое» при -15?</h3>
+                <p>С полностью отключённой охраной и прогревами - <b>0,1–0,5% в сутки</b>. С включённым стражем - 1–3% в сутки. С прогревом по расписанию - до 5% в сутки (особенно на коротких пробегах, где прогрев по времени дольше самой поездки).</p>
+                <h3>Машина пишет 0% на зарядке - что делать?</h3>
+                <p>Если авто сильно промёрзло и заряд был на минимуме, оно может первые 10–20 минут показывать 0% - но зарядка идёт. Дождитесь, когда батарея прогреется, и процент начнёт расти. Если ничего не меняется 30 минут - см. статью <a href="/no-power.html" class="inline">«Если авто обесточено»</a>, возможно, проблема с 12-вольтовым аккумулятором.</p>
+                <h2>Выводы - для тех, кто спешит</h2>
+                <ul>
+                    <li>
+                        <b>Запас хода зимой меньше на 20–30%</b>, это нормально для любого электромобиля
+                    </li>
+                    <li>
+                        <b>Ручной прогрев батареи</b> - must-have перед быстрой зарядкой и дальней поездкой в мороз (появился в HyperOS 1.11)
+                    </li>
+                    <li>
+                        <b>Зимовать можно без проблем</b> - достаточно зарядить до 60–80% и отключить охрану с прогревами
+                    </li>
+                    <li>
+                        <b>Заряжаться в мороз от бытовой розетки на улице - бесполезно</b>: 3,5 кВт уходят на обогрев батареи, а не в ёмкость
+                    </li>
+                    <li>
+                        <b>Сама батарея мороза не боится</b> - у неё есть терморегуляция, переживать за «деградацию от холода» нет причин
+                    </li>
+                </ul>
+                <div class="source-box">
+                    <div class="label">Источник</div>
+                    Статья собрана из более чем 160 сообщений темы «Зарядка • Батарея» чата © 2024—2026 за два зимних сезона (ноябрь 2024 - апрель 2026). Реальная статистика зимовки, расходов и использования прогрева - эмпирический опыт владельцев, а не пересказ рекламных материалов.
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <p>Зимняя эксплуатация Xiaomi YU7 · справочник владельца</p>
+                <p style="margin-top: 14px;"><span class="signature">© Herbert Wells</span></p>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>

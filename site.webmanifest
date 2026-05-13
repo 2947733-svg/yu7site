@@ -1,0 +1,26 @@
+{
+  "name": "YU7.site — справочник владельца Xiaomi YU7",
+  "short_name": "YU7.site",
+  "description": "Независимый справочник для владельцев Xiaomi YU7: заказ, активация, ПО, обслуживание.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0b",
+  "theme_color": "#0a0a0b",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
