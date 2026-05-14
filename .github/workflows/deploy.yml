@@ -23,13 +23,13 @@ jobs:
           chmod 700 ~/.ssh
           printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -p 1500 -t ed25519,rsa server157.hosting.reg.ru >> ~/.ssh/known_hosts 2>/dev/null
-          chmod 644 ~/.ssh/known_hosts
 
       - name: Trigger git pull on server
         run: |
           ssh -i ~/.ssh/deploy_key \
               -o IdentitiesOnly=yes \
+              -o StrictHostKeyChecking=accept-new \
+              -o UserKnownHostsFile=~/.ssh/known_hosts \
               -o ConnectTimeout=20 \
               -p 1500 \
               u9408526@server157.hosting.reg.ru \
