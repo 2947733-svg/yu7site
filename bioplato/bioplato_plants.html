@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Растения для биоплато</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0d1f0f;
+    color: #e8ead6;
+    font-family: 'Lora', Georgia, serif;
+    min-height: 100vh;
+    padding: 32px 16px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #a8d5a2;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+  }
+
+  .header p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #7a9e78;
+    font-style: italic;
+  }
+
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: #3d7a3a;
+    margin: 16px auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: #142016;
+    border: 1px solid #2a4a28;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 0.68rem;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  .badge.wild {
+    background: #2d5c2a;
+    color: #a8d5a2;
+  }
+
+  .badge.buy {
+    background: #5c4a0a;
+    color: #e0c97a;
+  }
+
+  .plant-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.85);
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .latin {
+    font-size: 0.75rem;
+    color: #5a8a58;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+  }
+
+  .plant-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #c8e8c4;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #d8dac6;
+    margin-bottom: 14px;
+  }
+
+  .field {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed #2a4a28;
+  }
+
+  .field-label {
+    font-size: 0.7rem;
+    color: #7ab878;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .field-text {
+    font-size: 0.85rem;
+    color: #c8d4be;
+    line-height: 1.5;
+  }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    background: #1d3a1c;
+    color: #8ab888;
+    padding: 3px 9px;
+    border-radius: 3px;
+    border: 1px solid #2a4a28;
+  }
+
+  .footer {
+    max-width: 960px;
+    margin: 40px auto 0;
+    padding: 24px;
+    background: #142016;
+    border: 1px solid #2a4a28;
+    border-radius: 4px;
+    text-align: center;
+    color: #7a9e78;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .footer strong {
+    color: #a8d5a2;
+  }
+
+  .field-warn {
+    background: #2d1a0a;
+    border-left: 3px solid #c08040;
+    padding: 10px 14px;
+    margin-top: 12px;
+    font-size: 0.82rem;
+    color: #e0b890;
+    line-height: 1.5;
+  }
+
+  .calendar-block {
+    max-width: 960px;
+    margin: 24px auto 0;
+    padding: 24px;
+    background: #142016;
+    border: 1px solid #2a4a28;
+    border-radius: 4px;
+  }
+
+  .calendar-block h2 {
+    font-family: 'Playfair Display', serif;
+    color: #a8d5a2;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .calendar-item {
+    background: #0d1f0f;
+    padding: 14px;
+    border-radius: 3px;
+    border-left: 3px solid #3d7a3a;
+  }
+
+  .calendar-item .name {
+    color: #c8e8c4;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .calendar-item .when {
+    color: #7ab878;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Растения для биоплато</h1>
+  <div class="divider"></div>
+  <p>Биоплато 24×1.5 м · подача воды снизу через гальку · пруд с кои</p>
+</div>
+
+<div class="grid">
+
+  <!-- 1. Эйхорния -->
+  <div class="card">
+    <span class="badge buy">Купить</span>
+    <img class="plant-img" src="eichhornia.jpg" alt="Эйхорния — водный гиацинт">
+    <div class="card-body">
+      <div class="latin">Eichhornia crassipes</div>
+      <div class="plant-name">Эйхорния<br><small style="font-size:0.75rem;color:#7ab878">(водный гиацинт)</small></div>
+      <div class="desc">Чемпион по биофильтрации. Удваивает зелёную массу за 2 недели. Висячие корни поглощают нитраты, фосфаты, аммиак. Однолетник — каждый год покупать заново, но дёшево. Пустить плавать прямо в биоплато.</div>
+
+      <div class="field">
+        <div class="field-label">Как опознать</div>
+        <div class="field-text">Плавает на воде. Глянцевые округлые листья на вздутых пузырчатых черешках (поплавки). Цветок-«орхидея» сиренево-фиолетовый с жёлтым пятном на верхнем лепестке.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Где взять</div>
+        <div class="field-text">Только купить: Ozon, Wildberries, садовые центры, аквариумные магазины. Цена 100–300 ₽ за розетку. В дикой природе средней полосы РФ не зимует — растение тропическое.</div>
+      </div>
+
+      <div class="field-warn">
+        ⚠️ В РФ внесён в перечень особо опасных инвазионных видов — в открытые водоёмы не выпускать. В закрытом пруду безопасен: на зиму погибает сам от мороза.
+      </div>
+
+      <div class="tag-row">
+        <span class="tag">однолетник</span>
+        <span class="tag">плавающее</span>
+        <span class="tag">топ-фильтратор</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Пистия -->
+  <div class="card">
+    <span class="badge buy">Купить</span>
+    <img class="plant-img" src="pistiya.jpg" alt="Пистия — водная капуста">
+    <div class="card-body">
+      <div class="latin">Pistia stratiotes</div>
+      <div class="plant-name">Пистия<br><small style="font-size:0.75rem;color:#7ab878">(водная капуста)</small></div>
+      <div class="desc">Быстро разрастается розетками по поверхности. Очищает воду, насыщает кислородом, затеняет поверхность — тормозит зелёную воду. Однолетник.</div>
+
+      <div class="field">
+        <div class="field-label">Как опознать</div>
+        <div class="field-text">Плавающая розетка из бархатистых светло-зелёных листьев — как маленький кочан капусты на воде. Снизу свисают тонкие перистые корни. Цветков почти не видно — крошечные внутри розетки.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Где взять</div>
+        <div class="field-text">Купить: Ozon, Авито, аквариумные/прудовые магазины. Цена 80–200 ₽ за розетку. Берёт 5–10 штук для старта — за лето сама расселится.</div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag">однолетник</span>
+        <span class="tag">плавающее</span>
+        <span class="tag">оксигенатор</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Стрелолист -->
+  <div class="card">
+    <span class="badge wild">Накопать</span>
+    <img class="plant-img" src="sagittaria.jpg" alt="Стрелолист обыкновенный — цветок">
+    <div class="card-body">
+      <div class="latin">Sagittaria sagittifolia</div>
+      <div class="plant-name">Стрелолист<br><small style="font-size:0.75rem;color:#7ab878">(обыкновенный, болотник)</small></div>
+      <div class="desc">Мощные корни прорастают в гальку — идеально для bottom-up схемы. Многолетник, зимует сам, выдерживает до −30 °C. Внесён в Красные книги Иркутской области и Якутии — в Воронежской области охранного статуса не имеет, но копать аккуратно.</div>
+
+      <div class="field">
+        <div class="field-label">Как опознать (главное)</div>
+        <div class="field-text">Надводные листья — в форме <strong>наконечника стрелы</strong>: треугольная пластина 15–25 см с двумя длинными «усами» назад. Лист поднят над водой на высоту до 45 см на длинном трёхгранном черешке. Спутать невозможно — у частухи (соседнее растение) листья овальные, без «усов».</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Цветок и стебель</div>
+        <div class="field-text">Цветёт в июне–августе. Цветки белые, три лепестка, в центре тёмно-малиновое пятно с пучком фиолетовых тычинок. Цветки собраны мутовками по три на безлистном стебле. Если сорвать черешок — потечёт белый млечный сок.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Где копать (Воронежская область)</div>
+        <div class="field-text">Пойменные мелководья и заболоченные берега Дона, Воронежского водохранилища, малых рек. Глубина воды 10–50 см, илистое дно. Часто образует сплошные заросли — спутать с другим растением сложно.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Когда копать</div>
+        <div class="field-text">Лучшее время — <strong>май–июнь</strong>, когда листья уже распустились (видна форма стрелы), но цветение ещё не началось. Брать молодую розетку с корневищем и комом ила, перевозить во влажном пакете.</div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag">многолетник</span>
+        <span class="tag">в корзину</span>
+        <span class="tag">дон · водохранилище</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Аир -->
+  <div class="card">
+    <span class="badge wild">Накопать</span>
+    <img class="plant-img" src="acorus.jpg" alt="Аир болотный с початком">
+    <div class="card-body">
+      <div class="latin">Acorus calamus</div>
+      <div class="plant-name">Аир болотный<br><small style="font-size:0.75rem;color:#7ab878">(ирный корень, татарское зелье)</small></div>
+      <div class="desc">Корневища агрессивно расползаются в гальку — бактерии их обожают. Содержит фитонциды, обеззараживает воду (легенда: татаро-монголы кидали корневища в водоёмы перед водопоем коней). Многолетник, зимует, выдерживает мороз.</div>
+
+      <div class="field">
+        <div class="field-label">Как опознать (главное)</div>
+        <div class="field-text">Длинные плоские мечевидные листья 60–120 см, как у ириса, но с одним острым ребром. <strong>Главный признак: разотри лист в пальцах — будет сильный лимонно-мандариновый запах</strong>. Ни у ириса, ни у других похожих растений такого запаха нет.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Цветок (необычный)</div>
+        <div class="field-text">Не похож на цветок — это жёлто-зелёный мясистый <strong>початок</strong> 4–8 см, сидит сбоку на трёхгранном стебле. Цветёт в мае–июле. В средней полосе плодов не даёт, размножается только корневищами.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Где копать (Воронежская область)</div>
+        <div class="field-text">Документально встречается в Богучарском (балка Яровая, яр Барьевка, окрестности с. Залиман) и Семилукском районах. По поймам Дона, Воронежа, Битюга — на болотах, в стоячих и медленно текущих водах, по берегам ручьёв, часто образует сплошные густые заросли.</div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">Когда копать</div>
+        <div class="field-text">Идеально — <strong>сентябрь–октябрь</strong>, когда уровень воды падает и корневища доступны. Можно весной (апрель–май), но из-за разлива часто не подойдёшь. Корневище толстое (до 3 см), ползучее — рубить лопатой, брать с куском 20–40 см.</div>
+      </div>
+
+      <div class="tag-row">
+        <span class="tag">многолетник</span>
+        <span class="tag">в корзину</span>
+        <span class="tag">биофильтр</span>
+        <span class="tag">пахнет лимоном</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Календарь сбора -->
+<div class="calendar-block">
+  <h2>Календарь сбора в Воронежской области</h2>
+  <div class="calendar-grid">
+    <div class="calendar-item">
+      <div class="name">Стрелолист</div>
+      <div class="when"><strong>Май–июнь</strong><br>Видна форма стрелы, цветения ещё нет, корневище молодое и не разросшееся</div>
+    </div>
+    <div class="calendar-item">
+      <div class="name">Аир болотный</div>
+      <div class="when"><strong>Сентябрь–октябрь</strong><br>Уровень воды падает, корневища доступны, в них максимум полезных веществ</div>
+    </div>
+    <div class="calendar-item">
+      <div class="name">Эйхорния, пистия</div>
+      <div class="when"><strong>Конец мая, когда стабильно +18 °C</strong><br>Купить, пустить плавать. До этого срока — погибнут от ночных заморозков</div>
+    </div>
+  </div>
+</div>
+
+<!-- Правила копания -->
+<div class="calendar-block">
+  <h2>Правила выкапывания диких растений</h2>
+  <div class="calendar-grid">
+    <div class="calendar-item">
+      <div class="name">Не сноси заросль целиком</div>
+      <div class="when">Бери 5–10 розеток из крупной группы, оставляй основу — заросль восстановится</div>
+    </div>
+    <div class="calendar-item">
+      <div class="name">Бери с комом грунта</div>
+      <div class="when">Корни не оголять, не отмывать, не «бить» о камни — у воды бактерий-симбионтов нет, восстанавливаться будет долго</div>
+    </div>
+    <div class="calendar-item">
+      <div class="name">Перевозка</div>
+      <div class="when">Влажный мешок или большой ZIP-пакет, в воде, в тени, до пруда — не дольше суток</div>
+    </div>
+    <div class="calendar-item">
+      <div class="name">Карантин (опционально)</div>
+      <div class="when">Перед посадкой подержать в отдельной ёмкости с водой пару дней — увидишь улиток/пиявок и стряхнёшь нежелательное</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <strong>Эйхорнию и пистию</strong> — пустить плавать по поверхности · <strong>Стрелолист и аир</strong> — в корзины на гальку, корневищами в субстрат
+</div>
+
+</body>
+</html>
