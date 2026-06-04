@@ -1,0 +1,25 @@
+# Pinegrow служебные файлы и папки
+_pgbackup/
+_pginfo/
+bioplato/_pgbackup/
+bioplato/_pginfo/
+bioplato/pinegrow.json
+pinegrow.json
+
+# Локальные служебные
+.backup.info
+.system_site/
+notes/
+
+# OS мусор
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Бэкапы
+*.bak
+*.bak_*
+
+# Pinegrow временные
+.pgsuo
+*.pgsuo
