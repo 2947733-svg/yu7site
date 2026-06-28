@@ -92,21 +92,14 @@
                 padding: 0 0 1.1rem 0;
                 color: #374151;
                 line-height: 1.7;
+                overflow: hidden;
+                transition: height 0.28s ease;
             }
             .faq-answer p { margin: 0 0 0.5rem; }
             .faq-answer p:last-child { margin-bottom: 0; }
             .faq-answer ul, .faq-answer ol { margin: 0.4rem 0 0.5rem 1.2rem; padding: 0; }
             .faq-answer li { margin-bottom: 0.25rem; }
             .faq-section { margin: 2rem 0 0.25rem; }
-
-            /* плавное раскрытие аккордеона (как на volt-ev) */
-            :root { interpolate-size: allow-keywords; }
-            details::details-content {
-                block-size: 0;
-                overflow: clip;
-                transition: block-size 0.28s ease, content-visibility 0.28s ease allow-discrete;
-            }
-            details[open]::details-content { block-size: auto; }
         </style>
     </head>
     <body>
@@ -589,5 +582,40 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+    <script>
+    (function () {
+      document.querySelectorAll('details').forEach(function (det) {
+        var sum = det.querySelector('summary');
+        var ans = det.querySelector('.faq-answer');
+        if (!sum || !ans) return;
+        sum.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (det.dataset.anim === '1') return;
+          det.dataset.anim = '1';
+          if (det.open) {
+            ans.style.height = ans.scrollHeight + 'px';
+            ans.getBoundingClientRect();
+            ans.style.height = '0px';
+            ans.addEventListener('transitionend', function done(ev) {
+              if (ev.propertyName !== 'height') return;
+              det.open = false; ans.style.height = ''; det.dataset.anim = '';
+              ans.removeEventListener('transitionend', done);
+            });
+          } else {
+            det.open = true;
+            var h = ans.scrollHeight;
+            ans.style.height = '0px';
+            ans.getBoundingClientRect();
+            ans.style.height = h + 'px';
+            ans.addEventListener('transitionend', function done(ev) {
+              if (ev.propertyName !== 'height') return;
+              ans.style.height = 'auto'; det.dataset.anim = '';
+              ans.removeEventListener('transitionend', done);
+            });
+          }
+        });
+      });
+    })();
+    </script>
     </body>
 </html>
