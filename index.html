@@ -1144,7 +1144,7 @@
   function loadIndex(){
     if (PAGES) return Promise.resolve(PAGES);
     if (loadingPromise) return loadingPromise;
-    loadingPromise = fetch('/search-index.json', {cache: 'force-cache'})
+    loadingPromise = fetch('/search-index.json', {cache: 'no-cache'})
       .then(function(r){ return r.json(); })
       .then(function(data){ PAGES = data; return PAGES; })
       .catch(function(){ PAGES = []; return PAGES; });
