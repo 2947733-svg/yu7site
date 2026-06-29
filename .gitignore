@@ -23,3 +23,8 @@ desktop.ini
 # Pinegrow временные
 .pgsuo
 *.pgsuo
+# Тяжёлые медиа в assets/apps (заливаются на сервер по FTP, не через git - GitHub режет файлы >100 МБ)
+assets/apps/*.apk
+assets/apps/*.MOV
+assets/apps/*.mov
+assets/apps/*.mp4
