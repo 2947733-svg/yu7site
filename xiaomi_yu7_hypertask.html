@@ -738,11 +738,12 @@
                 <div class="cmd">
                     <div class="cmd-top">
                         <div>
-                            <div class="cmd-title">Отключение предупреждения превышения скорости &laquo;необходимо в ручную отключить ползунок)</div>
+                            <div class="cmd-title">Отключение предупреждения превышения скорости</div>
                             <div class="cmd-zh">Speed Of Sound</div>
                         </div>
                         <div class="cmd-code" onclick="copyCode(this)">382 564 218</div>
                     </div>
+                    <div style="font-size:13px;color:var(--text-dim);line-height:1.4;margin-top:2px;">Ползунок нужно отключать вручную каждый раз при посадке в авто - это настройка безопасности, она включается заново при каждом запуске машины.</div>
                 </div>
                 <div class="cmd">
                     <div class="cmd-top">
@@ -905,7 +906,7 @@
         el.textContent = original;
       }, 1200);
     }).catch(() => {
-      // fallback — просто подсветка
+      // fallback - просто подсветка
       el.classList.add('copied');
       setTimeout(() => el.classList.remove('copied'), 1000);
     });
