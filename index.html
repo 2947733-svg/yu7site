@@ -1138,7 +1138,7 @@
 <script>
 (function(){
   // Full-text search index is loaded lazily on first search-box open.
-  // File: /search-index.json (~250 KB, one-time download, then cached by the browser)
+  // File: /search-index.json (~460 KB, one-time download, then cached by the browser)
   var PAGES = null;
   var loadingPromise = null;
 
@@ -1196,6 +1196,18 @@
     return highlight(escapeHtml(snippet), q);
   }
 
+  // Разбивка запроса на слова: латиница, кириллица, цифры, иероглифы.
+  function tokenize(q){
+    return q.toLowerCase().split(/[^0-9a-zа-яё一-鿿]+/).filter(function(w){
+      return w.length > 1;
+    });
+  }
+
+  // Грубая нормализация окончаний: «голосовой» / «голосовое» / «голосовые» → «голосов».
+  function stem(w){
+    return w.length > 5 ? w.slice(0, w.length - 2) : w;
+  }
+
   function scorePage(p, q){
     // Higher score = better match. 0 = no match.
     var ql = q.toLowerCase();
@@ -1203,10 +1215,28 @@
     var metaL = (p.meta || '').toLowerCase();
     var textL = (p.text || '').toLowerCase();
 
-    if (titleL.indexOf(ql) !== -1) return 100;
-    if (metaL.indexOf(ql) !== -1) return 50;
-    if (textL.indexOf(ql) !== -1) return 10;
-    return 0;
+    // 1) Точная фраза целиком - самый сильный сигнал.
+    if (titleL.indexOf(ql) !== -1) { p._hit = q; return 100; }
+    if (metaL.indexOf(ql) !== -1)  { p._hit = q; return 50; }
+    if (textL.indexOf(ql) !== -1)  { p._hit = q; return 10; }
+
+    // 2) Иначе - все слова запроса должны найтись (AND), с учётом окончаний.
+    var words = tokenize(q);
+    if (words.length < 2) return 0;
+
+    var all = titleL + ' ' + metaL + ' ' + textL;
+    var score = 0;
+    var hit = '';
+    for (var i = 0; i < words.length; i++){
+      var s = stem(words[i]);
+      if (all.indexOf(s) === -1) return 0;
+      if (titleL.indexOf(s) !== -1) score += 8;
+      else if (metaL.indexOf(s) !== -1) score += 4;
+      else score += 2;
+      if (!hit || words[i].length > hit.length) hit = s;
+    }
+    p._hit = hit;
+    return score;
   }
 
   function render(results, q){
@@ -1215,12 +1245,13 @@
       return;
     }
     dropdown.innerHTML = results.slice(0, 8).map(function(p){
-      var titleHtml = highlight(escapeHtml(p.title), q);
-      var metaHtml = highlight(escapeHtml(p.meta || ''), q);
+      var hl = p._hit || q;
+      var titleHtml = highlight(escapeHtml(p.title), hl);
+      var metaHtml = highlight(escapeHtml(p.meta || ''), hl);
       // If title/meta already matches, show meta as subtitle; otherwise show text snippet.
       var sub = metaHtml;
-      if (p._score === 10) {
-        var sn = makeSnippet(p.text, q, 120);
+      if (p._score <= 10) {
+        var sn = makeSnippet(p.text, hl, 120);
         if (sn) sub = sn;
       }
       return '<a href="'+p.url+'" class="search-result">'+
