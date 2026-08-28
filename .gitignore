@@ -28,3 +28,7 @@ assets/apps/*.apk
 assets/apps/*.MOV
 assets/apps/*.mov
 assets/apps/*.mp4
+
+# Исключения: лёгкие APK MI Dashboard (3-4 МБ) - деплоятся через git
+!assets/apps/MI-Dashboard.apk
+!assets/apps/MI-Dashboard-Prep.apk

@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Приложения на планшете Xiaomi YU7 · Huako - ярлыки · YU7.site</title>
-        <meta name="description" content="Как открывать популярные приложения (Telegram, WhatsApp, YouTube и др.) на планшете Xiaomi YU7 через страницу huako.ru - быстрые ярлыки, которые запускают приложение на телефоне.">
-        <meta name="keywords" content="приложения YU7, веб-браузер YU7, Mi Home YU7, YouTube на планшете YU7">
+        <title>Приложения на планшете Xiaomi YU7 · Huako - ярлыки и MI Dashboard · YU7.site</title>
+        <meta name="description" content="Как открывать популярные приложения (Telegram, WhatsApp, YouTube и др.) на планшете Xiaomi YU7 через страницу huako.ru, плюс MI Dashboard - панель с часами, погодой, музыкой и антирадаром на экране авто, с APK для скачивания.">
+        <meta name="keywords" content="приложения YU7, веб-браузер YU7, Mi Home YU7, YouTube на планшете YU7, MI Dashboard, xiaomicar.pro, Interconnectivity, HUD Speed, антирадар YU7, APK">
         <meta name="author" content="Herbert Wells">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -693,14 +693,108 @@
                     </div>
                 </div>
             </div>
+            <!-- MI DASHBOARD -->
+            <div class="section" id="mi-dashboard">
+                <div class="section-title">MI Dashboard - панель на экране авто</div>
+                <p style="font-size: 15px; line-height: 1.65; color: var(--text-dim); margin-bottom: 16px;">Ярлыки huako.ru открывают приложения по одному. <b style="color: var(--text);">MI Dashboard</b> идёт дальше: это отдельное приложение для телефона, которое превращает окно Interconnectivity на экране машины в полноценную панель - крупные часы и дата, погода, музыкальный островок с обложкой и перемоткой, ряд кнопок запуска (Яндекс Музыка, Навигатор, VK Видео, RuTube, Lampa, Jellyfin и любое приложение с телефона), плавающая кнопка MI поверх навигатора и вывод антирадара HUD Speed прямо на экран авто. Бесплатно, без рекламы и регистрации, работает на SU7, SU7 Ultra и YU7. Автор - <a href="https://xiaomicar.pro" target="_blank" rel="noopener">xiaomicar.pro</a>, с Xiaomi проект не связан.</p>
+                <div class="diff-grid">
+                    <div class="diff-card b">
+                        <h3><span class="dot"></span>Что нужно</h3>
+                        <p>Телефон Xiaomi или Redmi с <b>китайской прошивкой HyperOS CN</b> (в номере сборки есть CN) и один Mi-аккаунт в телефоне и в машине. Панель выводится через Xiaomi Interconnectivity - «Взаимосвязь» в настройках авто.</p>
+                    </div>
+                    <div class="diff-card a">
+                        <h3><span class="dot"></span>Где не заработает</h3>
+                        <p>Global, EU и xiaomi.eu - в этих прошивках модуля Interconnectivity для автомобиля нет. На не-Xiaomi Android и iPhone экран машины умеет только зеркалить телефон, отдельные приложения туда не выводятся.</p>
+                    </div>
+                    <div class="diff-card c">
+                        <h3><span class="dot"></span>Почему «Baidu Map»</h3>
+                        <p>Interconnectivity пускает на экран авто только приложения из белого списка, поэтому панель собрана под именем пакета <code>com.baidu.BaiduMap</code>. К Baidu отношения не имеет, но с установленными Картами Baidu (百度地图) конфликтует.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ЗАГРУЗКА APK -->
+            <div class="section">
+                <div class="section-title">Скачать</div>
+                <div class="big-links">
+                    <a href="/assets/apps/MI-Dashboard-Prep.apk" download class="big-link">
+                        <div class="big-link-label">01 · Рекомендуется</div>
+                        <div class="big-link-title">Помощник установки 1.2.2</div>
+                        <div class="big-link-desc">Находит Карты Baidu, помогает их убрать и сам ставит панель. Внутри уже лежит MI Dashboard 0.4.57 - интернет для установки не нужен</div>
+                        <div class="big-link-url">MI-Dashboard-Prep.apk · 3,8 МБ</div>
+                    </a>
+                    <a href="/assets/apps/MI-Dashboard.apk" download class="big-link">
+                        <div class="big-link-label">02 · Напрямую</div>
+                        <div class="big-link-title">MI Dashboard 0.4.79</div>
+                        <div class="big-link-desc">Сама панель, свежая версия. Ставится без помощника, если Карт Baidu на телефоне нет или вы их уже удалили</div>
+                        <div class="big-link-url">MI-Dashboard.apk · 3,1 МБ</div>
+                    </a>
+                    <a href="https://xiaomicar.pro/download/hud/HUD-Speed-car.apk" target="_blank" rel="noopener" class="big-link">
+                        <div class="big-link-label">03 · Опция</div>
+                        <div class="big-link-title">HUD Speed - антирадар</div>
+                        <div class="big-link-desc">Своей базы камер у панели нет: она выводит на экран авто окно HUD Speed. Ставится отдельно, на нашем сайте не хранится</div>
+                        <div class="big-link-url">xiaomicar.pro · 16,5 МБ</div>
+                    </a>
+                </div>
+                <div class="info">
+                    <div class="info-icon">🔐</div>
+                    <div>
+                        <b>Версии и контрольные суммы</b> - файлы скачаны с xiaomicar.pro 29 августа 2026, SHA-256 совпадает с опубликованными автором.<br>
+                        MI-Dashboard-Prep.apk 1.2.2 - <code style="font-size:12px; word-break:break-all;">48e32cd4b859d18368d70e4eb67c85d0ff94cc66ea1bfec5714d23af2dd0870e</code><br>
+                        MI-Dashboard.apk 0.4.79 - <code style="font-size:12px; word-break:break-all;">81b64b68ad3b69d61700e344e9f23a09be91a8977deef26019cb88ccb41dfc01</code><br>
+                        Приложение обновляется само: Настройки панели → «О приложении» → «Проверить обновления». За самой свежей сборкой - на <a href="https://xiaomicar.pro" target="_blank" rel="noopener">xiaomicar.pro</a>.
+                    </div>
+                </div>
+            </div>
+            <!-- УСТАНОВКА MI DASHBOARD -->
+            <div class="section">
+                <div class="section-title">Установка и два разрешения</div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-text">Скачайте и откройте на телефоне <kbd>MI-Dashboard-Prep.apk</kbd>, запустите «Подготовка MI Dashboard». Помощник проверяет одно имя пакета - <code>com.baidu.BaiduMap</code> - и показывает, кто его занимает.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-text">Если карточка оранжевая - нажмите кнопку и подтвердите удаление помехи в штатном окне Android. Обычно это Карты Baidu (百度地图). Яндекс Карты, Google Maps, 2GIS и файлы не трогаются.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div class="step-text">Карточка стала зелёной - жмите «Установить MI Dashboard» и подтвердите в системном установщике. После этого помощник можно удалить.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">4</div>
+                        <div class="step-text">Запустите панель, задержите палец на часах на секунду - откроются настройки, раздел «Настройка». Выдайте <b>«Плавающая кнопка»</b>: на Xiaomi это «Другие разрешения» → в самом низу «Всплывающие окна» → «Всегда разрешать».
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">5</div>
+                        <div class="step-text">Выдайте <b>«Доступ к музыке»</b> - системный экран «Доступ к уведомлениям». Тумблер серый и подписан «Controlled by Restricted Setting»: откройте «О приложении» для MI Dashboard → меню «⋮» → «Разрешить ограниченные настройки» → подтвердите PIN, вернитесь и включите тумблер.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">6</div>
+                        <div class="step-text">Подключитесь к машине по Interconnectivity - MI Dashboard появится среди приложений телефона на экране авто. Дальше открывается сам при каждом подключении.
+                        </div>
+                    </div>
+                </div>
+                <div class="info" style="margin-top: 14px;">
+                    <div class="info-icon">⚠️</div>
+                    <div>
+                        Ошибка <b>«Couldn't install (−7) · Conflicting app signatures»</b> при установке напрямую значит, что на телефоне стоят Карты Baidu: удалите их (Play Маркет → «Baidu Map» → Удалить) и поставьте APK заново, либо используйте помощник. После установки Play Маркет может показывать панель как «百度地图» и предлагать обновление - <b>не обновлять</b>, иначе Карты Baidu затрут MI Dashboard.
+                    </div>
+                </div>
+            </div>
             <!-- АЛЬТЕРНАТИВЫ -->
             <div class="section">
                 <div class="section-title">Альтернативные сервисы</div>
                 <div class="big-links">
-                    <a href="https://xiaomicar.pro" target="_blank" rel="noopener" class="big-link">
-                        <div class="big-link-label">Альтернатива · ч/б</div>
-                        <div class="big-link-title">xiaomicar.pro</div>
-                        <div class="big-link-desc">Чёрно-белые SVG-иконки, минималистичный стиль</div>
+                    <a href="#mi-dashboard" class="big-link">
+                        <div class="big-link-label">Альтернатива · приложение</div>
+                        <div class="big-link-title">MI Dashboard</div>
+                        <div class="big-link-desc">Не страница с ярлыками, а панель на экране авто - часы, погода, музыка и кнопки. Разбор и APK выше на этой странице</div>
                         <div class="big-link-url">xiaomicar.pro</div>
                     </a>
                     <a href="https://xiaomicar.site" target="_blank" rel="noopener" class="big-link">
