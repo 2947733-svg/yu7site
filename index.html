@@ -506,6 +506,64 @@
     border-bottom: 1px dashed rgba(255,105,0,0.4);
 }
 
+  /* DONATE */
+  .donate-box {
+    margin: 0 0 14px;
+    padding: 14px 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    max-width: 380px;
+    scroll-margin-top: 78px;
+}
+
+  .donate-box:target {
+    border-color: var(--accent);
+}
+
+  .donate-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+  .about .donate-btn {
+    display: inline-block;
+    padding: 11px 18px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: none;
+}
+
+  .donate-or {
+    margin: 14px 0 10px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+  .donate-yoomoney {
+    display: block;
+    width: 100%;
+    max-width: 330px;
+    height: 50px;
+    border: 0;
+    color-scheme: light;
+}
+
+  .about .donate-alt {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+    border-bottom: 1px dashed var(--border-light);
+}
+
   .source-box {
     background: var(--card);
     border: 1px solid var(--border);
@@ -1089,6 +1147,13 @@
                         <h2>О проекте</h2>
                         <p>YU7.site - независимый справочник для владельцев китайского электрокроссовера Xiaomi YU7. Здесь собрано всё самое нужное: от оформления заказа в Китае до тонкостей обслуживания, обновлений ПО и полезных автоматизаций HyperTask.</p>
                         <p>Этот сайт - независимая база знаний, собранная на основе опыта русскоязычного сообщества владельцев Xiaomi YU7. Мы не занимаемся продажами, не оказываем платных услуг и не публикуем информацию за деньги. Всё делается для того, чтобы полезные данные, инструкции и реальные наблюдения были собраны в одном месте. Поддержать проект можно <a href="https://pay.cloudtips.ru/p/a9ed2c99" target="_blank">добровольным донатом</a>.</p>
+                        <div class="donate-box" id="support">
+                            <div class="donate-label">Поддержать проект</div>
+                            <a class="donate-btn" href="https://pay.cloudtips.ru/p/a9ed2c99" target="_blank" rel="noopener">Банковской картой · CloudTips</a>
+                            <div class="donate-or">или через ЮMoney - сбор «YU7.SITE»</div>
+                            <iframe class="donate-yoomoney" src="https://yoomoney.ru/quickpay/fundraise/button?billNumber=1KD425N7KQ3.260919&amp;" width="330" height="50" loading="lazy" title="Поддержать проект через ЮMoney"></iframe>
+                            <a class="donate-alt" href="https://yoomoney.ru/quickpay/fundraise/button?billNumber=1KD425N7KQ3.260919&amp;" target="_blank" rel="noopener">Кнопка не видна? Открыть сбор ЮMoney</a>
+                        </div>
                         <p>Нашли ошибку или хотите предложить материал - напишите в <a href="https://t.me/Herbert_Wells" target="_blank" rel="noopener">ЛС</a>.</p>
                     </div>
                     <div class="source-box">
@@ -1314,6 +1379,16 @@
     if(e.key === 'Escape') closeSearch();
   });
 })();
+</script>
+<script>
+  // Доскролл до якоря (#support и т.п.) после полной загрузки:
+  // при холодном открытии ссылки с хэшем нативный переход сбивается
+  // из-за ленивых блоков и smooth-scroll.
+  window.addEventListener('load', function () {
+    if (!location.hash) return;
+    var target = document.getElementById(location.hash.slice(1));
+    if (target) target.scrollIntoView();
+  });
 </script>
     </body>
 </html>
