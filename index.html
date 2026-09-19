@@ -1381,13 +1381,24 @@
 })();
 </script>
 <script>
-  // Доскролл до якоря (#support и т.п.) после полной загрузки:
-  // при холодном открытии ссылки с хэшем нативный переход сбивается
-  // из-за ленивых блоков и smooth-scroll.
+  // Доскролл до якоря (#support и т.п.) при холодном открытии ссылки с хэшем.
+  // scrollIntoView здесь не работает: html{scroll-behavior:smooth} вместе с
+  // body{overflow:hidden auto} гасят плавную прокрутку. Поэтому явный scrollTo
+  // с временно выключенным smooth, и три прохода - верстка доезжает не сразу.
   window.addEventListener('load', function () {
     if (!location.hash) return;
     var target = document.getElementById(location.hash.slice(1));
-    if (target) target.scrollIntoView();
+    if (!target) return;
+    function jump() {
+      var html = document.documentElement;
+      var prev = html.style.scrollBehavior;
+      html.style.scrollBehavior = 'auto';
+      window.scrollTo(0, window.pageYOffset + target.getBoundingClientRect().top - 78);
+      html.style.scrollBehavior = prev;
+    }
+    jump();
+    setTimeout(jump, 300);
+    setTimeout(jump, 900);
   });
 </script>
     </body>
