@@ -16,12 +16,24 @@
 
 Пайплайн:
 1. Правка файла локально в `site_live\`
-2. `git add ... && git commit -m "..." && git push origin master`
-3. Cron на reg.ru каждые 2 минуты делает в `~/www/yu7.site/`:
+2. `git pull --rebase origin master` - ОБЯЗАТЕЛЬНО перед коммитом: в репо параллельно пушат чат Claude.ai и Takopi, локальная копия часто отстаёт от origin
+3. `git add ... && git commit -m "..." && git push origin master`
+4. Cron на reg.ru каждые 2 минуты делает в `~/www/yu7.site/`:
    `git fetch origin master && git merge --ff-only origin/master`
-4. Сайт обновлён за ≤2 мин
+5. Сайт обновлён за ≤2 мин
 
 После пуша никаких действий на сервере вручную не требуется.
+
+Если push отклонён (rejected, non-fast-forward) - значит pull пропущен: `git pull --rebase origin master`, потом push снова.
+Если rebase даёт конфликт ТОЛЬКО в `search-index.json` - не мержить руками:
+```
+git checkout --ours search-index.json
+python -X utf8 C:\claude-test\yu7-digest\regen_search_index.py
+git add search-index.json
+set GIT_EDITOR=true
+git rebase --continue
+git push origin master
+```
 
 ## Перед КАЖДОЙ правкой существующего файла
 
@@ -33,12 +45,13 @@
 
 ## ОБЯЗАТЕЛЬНО при добавлении / изменении контента страницы
 
-После правки HTML-файла **всегда обновлять `search-index.json`**:
-- Найти запись с нужным `"url"`
-- Обновить `"title"` и `"meta"` если изменился заголовок или описание страницы
-- Добавить в `"text"` все новые ключевые слова: названия, адреса, телефоны, имена
-- Бэкапить `search-index.json` перед правкой (как любой другой файл)
-- Коммитить вместе с HTML или отдельным коммитом
+После правки HTML-файла **всегда перегенерировать `search-index.json`**:
+```
+C:\Users\HW\AppData\Local\Programs\Python\Python312\python.exe -X utf8 C:\claude-test\yu7-digest\regen_search_index.py
+```
+- Скрипт собирает индекс по всем страницам сам. Руками `search-index.json` НЕ править никогда - ручные правки затираются следующим запуском и дают конфликты при rebase
+- Проверить, что новые ключевые слова попали в индекс: `git grep -c <слово> search-index.json`
+- Коммитить вместе с HTML
 
 Без этого новый контент **не будет искаться** на сайте.
 
