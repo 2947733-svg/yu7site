@@ -16,8 +16,8 @@
 
 Пайплайн:
 1. Правка файла локально в `site_live\`
-2. `git pull --rebase origin master` - ОБЯЗАТЕЛЬНО перед коммитом: в репо параллельно пушат чат Claude.ai и Takopi, локальная копия часто отстаёт от origin
-3. `git add ... && git commit -m "..." && git push origin master`
+2. `git add ... && git commit -m "..."`
+3. `git pull --rebase origin master && git push origin master` - pull ОБЯЗАТЕЛЬНО после коммита и перед пушем: в репо параллельно пушат чат Claude.ai и Takopi, локальная копия часто отстаёт от origin. До коммита pull --rebase не сработает (unstaged changes)
 4. Cron на reg.ru каждые 2 минуты делает в `~/www/yu7.site/`:
    `git fetch origin master && git merge --ff-only origin/master`
 5. Сайт обновлён за ≤2 мин
