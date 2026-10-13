@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Приложения на планшете Xiaomi YU7 · Huako - ярлыки и MI Dashboard · YU7.site</title>
         <meta name="description" content="Как открывать популярные приложения (Telegram, WhatsApp, YouTube и др.) на планшете Xiaomi YU7 через страницу huako.ru, плюс MI Dashboard - панель с часами, погодой, музыкой и антирадаром на экране авто, с APK для скачивания.">
-        <meta name="keywords" content="приложения YU7, веб-браузер YU7, Mi Home YU7, YouTube на планшете YU7, MI Dashboard, xiaomicar.pro, Interconnectivity, HUD Speed, антирадар YU7, APK, XiaoDroidLink, CarLink, Samsung YU7, Android Auto YU7">
+        <meta name="keywords" content="приложения YU7, веб-браузер YU7, Mi Home YU7, YouTube на планшете YU7, MI Dashboard, xiaomicar.pro, Interconnectivity, HUD Speed, антирадар YU7, APK, Xiaomi Cockpit, XiaoDroidLink, CarLink, Samsung YU7, Android Auto YU7">
         <meta name="author" content="Herbert Wells">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -782,6 +782,45 @@
                     <div class="info-icon">⚠️</div>
                     <div>
                         Ошибка <b>«Couldn't install (−7) · Conflicting app signatures»</b> при установке напрямую значит, что на телефоне стоят Карты Baidu: удалите их (Play Маркет → «Baidu Map» → Удалить) и поставьте APK заново, либо используйте помощник. После установки Play Маркет может показывать панель как «百度地图» и предлагать обновление - <b>не обновлять</b>, иначе Карты Baidu затрут MI Dashboard.
+                    </div>
+                </div>
+            </div>
+            <!-- XIAOMI COCKPIT -->
+            <div class="section" id="xiaomi-cockpit">
+                <div class="section-title">Xiaomi Cockpit - вторая панель для Interconnectivity</div>
+                <p style="font-size: 15px; line-height: 1.65; color: var(--text-dim); margin-bottom: 16px;">Бесплатная панель на экран авто от участника клуба, сделанная по мотивам MI Dashboard: крупные часы и погода, музыка с обложкой, живая карта с навигацией, ближайшие зарядки, док приложений и уведомления телефона. Языки: английский, русский, польский, кхмерский. Без аккаунта и рекламы. С Xiaomi не связана, сайт проекта - <a href="https://xiaomi-cockpit.github.io" target="_blank" rel="noopener">xiaomi-cockpit.github.io</a>.</p>
+                <div class="diff-grid">
+                    <div class="diff-card b">
+                        <h3><span class="dot"></span>Что нужно</h3>
+                        <p>То же, что для MI Dashboard: Xiaomi с <b>китайской прошивкой HyperOS</b>, Android 12 и новее, Interconnectivity с одним Mi-аккаунтом в телефоне и в машине. Без Interconnectivity панель открывается только на телефоне.</p>
+                    </div>
+                    <div class="diff-card a">
+                        <h3><span class="dot"></span>Карты в России</h3>
+                        <p>Карта Google видна сразу, но маршруты, поиск и пошаговые подсказки - только со своим ключом Google API. Вместо Google можно выбрать <b>Яндекс</b> с бесплатным ключом MapKit (инструкция в настройках приложения): карта с пробками, поиск мест, зарядки и маршрут со временем в пути, но <b>без пошаговых подсказок</b> - бесплатная лицензия Яндекса их не включает.</p>
+                    </div>
+                    <div class="diff-card c">
+                        <h3><span class="dot"></span>Рядом с MI Dashboard</h3>
+                        <p>Собрана под именем пакета <code>com.baidu.searchbox</code>, а не <code>com.baidu.BaiduMap</code>, поэтому ставится на один телефон с MI Dashboard. Конфликтует с настоящим приложением Baidu (百度) - если оно стоит, установка падает с ошибкой подписи, его нужно удалить.</p>
+                    </div>
+                </div>
+                <div class="big-links">
+                    <a href="https://github.com/xiaomi-cockpit/xiaomi-cockpit.github.io/releases/latest/download/Xiaomi-Cockpit.apk" target="_blank" rel="noopener" class="big-link">
+                        <div class="big-link-label">APK · последняя версия</div>
+                        <div class="big-link-title">Xiaomi Cockpit</div>
+                        <div class="big-link-desc">Файл со страницы релизов автора на GitHub. В магазинах приложения нет, при предупреждении Play Protect - «Установить всё равно»</div>
+                        <div class="big-link-url">Xiaomi-Cockpit.apk</div>
+                    </a>
+                    <a href="https://xiaomi-cockpit.github.io/guide.html" target="_blank" rel="noopener" class="big-link">
+                        <div class="big-link-label">Инструкция автора</div>
+                        <div class="big-link-title">User guide</div>
+                        <div class="big-link-desc">Все настройки, получение ключей Google и Яндекс, решение проблем (на английском)</div>
+                        <div class="big-link-url">xiaomi-cockpit.github.io</div>
+                    </a>
+                </div>
+                <div class="info" style="margin-top: 14px;">
+                    <div class="info-icon">🔧</div>
+                    <div>
+                        При первом запуске мастер настройки просит разрешения: <b>поверх других окон</b> (плавающая кнопка возврата), <b>доступ к музыке и уведомлениям</b>, геолокация и календарь. Серый тумблер - «О приложении» → меню «⋮» → разрешить ограниченные настройки. На HyperOS дополнительно включите автозапуск и снимите ограничения батареи, иначе панель выгружается в фоне. Обновления приложение умеет ставить само.
                     </div>
                 </div>
             </div>
