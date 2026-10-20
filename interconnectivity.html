@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Выбор смартфона для Interconnectivity · Xiaomi YU7 · YU7.site</title>
+        <meta name="description" content="Какой смартфон Xiaomi / Redmi взять для Xiaomi Interconnectivity с YU7 и SU7: официальный список моделей с экрана машины, модели, проверенные владельцами в клубе, требование китайской прошивки HyperOS CN, нюансы VPN, Беларуси и UWB-ключа.">
+        <meta name="keywords" content="Interconnectivity, интерконнективити, интерконнект YU7, какой телефон для YU7, Xiaomi 17 Pro, Redmi Turbo 4, Redmi K60, HyperOS CN, китайская прошивка, UWB ключ, MI Dashboard, VPN интерконнект">
+        <meta name="author" content="Herbert Wells">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Manrope:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <style>:root {
+    --bg: #0a0a0b;
+    --bg-2: #121215;
+    --card: #17171c;
+    --card-hover: #1d1d24;
+    --border: #26262d;
+    --border-light: #33333c;
+    --text: #ececf1;
+    --text-dim: #9a9aa8;
+    --text-muted: #6b6b78;
+    --accent: #ff6900;
+    --accent-soft: #ff9a3c;
+    --blue: #4a9eff;
+    --green: #3ecf8e;
+}
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+  html {
+    scroll-behavior: smooth;
+}
+
+  body {
+    font-family: 'Manrope', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle at 15% 5%, rgba(255, 105, 0, 0.1), transparent 45%),
+      radial-gradient(circle at 85% 90%, rgba(74, 158, 255, 0.06), transparent 45%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+  a {
+    color: inherit;
+    text-decoration: none;
+}
+
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 11, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+}
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+}
+
+  .logo {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+  .logo-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+}
+
+  .back-link {
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+  .back-link:hover {
+    color: var(--accent);
+}
+
+  /* HERO */
+  .hero {
+    padding: 48px 0 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+}
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+  .hero-eyebrow::before {
+    content: "";
+    width: 18px;
+    height: 1px;
+    background: var(--accent);
+}
+
+  .hero h1 {
+    font-size: clamp(28px, 6vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 14px;
+}
+
+  .hero h1 .hl {
+    background: linear-gradient(90deg, #ff6900, #ff9a3c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+  .hero p {
+    color: var(--text-dim);
+    font-size: 16px;
+    max-width: 640px;
+}
+
+  /* BIG LINKS */
+  .big-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-bottom: 36px;
+}
+  @media (max-width: 560px) {
+    .big-links {
+        grid-template-columns: 1fr;
+    }
+}
+  .big-link {
+    background: linear-gradient(135deg, var(--card) 0%, var(--bg-2) 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: all .2s;
+    position: relative;
+    overflow: hidden;
+}
+
+  .big-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s;
+}
+
+  .big-link:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+  .big-link:hover::before {
+    transform: scaleX(1);
+}
+
+  .big-link-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+  .big-link-title {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-top: 4px;
+}
+
+  .big-link-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 2px;
+}
+
+  .big-link-url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--text);
+    margin-top: 10px;
+    padding: 8px 10px;
+    background: rgba(255, 105, 0, 0.08);
+    border: 1px solid rgba(255, 105, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    word-break: break-all;
+}
+
+  .big-link-url::before {
+    content: "→";
+    color: var(--accent);
+}
+
+  /* SECTIONS */
+  .section {
+    margin-bottom: 36px;
+}
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+  /* STEPS */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+  .step {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+  .step-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(255, 105, 0, 0.1);
+    border: 1px solid rgba(255, 105, 0, 0.25);
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+  .step-text {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+  .step-text b {
+    color: var(--text);
+}
+
+  .step-text kbd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    background: rgba(255,255,255,0.07);
+    padding: 2px 7px;
+    border-radius: 5px;
+    border: 1px solid var(--border-light);
+    color: var(--accent);
+}
+
+  /* INFO BOX */
+  .info {
+    background: linear-gradient(135deg, rgba(74,158,255,0.08), rgba(74,158,255,0.02));
+    border: 1px solid rgba(74,158,255,0.22);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 14px;
+    line-height: 1.55;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+  .info-icon {
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 1px;
+}
+
+  .info b {
+    color: var(--blue);
+}
+
+  /* DIFFERENCE */
+  .diff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+  @media (max-width: 720px) {
+    .diff-grid {
+        grid-template-columns: 1fr;
+    }
+}
+  .diff-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+}
+
+  .diff-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+  .diff-card .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+  .diff-card.a .dot {
+    background: var(--text-dim);
+}
+
+  .diff-card.b .dot {
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+}
+
+  .diff-card.c .dot {
+    background: var(--blue);
+    box-shadow: 0 0 8px var(--blue);
+}
+
+  .diff-card p {
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+  /* CREDITS */
+  .credits {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+  .credits-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+  .credits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+  .credit-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+  .credit-role {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    min-width: 100px;
+}
+
+  .credit-name {
+    flex: 1;
+    font-weight: 600;
+}
+
+  .credit-tg {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+  .credit-tg a {
+    color: var(--accent);
+}
+
+  /* FOOTER */
+  footer {
+    padding: 40px 0 30px;
+    margin-top: 50px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+  footer p {
+    margin-bottom: 6px;
+}
+
+  footer .signature {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+  footer .source {
+    color: var(--text-dim);
+    margin-top: 10px;
+}
+
+  /* VIDEO BLOCK */
+  .apps-video-block {
+    margin: 36px 0;
+  }
+
+  .apps-video-block-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .apps-video-block-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .apps-video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 720px) {
+    .apps-video-grid { grid-template-columns: 1fr; }
+  }
+
+  .apps-video {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .apps-video-head {
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .apps-video-head .yt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ff4747;
+    background: rgba(255, 71, 71, 0.1);
+    border: 1px solid rgba(255, 71, 71, 0.25);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .apps-video-frame {
+    aspect-ratio: 16/9;
+    width: 100%;
+    background: #000;
+  }
+
+  .apps-video-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+    footer .source a {
+    color: var(--accent);
+    border-bottom: 1px dashed rgba(255,105,0,0.4);
+}
+    .spec-table { width: 100%; border-collapse: collapse; margin: 16px 0; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; line-height: 1.5; }
+    .spec-table th, .spec-table td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); }
+    .spec-table th { background: var(--bg-2); font-size: 12px; font-weight: 700; color: var(--text); }
+    .spec-table tr:last-child td { border-bottom: none; }
+    .spec-table td:first-child { color: var(--text-dim); white-space: nowrap; }
+  .ic-table { width:100%; border-collapse:collapse; font-size:14.5px; margin-top:10px; }
+  .ic-table th, .ic-table td { padding:10px 12px; border-bottom:1px solid var(--border); text-align:left; vertical-align:top; }
+  .ic-table th { color:var(--text-dim); font-weight:600; font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+  .ic-table td:first-child { font-weight:600; white-space:nowrap; }
+  .ic-table .ok { color:var(--green); font-weight:600; }
+  .ic-table .warn { color:var(--accent-soft); font-weight:600; }
+  .ic-table .bad { color:#ff6b6b; font-weight:600; }
+  .ic-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+  .ic-tag { background:var(--bg-2); border:1px solid var(--border); border-radius:8px; padding:6px 11px; font-size:13.5px; font-family:'JetBrains Mono',monospace; }
+  .ic-tag.new { border-color:rgba(62,207,142,.45); }
+  .ic-photo { margin-top:16px; display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap; }
+  .ic-photo img { width:220px; max-width:100%; border-radius:12px; border:1px solid var(--border); }
+  .ic-photo p { flex:1; min-width:220px; font-size:14.5px; color:var(--text-dim); line-height:1.6; }
+  @media (max-width:600px){ .ic-table { font-size:13.5px; } .ic-table th, .ic-table td { padding:8px 8px; } .ic-table td:first-child { white-space:normal; } }
+</style>
+        <!-- === SEO meta auto-generated 2026-04-27 === -->
+        <link rel="canonical" href="https://yu7.site/apps.html">
+        <meta property="og:url" content="https://yu7.site/apps.html">
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Приложения на планшете Xiaomi YU7 · Huako - ярлыки · YU7.site">
+        <meta property="og:description" content="Как открывать популярные приложения (Telegram, WhatsApp, YouTube и др.) на планшете Xiaomi YU7 через страницу huako.ru - быстрые ярлыки, которые запускают приложение на телефоне.">
+        <meta property="og:image" content="https://yu7.site/assets/og-image.jpg">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="YU7.site">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Приложения на планшете Xiaomi YU7 · Huako - ярлыки · YU7.site">
+        <meta name="twitter:description" content="Как открывать популярные приложения (Telegram, WhatsApp, YouTube и др.) на планшете Xiaomi YU7 через страницу huako.ru - быстрые ярлыки, которые запускают приложение на телефоне.">
+        <meta name="twitter:image" content="https://yu7.site/assets/og-image.jpg">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://yu7.site/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Приложения на планшете Xiaomi YU7 · Huako - ярлыки",
+      "item": "https://yu7.site/apps.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Приложения на планшете Xiaomi YU7 · Huako - ярлыки",
+  "description": "Как открывать популярные приложения (Telegram, WhatsApp, YouTube и др.) на планшете Xiaomi YU7 через страницу huako.ru - быстрые ярлыки, которые запускают приложение на телефоне.",
+  "url": "https://yu7.site/apps.html",
+  "inLanguage": "ru",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "YU7.site",
+    "url": "https://yu7.site"
+  },
+  "about": {
+    "@type": "Product",
+    "name": "Xiaomi YU7",
+    "brand": {
+      "@type": "Brand",
+      "name": "Xiaomi"
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Herbert Wells"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "YU7.site",
+    "url": "https://yu7.site"
+  }
+}
+    </script>
+</head>
+    <body>
+        <nav>
+            <div class="container nav-inner">
+                <a href="/" class="logo"> <span class="logo-dot"></span>
+      YU7.site </a>
+                <a href="/" class="back-link">← На главную</a>
+            </div>
+        </nav>
+        <div class="container">
+            <section class="hero">
+                <div class="hero-eyebrow">Приложения на планшете · Interconnectivity</div>
+                <h1>Выбор смартфона<br><span class="hl">для Interconnectivity</span></h1>
+                <p>Interconnectivity (互联, «Взаимосвязь») - штатная связка телефона Xiaomi с планшетом YU7 и SU7: приложения телефона открываются на экране машины отдельными окнами, оттуда же работают <a href="/apps.html#mi-dashboard">MI Dashboard</a> и Xiaomi Cockpit. Ниже - какой телефон для этого подходит: официальный список с экрана машины, модели, которые реально проверили владельцы в клубе, и условия, без которых ничего не заработает.</p>
+            </section>
+
+            <!-- ГЛАВНОЕ ПРАВИЛО -->
+            <div class="section">
+                <div class="section-title">Главное условие - китайская прошивка</div>
+                <div class="diff-grid">
+                    <div class="diff-card b">
+                        <h3><span class="dot"></span>Что нужно</h3>
+                        <p>Телефон <b>Xiaomi, Redmi или POCO</b> на <b>китайской прошивке HyperOS CN</b>: в номере сборки есть <code>CN</code>, например <code>HyperOS 2.0.x.x.CNXM</code>. Один Mi-аккаунт на телефоне и в машине. Приложение Xiaomi Auto для Interconnectivity ставить не нужно - достаточно войти в аккаунт в настройках телефона.</p>
+                    </div>
+                    <div class="diff-card a">
+                        <h3><span class="dot"></span>Где не заработает</h3>
+                        <p><b>Global, EU, xiaomi.eu</b> - модуля Interconnectivity для автомобиля в этих прошивках нет, телефон в машине не появится. iPhone - только CarPlay и AirPlay. Samsung, Huawei, OPPO и прочие Android - только CarLink-зеркало, см. <a href="/apps.html#xiaodroidlink">XiaoDroidLink</a> и <a href="/apps.html#samsung-auto">Samsung Auto</a>.</p>
+                    </div>
+                    <div class="diff-card c">
+                        <h3><span class="dot"></span>Как подключить</h3>
+                        <p>В машине: <code>设置 (Settings) → 连接 (Connections) → 小米互联 (Xiaomi Interconnectivity)</code>, на телефоне включить Wi-Fi и Bluetooth, подтвердить запрос. Глобальную версию можно разлочить и перешить на CN - тогда работает как китайская.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ОФИЦИАЛЬНЫЙ СПИСОК -->
+            <div class="section" id="official">
+                <div class="section-title">Официальный список с экрана машины</div>
+                <p style="font-size: 15px; line-height: 1.65; color: var(--text-dim);">Этот список машина показывает сама, когда подключаешь неподдерживаемый телефон: заголовок <code>手机互联机型列表</code> («Список моделей для взаимосвязи телефона»), внизу - «остальные модели будут добавляться постепенно». Снято с экрана YU7 в сентябре 2026.</p>
+                <div class="ic-photo">
+                    <img src="assets/interconnectivity/model-list-car-screen.jpg" alt="Список моделей телефонов для Interconnectivity на экране Xiaomi YU7" loading="lazy">
+                    <div>
+                        <div class="ic-tags">
+                            <span class="ic-tag new">Xiaomi 17 серия</span><span class="ic-tag">Xiaomi 15 серия</span><span class="ic-tag">Xiaomi 14 серия</span><span class="ic-tag">Xiaomi 13 серия</span><span class="ic-tag">Xiaomi 12 серия</span><span class="ic-tag">Xiaomi 11 серия</span>
+                            <span class="ic-tag">MIX Flip серия</span><span class="ic-tag">MIX Fold 4</span><span class="ic-tag">MIX Fold 3</span><span class="ic-tag">MIX Fold 2</span><span class="ic-tag">MIX 4</span>
+                            <span class="ic-tag new">Civi 5 Pro</span><span class="ic-tag">Civi 4 Pro</span>
+                            <span class="ic-tag new">Redmi K90 серия</span><span class="ic-tag">Redmi K80 серия</span><span class="ic-tag">Redmi K70 серия</span><span class="ic-tag">Redmi K60 серия</span><span class="ic-tag">Redmi K50 G</span><span class="ic-tag">Redmi K50 Ultra</span><span class="ic-tag">Redmi K40 Pro</span><span class="ic-tag">Redmi K40S</span>
+                            <span class="ic-tag new">Redmi Turbo 4 Pro</span><span class="ic-tag">Redmi Turbo 4</span><span class="ic-tag">Redmi Turbo 3</span>
+                            <span class="ic-tag new">Redmi Note 15 Pro+</span><span class="ic-tag">Redmi Note 14 Pro+</span><span class="ic-tag">Redmi Note 12 Turbo</span>
+                        </div>
+                        <p style="margin-top:12px;">«Серия» - значит все модели линейки: базовая, Pro, Pro Max, Ultra. Из Redmi Note в списке только старшие Pro+ и Turbo - обычный Redmi Note 13 Pro или Note 15 в нём нет. Зелёной рамкой - модели 2025-2026 года, которых ещё нет на странице <a href="https://xiaomicar.pro/#phones" target="_blank" rel="noopener">xiaomicar.pro</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ПРОВЕРЕНО В КЛУБЕ -->
+            <div class="section" id="club">
+                <div class="section-title">Что проверили владельцы в клубе</div>
+                <p style="font-size: 15px; line-height: 1.65; color: var(--text-dim);">По сообщениям в чатах @XiaomiEVclub, @xiaomiautoclub и @XiaomiY7MAX, апрель - октябрь 2026. Все телефоны - на китайской прошивке.</p>
+                <table class="ic-table">
+                    <thead><tr><th>Телефон</th><th>Статус</th><th>Что пишут</th></tr></thead>
+                    <tbody>
+                        <tr><td>Xiaomi 17 / 17 Pro / 17 Pro Max</td><td class="ok">работает</td><td>Основной выбор на осень 2026: 17 Pro и Pro Max ещё и с UWB-ключом. Xiaomi 17 (без Pro) выпускается и в глобальной версии - брать строго CN. У одного владельца 17 Pro Max связь слетала после обновления HyperOS 3.0.306 - помогла повторная привязка.</td></tr>
+                        <tr><td>Xiaomi 17 Ultra</td><td class="warn">работает с нюансом</td><td>Без мастер-аккаунта машина пишет «couldn't sign in» - сначала МА, потом Interconnectivity.</td></tr>
+                        <tr><td>Xiaomi 15 / 15 Pro / 15 Ultra</td><td class="ok">работает</td><td>Interconnectivity и MI Dashboard работают. На 15 CN для MI Dashboard нужно снять «Controlled by Restricted Setting» в доступе к уведомлениям - разбор на <a href="/apps.html#mi-dashboard">странице приложений</a>.</td></tr>
+                        <tr><td>Xiaomi 14 / 14 Pro</td><td class="ok">работает</td><td>Самый стабильный вариант под полный экран на HyperOS 2.0. На HyperOS 3 полноэкранный режим отдельных приложений уже не работает - если нужен именно он, телефон не обновлять.</td></tr>
+                        <tr><td>Xiaomi 13 Pro</td><td class="warn">по-разному</td><td>У одного владельца на HyperOS 3.0.3 с ПО машины 1.12.0 соединение рвётся сразу после подтверждения, хотя управление климатом и сиденьями с телефона работает. Единичный кейс.</td></tr>
+                        <tr><td>Redmi Turbo 4</td><td class="ok">работает</td><td>Самый популярный бюджетный выбор: «работает отлично и окошком, и на полный экран - карты, музыка, ютуб». Покупают специально под машину, чтобы лежал в подлокотнике.</td></tr>
+                        <tr><td>Redmi K70 / K70 Pro</td><td class="ok">работает</td><td>Любимец китайских владельцев SU7 под полный экран на HyperOS 2.0: минимальная задержка, хорошая передача звука.</td></tr>
+                        <tr><td>Redmi K60</td><td class="ok">работает</td><td>Разлоченный с Авито за 10 тысяч, перешит на CN - «всё летает». Для телефона, который просто лежит в машине, большего не надо.</td></tr>
+                        <tr><td>POCO F5 Pro / F6</td><td class="warn">после перешивки</td><td>Глобальный POCO - это Redmi K-серия. Разлочить загрузчик, прошить CN HyperOS 2.0 - дальше работает как китайский Redmi.</td></tr>
+                        <tr><td>Redmi Note 13 Pro, Note 15</td><td class="bad">нет в списке</td><td>Спрашивали в клубе, подтверждений нет, в официальном списке этих моделей нет - только Note 15 Pro+ и Note 14 Pro+.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ЧТО ВЗЯТЬ -->
+            <div class="section" id="pick">
+                <div class="section-title">Что взять - коротко</div>
+                <div class="diff-grid">
+                    <div class="diff-card b">
+                        <h3><span class="dot"></span>Второй телефон в машину</h3>
+                        <p><b>Redmi Turbo 4</b> или <b>Redmi K60 / K70</b> на CN. Дёшево, проверено десятками владельцев, задача - лежать в подлокотнике и отдавать карты, музыку и YouTube на экран.</p>
+                    </div>
+                    <div class="diff-card a">
+                        <h3><span class="dot"></span>Основной телефон</h3>
+                        <p><b>Xiaomi 17 Pro / 17 Pro Max</b> CN. Плюс UWB-ключ: подошёл - двери открылись, три секунды у кормы - открылся багажник. UWB есть только у 15S Pro, 17 Pro, 17 Pro Max, 17 Ultra и 18 Pro; у обычных 15 / 16 / 17 его нет.</p>
+                    </div>
+                    <div class="diff-card c">
+                        <h3><span class="dot"></span>Полный экран любой ценой</h3>
+                        <p><b>Xiaomi 14 / 14 Pro</b> или <b>K70 Pro</b> на HyperOS 2.0 и не обновлять до 3.0. На третьей версии приложения выводятся только окном.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- НЮАНСЫ -->
+            <div class="section" id="issues">
+                <div class="section-title">Типовые проблемы</div>
+                <div class="steps">
+                    <div class="step"><div class="step-num">1</div><div class="step-text"><b>VPN на телефоне.</b> Связь телефон-машина идёт по локальному Wi-Fi, а VPN заворачивает весь трафик в туннель - Interconnectivity не запускается, пока VPN не выключишь. Варианты: SplitVPN с исключением для Interconnectivity, рутованный телефон, либо раздавать интернет с другого телефона на машину, а Xiaomi подключить к хотспоту машины.</div></div>
+                    <div class="step"><div class="step-num">2</div><div class="step-text"><b>Слетело после обновления.</b> После обновления HyperOS или прошивки машины привязка часто отваливается: удалить машину из списка устройств на телефоне, перезагрузить и телефон, и планшет, привязать заново по QR.</div></div>
+                    <div class="step"><div class="step-num">3</div><div class="step-text"><b>Беларусь.</b> На стоковой CN-прошивке Interconnectivity в РБ не работает: Wi-Fi-диапазон привязан к региону сотовой сети, в РФ он разрешён, в РБ нет. Обход - рут и смена Wi-Fi-региона на Китай или США.</div></div>
+                    <div class="step"><div class="step-num">4</div><div class="step-text"><b>Нет ключа при нажатии на тормоз.</b> Interconnectivity, CarPlay и Bluetooth подключены, а машина ругается на ключ - это не про интерконнект, а про привязку телефона как Bluetooth-ключа: см. <a href="/keys.html">Ключи и доступ</a>.</div></div>
+                    <div class="step"><div class="step-num">5</div><div class="step-text"><b>Приложение не выводится на экран.</b> Interconnectivity пускает на экран только приложения из белого списка Xiaomi. Отсюда моды Яндекс Карт под именем пакета Baidu и MI Dashboard - подробнее на <a href="/apps.html">странице приложений</a>.</div></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="info">
+                    <div class="info-icon">💡</div>
+                    <div><b>Источники:</b> официальный список с экрана YU7 (фото выше), страница совместимости <a href="https://xiaomicar.pro/#phones" target="_blank" rel="noopener">xiaomicar.pro</a>, раздел «导航流转» на <a href="https://hyperos.mi.com/continuity/abilities/ab0015" target="_blank" rel="noopener">hyperos.mi.com</a> и обсуждения в клубных чатах за апрель - октябрь 2026. Если ваша модель не из списка, а Interconnectivity заработал - напишите в <a href="https://t.me/XiaomiEVclub" target="_blank" rel="noopener">@XiaomiEVclub</a>, добавим.</div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <p>Выбор смартфона для Interconnectivity · Xiaomi YU7</p>
+                <p class="source">Материал из ТГ чатов.</p>
+                <p style="margin-top: 14px;"><span class="signature">© Herbert Wells</span></p>
+                <p class="support-line" style="margin-top:12px;font-size:13px;opacity:0.75;">Сайт живёт без рекламы и платных публикаций. <a href="/#support" style="color:var(--accent);border-bottom:1px dashed rgba(255,105,0,0.4);">Поддержать проект</a></p>
+            </div>
+        </footer>
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108669926', 'ym');
+    ym(108669926, 'init', {ssr:true, webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108669926" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    </body>
+</html>
