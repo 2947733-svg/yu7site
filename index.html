@@ -1311,22 +1311,49 @@
     return score;
   }
 
+  function findParagraph(page, query, terms){
+    var best = null;
+    var bestScore = 0;
+    var blocks = page.blocks || [];
+    for (var i = 0; i < blocks.length; i++){
+      var block = blocks[i];
+      var text = page.text.slice(block[1], block[2]).toLowerCase();
+      var exact = text.indexOf(query) !== -1;
+      var hits = terms.filter(function(term){ return text.indexOf(term) !== -1; }).length;
+      if (!exact && !hits) continue;
+      var score = (exact ? 100 : 0) + (terms.length ? 60 * hits / terms.length : 0);
+      // У явно привязанной подсказки приоритет только при совпадении всего запроса.
+      if (block[3] && (exact || (terms.length > 1 && hits === terms.length))) score += 120;
+      if (score > bestScore || (score === bestScore && block[2] - block[1] < best[2] - best[1])){
+        best = block;
+        bestScore = score;
+      }
+    }
+    return best;
+  }
+
   function render(results, q){
     if (results.length === 0){
       dropdown.innerHTML = '<div class="search-empty">Ничего не найдено</div>';
       return;
     }
+    var query = q.toLowerCase();
+    var terms = Array.from(new Set(tokenize(query).map(stem)));
     dropdown.innerHTML = results.slice(0, 8).map(function(p){
       var hl = p._hit || q;
+      var paragraph = findParagraph(p, query, terms);
+      var anchor = paragraph ? paragraph[0] : p.anchor;
+      var href = p.url + (anchor ? '#' + encodeURIComponent(anchor) : '');
       var titleHtml = highlight(escapeHtml(p.title), hl);
       var metaHtml = highlight(escapeHtml(p.meta || ''), hl);
       // If title/meta already matches, show meta as subtitle; otherwise show text snippet.
       var sub = metaHtml;
       if (p._score <= 10) {
-        var sn = makeSnippet(p.text, hl, 120);
+        var excerpt = paragraph ? p.text.slice(paragraph[1], paragraph[2]) : p.text;
+        var sn = makeSnippet(excerpt, hl, 120);
         if (sn) sub = sn;
       }
-      return '<a href="'+p.url+'" class="search-result">'+
+      return '<a href="'+escapeHtml(href)+'" class="search-result">'+
         '<div class="search-result-text">'+
           '<div class="search-result-title">'+titleHtml+'</div>'+
           '<div class="search-result-meta">'+sub+'</div>'+
@@ -1340,7 +1367,7 @@
     if (!PAGES) {
       dropdown.innerHTML = '<div class="search-empty">Загрузка индекса…</div>';
       dropdown.classList.add('open');
-      loadIndex().then(function(){ if (input.value.trim().toLowerCase() === q) runSearch(q); });
+      loadIndex().then(function(){ if (input.value.trim() === q) runSearch(q); });
       return;
     }
     var results = [];
